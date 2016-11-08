@@ -1,0 +1,189 @@
+{
+  "id": "uri:data.gouv.fr:format:marchés-sécurité-défense",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Format réglementaire de publication des données essentielles des marchés publics de sécurité et de défense français",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "id": {
+      "title": "Identifiant de marché",
+      "description": "Exemple : 2014-1234567890-12345678901234 (est unique au niveau national grâce à l’ajout SIRET du donneur d’ordre ou du pouvoir adjudicateur)",
+      "$ref": "#/definitions/IdentifiantMarche"
+    },
+    "acheteurs": {
+      "title": "Liste des acheteurs",
+      "description": "Si le marché n’a qu’un seul acheteur, c’est malgré tout une liste à contenant un objet, pas un simple objet.",
+      "type": "array",
+      "items": [
+        {
+          "$ref": "#/definitions/Acheteur"
+        }
+      ],
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "nature": {
+      "title": "Nature du marché",
+      "description": "La nature du marché.",
+      "type": "string",
+      "enum": [
+        "Marché",
+        "Marché de partenariat",
+        "Accord-cadre"
+      ]
+    },
+    "objet": {
+      "title": "Objet du marché ou du lot",
+      "description": "Description synthétique de l’objet du marché ou du lot.",
+      "maxSize": "256",
+      "type": "string"
+    },
+    "codeCPV": {
+      "title": "Code CPV principal",
+      "description": "Nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv)",
+      "type": "string",
+      "pattern": "^[0-9]{8}\\-[0-9]$"
+    },
+    "procedure": {
+      "title": "Procédure de passation du marché",
+      "description": "La procédure de passation de marché utilisée par l'autorité concédante",
+      "enum": [
+        "Procédure adaptée",
+        "Appel d’offres restreint",
+        "Procédure négociée avec publicité préalable",
+        "Marché négocié sans publicité ni mise en concurrence préalable",
+        "Dialogue compétitif"
+      ]
+    },
+    "dateNotification": {
+      "title": "Date de la notification du marché",
+      "description": "Date à laquelle le marché a été notifié au(x) titulaire(s), au format AAAA-MM-JJ.",
+      "type": "string",
+      "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+    },
+    "datePublicationDonnees": {
+      "title": "Date de la publication des données essentielles du marché",
+      "description": "Date à laquelle les données essentielles du marché ont été publiées sur le profil d'autorité concédante, au format AAAA-MM-JJ.",
+      "type": "string",
+      "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+    }
+  },
+  "required": [
+    "id",
+    "acheteurs",
+    "nature",
+    "objet",
+    "procedure",
+    "dateNotification",
+    "datePublicationDonnees"
+  ],
+  "definitions": {
+    "Acheteur": {
+      "required": [
+        "siret",
+        "nom"
+      ],
+      "properties": {
+        "siret": {
+          "title": "Identifiant SIRET de l'acheteur",
+          "description": "http://xml.insee.fr/schema/siret.html#SIRET_stype",
+          "type": "string",
+          "pattern": "^[0-9]{14}$"
+        },
+        "nom": {
+          "title": "Nom de l'acheteur",
+          "description": "Nom de l’acheteur (le caractère univoque est assuré par le SIRET).\nExemple : \"Conseil régional de Bretagne\"",
+          "type": "string"
+        }
+      }
+    },
+    "IdentifiantMarche": {
+      "title": "Identifiant de marché",
+      "type": "string",
+      "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles."
+    },
+    "COG": {
+      "title": "Code Officiel Géographique",
+      "description": "Identifiant géographique tel que défini par l'INSEE (http://www.insee.fr/fr/methodes/nomenclatures/cog/)",
+      "type": "string"
+    },
+    "Titulaire": {
+      "title": "Titulaire",
+      "type": "object",
+      "properties": {
+        "TypeIdentifiantTitulaire": {
+          "title": "Type d'identifiant du titulaire",
+          "description": "Le type d'identifiant utilisé pour identifier le titulaire du marché.",
+          "type": "string",
+          "enum": [
+            "SIRET",
+            "TVA",
+            "NUTS"
+          ]
+        },
+        "IdentifiantTitulaire": {
+          "title": "Identifiant du titulaire",
+          "description": "Un SIRET, un code NUTS ou un numéro de TVA intra-communautaire. Le SIRET doit être utilisé si l’opérateur économique en possède un.",
+          "type": "string"
+        },
+        "DenominationSocialeTitulaire": {
+          "title": "Dénomination sociale du titulaire",
+          "description": "Nom de l’opérateur économique intervenant sur le marché . Exemple : \"Transit 2000 SA\"",
+          "type": "string"
+        }
+      },
+      "required": [
+        "TypeIdentifiantTitulaire",
+        "IdentifiantTitulaire",
+        "DenominationSocialeTitulaire"
+      ]
+    },
+    "Modification": {
+      "title": "Modification",
+      "description": "Une modification du marché ayant lieu après la publication des données essentielle du marché.",
+      "type": "object",
+      "properties": {
+        "objetModification": {
+          "title": "Objet de la modification",
+          "description": "Exemple : \"Modification du titulaire du marché. Nouveau titulaire : Rodriguez SAS\".",
+          "type": "string",
+          "maxSize": "256"
+        },
+        "datePublicationDonneesModification": {
+          "title": "Date de la republication des données incluant la modification",
+          "description": "Date à laquelle les données essentielles sont republiées suite à la modification, au format AAAA-MM-JJ.",
+          "type": "string",
+          "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+        },
+        "dureeMois": {
+          "title": "Nouvelle durée du marché, en mois",
+          "description": "",
+          "type": "integer",
+          "minimum": 1
+        },
+        "montant": {
+          "title": "Nouveau montant du marché",
+          "description": "",
+          "type": "number",
+          "minimum": 1
+        },
+        "titulaires": {
+          "title": "Liste des titulaires après modification",
+          "description": "",
+          "type": "array",
+          "items": [
+            {
+              "$ref": "#/definitions/Titulaire"
+            }
+          ],
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "objetModification",
+        "datePublicationDonneesModification"
+      ]
+    }
+  }
+}
