@@ -8,7 +8,6 @@ Ce dépôt est voué à accueillir :
 - les référentiels qui définissent ces schémas
 - des données exemple
 - une suite de tests permettant de vérifier que les schémas couvrent bien les cas de figure envisagés, en utilisant les données exemple
-- des outils de conversion (plus tard)
 
 ## Vos commentaires
 
@@ -22,13 +21,18 @@ Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https:/
 
 ## Notes de version
 
-#### 0.2 (28 octobre 2016)
+**0.2.1** (9 novembre 2016)
+
+- ajout de liens autour de la spécification JSON Schema ([ici](https://github.com/etalab/format-commande-publique/tree/master/json-schema))
+- correction de coquilles
+
+**0.2.0** (28 octobre 2016)
 
 - mise à jour des schéma pour coller à l'arrêté relati aux données essentielles, version 28/10/2016
 - Ajout d'information dans le README
 
-#### 0.1 (13 septembre 2016)
+**0.1.0** (13 septembre 2016)
 
-- schémsa pour les marchés public, les marchés de défense ou de sécurité, et les concessions
+- schémas pour les marchés public, les marchés de défense ou de sécurité, et les concessions
 - schémas JSON conformes à la norme **JSON Schema draft v4**
 - pas (encore) de tests du schéma
