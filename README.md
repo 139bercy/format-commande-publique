@@ -28,11 +28,11 @@ Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https:/
 
 **0.2.0** (28 octobre 2016)
 
-- mise à jour des schéma pour coller à l'arrêté relati aux données essentielles, version 28/10/2016
+- mise à jour des schéma pour coller à l'arrêté relatif aux données essentielles, version 28/10/2016
 - Ajout d'information dans le README
 
 **0.1.0** (13 septembre 2016)
 
-- schémas pour les marchés public, les marchés de défense ou de sécurité, et les concessions
+- schémas pour les marchés publics, les marchés de défense ou de sécurité, et les concessions
 - schémas JSON conformes à la norme **JSON Schema draft v4**
 - pas (encore) de tests du schéma
