@@ -6,8 +6,8 @@
   "type": "object",
   "properties": {
     "id": {
-      "title": "Identifiant de marché",
-      "description": "Exemple : 2014-1234567890-12345678901234 (est unique au niveau national grâce à l’ajout SIRET de l'autorité concédante)",
+      "title": "Identifiant du contrat de concession",
+      "description": "Exemples : 20141234567890 ou 2016C123456.",
       "$ref": "#/definitions/IdentifiantMarche"
     },
     "autoriteConcedante": {
@@ -21,13 +21,14 @@
     "enum": [
       "Concession de travaux",
       "Concession de service",
-      "Concession de service public"
+      "Concession de service public",
+      "Délégation de service public"
     ]
   },
   "objet": {
     "title": "Objet du contrat de concession",
     "description": "Description synthétique de l’objet du contrat de concession.",
-    "maxSize": "256",
+    "maxSize": 256,
     "type": "string"
   },
   "procedure": {
@@ -47,7 +48,7 @@
     "properties": {
       "code": {
         "title": "Identifiant du lieu principal d'exécution",
-        "description": "Code postal ou code INSEE (commune, région, etc.) du lieu principal d'exécution.",
+        "description": "Code du lieu d’exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002.",
         "type": "string",
         "maxSize": 6
       },
@@ -66,43 +67,36 @@
       },
       "nom": {
         "title": "Nom du lieu d'exécution",
-        "type": "string",
-        "maxSize": "128"
+        "type": "string"
       }
     },
     "required": [
-      "id",
-      "typeIdentifiant",
+      "code",
+      "typeCode",
       "nom"
     ]
   },
-  "dureeAnnees": {
+  "dureeMois": {
     "title": "Durée du contrat de concession",
-    "description": "La durée du contrat de concession, en années.",
+    "description": "La durée du contrat de concession, en mois.",
     "type": "integer",
     "minimum": 1
   },
   "dateSignature": {
     "title": "Date de la signature du marché",
-    "description": "Date à laquelle le marché a été signé par l'autorité concédante, au format AAAA-MM-JJ.",
-    "type": "string",
-    "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
-  },
-  "dateNotification": {
-    "title": "Date de la notification du marché",
-    "description": "Date à laquelle le marché a été notifié au(x) concessionnaire(s), au format AAAA-MM-JJ.",
+    "description": "Date à laquelle le contrat de concession a été signé par l'autorité concédante, au format AAAA-MM-JJ.",
     "type": "string",
     "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
   },
   "datePublicationDonnees": {
-    "title": "Date de la publication des données essentielles du marché",
-    "description": "Date à laquelle les données essentielles du marché ont été publiées sur le profil d'autorité concédante, au format AAAA-MM-JJ.",
+    "title": "Date de la publication des données essentielles du contrat de concession",
+    "description": "Date à laquelle les données essentielles du contrat de concession ont été publiées sur le profil d'autorité concédante, au format AAAA-MM-JJ.",
     "type": "string",
     "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
   },
   "dateDebutExecution": {
     "title": "Date du début de l'exécution du contrat de concession",
-    "description": "Date à laquelle les données essentielles du marché ont été publiées sur le profil d'autorité concédante, au format AAAA-MM-JJ.",
+    "description": "Date à laquelle a commencé l'exécution du contrat de concession, au format AAAA-MM-JJ.",
     "type": "string",
     "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
   },
@@ -111,17 +105,8 @@
     "description": "",
     "type": "number"
   },
-  "methodeCalculValeurGlobale": {
-    "title": "Méthode de calcul de la valeur globale",
-    "type": "string"
-  },
-  "subventionPublique": {
-    "title": "Octroi d’une subvention publique",
-    "type": "boolean",
-    "description": "L’octroi, ou non, d’une subvention publique dans le cadre du contrat de concession"
-  },
   "montantSubventionPublique": {
-    "title": "Montant de la subvention publique",
+    "title": "Montant de la subvention publique ou de tout autre avantage financier",
     "description": "Si aucune subvention publique n'est octroyée, indiquer 0",
     "type": "number",
     "minimum": 0
@@ -150,8 +135,8 @@
     ]
   },
   "modifications": {
-    "title": "Modifications des données du marché après leur publication initiale",
-    "description": "Une fois les données essentielles du marché publiées, aucune modification des données n'est possible, si ce n'est l'ajout d'objets dans Modifications.",
+    "title": "Modifications des données du contrat de concession après leur publication initiale",
+    "description": "Une fois les données essentielles du contrat de concession publiées, aucune modification des données n'est possible, si ce n'est l'ajout d'objets dans Modifications.",
     "type": "array",
     "items": [
       {
@@ -167,16 +152,12 @@
     "objet",
     "procedure",
     "lieuExecution",
-    "dureeAnnees",
+    "dureeMois",
     "dateSignature",
-    "dateNotification",
     "datePublicationDonnees",
     "dateDebutExecution",
     "valeurGlobale",
-    "methodeCalculValeurGlobale",
-    "subventionPublique",
     "montantSubventionPublique",
-    "donneesExecution",
     "concessionnaires",
     "modifications"
   ],
@@ -197,7 +178,7 @@
         },
         "nom": {
           "title": "Nom de l'autorité concédante",
-          "description": "Nom de l’autorité concédante (le caractère univoque est assuré par le SIRET).\nExemple : \"Conseil régional de Bretagne\"",
+          "description": "Nom de l’autorité concédante (le caractère univoque est assuré par le SIRET).\nExemple : \"Région Bretagne\"",
           "type": "string"
         }
       }
@@ -205,7 +186,8 @@
     "IdentifiantMarche": {
       "title": "Identifiant de marché",
       "type": "string",
-      "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles."
+      "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles.",
+      "maxLength": 14
     },
     "Concessionnaire": {
       "title": "Concessionnaire",
@@ -222,12 +204,13 @@
             "RIDET",
             "FRWF",
             "IREP",
+            "UE",
             "HORS-UE"
           ]
         },
         "id": {
           "title": "Identifiant du concessionnaire",
-          "description": "Types d'identifiants possibles (favoriser le SIRET) : SIRET, TVA, TAHITI, RIDET, FRWF, IREP, HORS-UE.",
+          "description": "Types d'identifiants possibles (favoriser le SIRET) : SIRET, TVA, TAHITI, RIDET, FRWF, IREP, UE, HORS-UE.",
           "type": "string"
         },
         "denominationSociale": {
@@ -244,14 +227,14 @@
     },
     "Modification": {
       "title": "Modification",
-      "description": "Une modification du contrat de concession ayant lieu après la publication des données essentielles.",
+      "description": "Une modification du contrat de concession ayant lieu après la publication initiale des données essentielles.",
       "type": "object",
       "properties": {
         "objetModification": {
           "title": "Objet de la modification",
-          "description": "Exemple : \"Modification de la durée, de 2 à 3 années.",
+          "description": "Exemple : \"Modification de la durée, de 24 à 36 mois.",
           "type": "string",
-          "maxSize": "256"
+          "maxSize": 256
         },
         "datePublicationDonneesModification": {
           "title": "Date de la republication des données incluant la modification",
@@ -259,8 +242,8 @@
           "type": "string",
           "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
         },
-        "dureeAnnees": {
-          "title": "Nouvelle durée en années.",
+        "dureeMois": {
+          "title": "Nouvelle durée en mois.",
           "description": "",
           "type": "integer",
           "minimum": 1
@@ -281,7 +264,9 @@
       "title": "Données d'éxecution",
       "type": "object",
       "required": [
-        "datePublicationDonneesExecution"
+        "datePublicationDonneesExecution",
+        "depensesInvestissement",
+        "tarifs"
       ],
       "properties": {
         "datePublicationDonneesExecution": {
@@ -312,8 +297,7 @@
       "type": "object",
       "required": [
         "intituleTarif",
-        "tarif",
-        "evolutionTarifPourCent"
+        "tarif"
       ],
       "properties": {
         "intituleTarif": {
@@ -325,11 +309,6 @@
           "title": "Tarif",
           "type": "number",
           "minimum": 0
-        },
-        "evolutionTarifPourCent": {
-          "title": "Evolution du tarif",
-          "description": "Evolution du tarif par rapport à l'année précédente, en pour cents",
-          "type": "number"
         }
       }
     }
