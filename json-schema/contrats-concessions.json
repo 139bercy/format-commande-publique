@@ -186,6 +186,7 @@
         "title": "Identifiant de marché",
         "type": "string",
         "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles.",
+        "minLength": 5,
         "maxLength": 14
       },
       "Concessionnaire": {
