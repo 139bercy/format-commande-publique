@@ -42,13 +42,13 @@
         "Marché négocié sans publicité ni mise en concurrence préalable",
         "Dialogue compétitif"
       ]
-    },
+    }
   },
   "required": [
     "id",
     "nature",
     "objet",
-    "procedure",
+    "procedure"
   ],
   "definitions": {
     "IdentifiantMarche": {
