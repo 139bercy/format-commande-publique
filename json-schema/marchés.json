@@ -13,14 +13,7 @@
     "acheteur": {
       "title": "Acheteur ou mandataire du marché",
       "description": "Si le marché est passé par un groupement d'acheteurs, c'est le mandataire en charge d'effectuer la procédure du passation.",
-      "type": "array",
-      "items": [
-        {
-          "$ref": "#/definitions/Acheteur"
-        }
-      ],
-      "minItems": 1,
-      "uniqueItems": true
+      "$ref": "#/definitions/Acheteur"
     },
     "nature": {
       "title": "Nature du marché",
