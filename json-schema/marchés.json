@@ -95,7 +95,7 @@
     },
     "dureeMois": {
       "title": "Durée initiale du marché",
-      "description": "La durée du marché, en mois, telle que définie au moment de la publication des données. Si une fois les données initiales du marché publiées une modification de la durée du marché intervient, elle doit être retranscrite via un objet enfant de Modifications et la propriété Duree initiale ne doit pas être modifiée.",
+      "description": "La durée du marché, en mois, telle que définie au moment de la publication des données. Si une fois les données initiales du marché publiées une modification de la durée du marché intervient, elle doit être retranscrite via un objet enfant de Modifications et la propriété Duree initiale ne doit pas être modifiée. La durée initale du marché comprend la durée des tranches et reconductions potentielles.",
       "type": "integer",
       "minimum": 1
     },

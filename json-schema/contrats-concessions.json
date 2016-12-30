@@ -104,9 +104,9 @@
       "description": "",
       "type": "number"
     },
-    "montantSubventionPublique": {
+    "montantAvantagesFinanciers": {
       "title": "Montant de la subvention publique ou de tout autre avantage financier",
-      "description": "Si aucune subvention publique n'est octroyée, indiquer 0",
+      "description": "Si aucune avantage financier n'est octroyée, indiquer 0.",
       "type": "number",
       "minimum": 0
     },
@@ -156,7 +156,7 @@
       "datePublicationDonnees",
       "dateDebutExecution",
       "valeurGlobale",
-      "montantSubventionPublique",
+      "montantAvantagesFinanciers",
       "concessionnaires",
       "modifications"
     ],
