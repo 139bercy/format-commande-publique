@@ -26,7 +26,7 @@
     },
     "objet": {
       "title": "Objet du contrat de concession",
-      "description": "Description synthétique de l’objet du contrat de concession.",
+      "description": "Description synthétique de l'objet du contrat de concession.",
       "maxSize": 256,
       "type": "string"
     },
@@ -47,7 +47,7 @@
       "properties": {
         "code": {
           "title": "Identifiant du lieu principal d'exécution",
-          "description": "Code du lieu d’exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002.",
+          "description": "Code du lieu d'exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002.",
           "type": "string",
           "maxSize": 6
         },
@@ -112,7 +112,7 @@
     },
     "donneesExecution": {
       "title": "Données d'exécution",
-      "description": "Les données d’exécution du contrat de concession à une date donnée. Tous les ans, l’autorité concédante publie les données d’exécution, jusqu’à la fin du contrat de concession. Ces données ne sont inclues qu’à partir de la première année, pas lors de la publication initiale des données qui fait suite à la notification.",
+      "description": "Les données d'exécution du contrat de concession à une date donnée. Tous les ans, l'autorité concédante publie les données d'exécution, jusqu'à la fin du contrat de concession. Ces données ne sont inclues qu'à partir de la première année, pas lors de la publication initiale des données qui fait suite à la notification.",
       "type": "array",
       "items": [
         {
@@ -177,7 +177,7 @@
           },
           "nom": {
             "title": "Nom de l'autorité concédante",
-            "description": "Nom de l’autorité concédante (le caractère univoque est assuré par le SIRET).\nExemple : \"Région Bretagne\"",
+            "description": "Nom de l'autorité concédante (le caractère univoque est assuré par le SIRET).\nExemple : \"Région Bretagne\"",
             "type": "string"
           }
         }
@@ -215,7 +215,7 @@
           },
           "denominationSociale": {
             "title": "Dénomination sociale du concessionnaire",
-            "description": "Nom de l’opérateur économique intervenant sur le contrat de concession. Exemple : \"Transit 2000 SA\"",
+            "description": "Nom de l'opérateur économique intervenant sur le contrat de concession. Exemple : \"Transit 2000 SA\"",
             "type": "string"
           }
         },
