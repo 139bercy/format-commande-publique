@@ -10,6 +10,11 @@
       "description": "Exemples : 20141234567890 ou 2016C123456",
       "$ref": "#/definitions/IdentifiantMarche"
     },
+    "identificationAcheteur": {
+      "title": "Identification de l'acheteur",
+      "description": "Soit le nom de l'établissement public concerné, soit 'État'",
+      "type": "string"
+    },
     "nature": {
       "title": "Nature du marché",
       "description": "La nature du marché.",
@@ -46,6 +51,7 @@
   },
   "required": [
     "id",
+    "identificationAcheteur",
     "nature",
     "objet",
     "procedure"
