@@ -1,8 +1,8 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-**Outils et documents divers autour du format de référence pour la publication des données essentielles des marchés publics français.**
+**Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français. Version 0.3.0.**
 
-Ce dépôt est voué à accueillir :
+Ce dépôt est destiné à accueillir :
 
 - les schémas (JSON et XML) permettant de vérifier la validité des données publiées
 - les référentiels qui définissent ces schémas
@@ -21,6 +21,10 @@ Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https:/
 
 ## Notes de version
 
+**0.3.0** (27 décembre 2016)
+
+- mise à jour des schémas et des référentiels pour coller à l'arrêté relatif aux données essentielles, version **13/12/2016**
+
 **0.2.1** (9 novembre 2016)
 
 - ajout de liens autour de la spécification JSON Schema ([ici](https://github.com/etalab/format-commande-publique/tree/master/json-schema))
@@ -28,7 +32,7 @@ Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https:/
 
 **0.2.0** (28 octobre 2016)
 
-- mise à jour des schéma pour coller à l'arrêté relati aux données essentielles, version 28/10/2016
+- mise à jour des schémas pour coller à l'arrêté relatif aux données essentielles, version **28/10/2016**
 - Ajout d'information dans le README
 
 **0.1.0** (13 septembre 2016)
