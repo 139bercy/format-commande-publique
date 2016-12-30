@@ -114,6 +114,7 @@
       "title": "Données d'exécution",
       "description": "Les données d'exécution du contrat de concession à une date donnée. Tous les ans, l'autorité concédante publie les données d'exécution, jusqu'à la fin du contrat de concession. Ces données ne sont inclues qu'à partir de la première année, pas lors de la publication initiale des données qui fait suite à la notification.",
       "type": "array",
+      "minItems": 0,
       "items": [
         {
           "$ref": "#/definitions/DonneesExecution"
@@ -158,6 +159,7 @@
     "dateDebutExecution",
     "valeurGlobale",
     "montantAvantagesFinanciers",
+    "donneesExecution",
     "concessionnaires",
     "modifications"
   ],
@@ -169,6 +171,7 @@
       ],
       "title": "Autorité concédante",
       "description": "L'autorité concédante qui signe le contrat de concession.",
+      "type": "object",
       "properties": {
         "siret": {
           "title": "Identifiant SIRET de l'autorité concédante",
