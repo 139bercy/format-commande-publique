@@ -7,12 +7,12 @@
   "properties": {
     "id": {
       "title": "Identifiant de marché",
-      "description": "Exemple : 2014-1234567890-12345678901234 (est unique au niveau national grâce à l’ajout SIRET du donneur d’ordre ou du pouvoir adjudicateur)",
+      "description": "Exemples : 20141234567890 ou 2016C123456",
       "$ref": "#/definitions/IdentifiantMarche"
     },
-    "acheteurs": {
-      "title": "Liste des acheteurs",
-      "description": "Si le marché n’a qu’un seul acheteur, c’est malgré tout une liste à une entrée, pas une simple chaîne de caractères.",
+    "acheteur": {
+      "title": "Acheteur ou mandataire du marché",
+      "description": "Si le marché est passé par un groupement d'acheteurs, c'est le mandataire en charge d'effectuer la procédure du passation.",
       "type": "array",
       "items": [
         {
@@ -29,20 +29,21 @@
       "enum": [
         "Marché",
         "Marché de partenariat",
-        "Accord-cadre"
+        "Accord-cadre",
+        "Marché subséquent"
       ]
     },
     "objet": {
-      "title": "Objet du marché ou du lot",
+      "title": "Objet du marché",
       "description": "Description synthétique de l’objet du marché ou du lot.",
-      "maxLength": "256",
+      "maxLength": 256,
       "type": "string"
     },
     "codeCPV": {
       "title": "Code CPV",
-      "description": "Nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500-0",
+      "description": "Nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500 (même si toléré, il préférable d'omettre le caractère de contrôle (-9))",
       "type": "string",
-      "pattern": "^[0-9]{8}\\-[0-9]$"
+      "pattern": "^[0-9]{8}(\\-[0-9])?$"
     },
     "procedure": {
       "title": "Procédure de passation du marché",
@@ -64,7 +65,7 @@
       "properties": {
         "code": {
           "title": "Code du lieu d'exécution",
-          "description": "Code du lieu d’exécution (code postal, commune, canton, arrondissement, département, région, pays). Exemple : 2B002",
+          "description": "Code du lieu d’exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002",
           "type": "string"
         },
         "typeCode": {
@@ -81,20 +82,20 @@
             "Code pays"
           ]
         },
-        "nomLieuExecution": {
+        "nom": {
           "title": "Nom du lieu d'exécution",
           "type": "string"
         }
       },
       "required": [
-        "codeLieuExecution",
-        "nomLieuExecution",
+        "code",
+        "nom",
         "typeCode"
       ]
     },
     "dureeMois": {
       "title": "Durée initiale du marché",
-      "description": "La durée du marché, en mois, telle que définie au moment de la publication des données. Si une fois les données initiales du marché publiées une modification de la durée du marché intervient, elle doit être retranscrite via un objet enfant de Modifications et la propriété Duree initiale ne doit pas être modifiée.",
+      "description": "La durée du marché, en mois, telle que définie au moment de la publication des données. Si une fois les données initiales du marché publiées une modification de la durée du marché intervient, elle doit être retranscrite via un objet enfant de Modifications et la propriété Duree initiale ne doit pas être modifiée. La durée initale du marché comprend la durée des tranches et reconductions potentielles.",
       "type": "integer",
       "minimum": 1
     },
@@ -118,7 +119,7 @@
     },
     "formePrix": {
       "title": "Forme du prix",
-      "description": "",
+      "description": "Ferme : le prix est fixé pour toute la durée marché. Ferme et actualisable : le prix peut évoluer périodiquement selon des conditions prévues dans le contrat initial (ex: variation d'indice. Révisable : l'acheteur et le titulaire peuvent s'entendre sur une modification du prix après la signature du marché.)",
       "type": "string",
       "enum": [
         "Ferme",
@@ -152,13 +153,13 @@
   },
   "required": [
     "id",
-    "acheteurs",
+    "acheteur",
     "nature",
     "objet",
+    "codeCPV",
     "procedure",
     "lieuExecution",
-    "duree",
-    "dateSignature",
+    "dureeMois",
     "dateNotification",
     "datePublicationDonnees",
     "montant",
@@ -170,8 +171,7 @@
     "Acheteur": {
       "required": [
         "id",
-        "nom",
-        "statut"
+        "nom"
       ],
       "properties": {
         "id": {
@@ -182,24 +182,16 @@
         },
         "nom": {
           "title": "Nom de l'acheteur",
-          "description": "Nom de l’acheteur (le caractère univoque est assuré par le SIRET).\nExemple : \"Conseil régional de Bretagne\"",
+          "description": "Nom de l’acheteur (le caractère univoque est assuré par le SIRET).\nExemple : \"Région Bretagne\"",
           "type": "string"
-        },
-        "statut": {
-          "title": "Statut de l'acheteur",
-          "description": "Un acheteur est entité adjudicatrice s’il exerce une activité d’opérateur de réseau telle que définie à l’article 12 de l’ordonnance n° 2015-899 du 23 juillet 2015 relative aux marchés publics (https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000030920376#LEGISCTA000030921995).\nUn acheteur est pouvoir adjudicateur dans tous les autres cas.",
-          "type": "string",
-          "enum": [
-            "Pouvoir adjudicateur",
-            "Entité adjudicatrice"
-          ],
-          "default": "Pouvoir adjudicateur"
         }
       }
     },
     "IdentifiantMarche": {
       "title": "Identifiant de marché",
       "type": "string",
+      "maxLength": 14,
+      "minLength": 5,
       "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles."
     },
     "Titulaire": {
@@ -217,12 +209,13 @@
             "RIDET",
             "FRWF",
             "IREP",
+            "UE",
             "HORS-UE"
           ]
         },
         "id": {
           "title": "Identifiant du titulaire",
-          "description": "Types d'identifiants possibles (favoriser le SIRET) : SIRET, TVA, TAHITI, RIDET, FRWF, IREP, HORS-UE.",
+          "description": "Types d'identifiants possibles (favoriser le SIRET) : SIRET, TVA, TAHITI, RIDET, FRWF, IREP, UE, HORS-UE.",
           "type": "string"
         },
         "denominationSociale": {
@@ -246,7 +239,7 @@
           "title": "Objet de la modification",
           "description": "Exemple : \"Modification du titulaire du marché. Nouveau titulaire : Rodriguez SAS\".",
           "type": "string",
-          "maxLength": "256"
+          "maxLength": 256
         },
         "datePublicationDonneesModification": {
           "title": "Date de la republication des données incluant la modification",
