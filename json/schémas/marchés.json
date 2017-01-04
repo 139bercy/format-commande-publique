@@ -13,14 +13,7 @@
     "acheteur": {
       "title": "Acheteur ou mandataire du marché",
       "description": "Si le marché est passé par un groupement d'acheteurs, c'est le mandataire en charge d'effectuer la procédure du passation.",
-      "type": "array",
-      "items": [
-        {
-          "$ref": "#/definitions/Acheteur"
-        }
-      ],
-      "minItems": 1,
-      "uniqueItems": true
+      "$ref": "#/definitions/Acheteur"
     },
     "nature": {
       "title": "Nature du marché",
@@ -35,7 +28,7 @@
     },
     "objet": {
       "title": "Objet du marché",
-      "description": "Description synthétique de l’objet du marché ou du lot.",
+      "description": "Description synthétique de l'objet du marché ou du lot.",
       "maxLength": 256,
       "type": "string"
     },
@@ -51,7 +44,7 @@
       "enum": [
         "Procédure adaptée",
         "Appel d'offres ouvert",
-        "Appel d’offres restreint",
+        "Appel d'offres restreint",
         "Procédure concurrentielle avec négociation",
         "Procédure négociée avec mise en concurrence préalable",
         "Marché négocié sans publicité ni mise en concurrence préalable",
@@ -65,12 +58,12 @@
       "properties": {
         "code": {
           "title": "Code du lieu d'exécution",
-          "description": "Code du lieu d’exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002",
+          "description": "Code du lieu d'exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002",
           "type": "string"
         },
         "typeCode": {
           "title": "Type de code du lieu d'exécution",
-          "description": "Le type de code utilisé pour désigner le lieu d’exécution. Hormis le « Code postal », les codes sont des codes géographiques gérés par l’INSEE (http://www.insee.fr/fr/methodes/nomenclatures/cog/default.asp)",
+          "description": "Le type de code utilisé pour désigner le lieu d'exécution. Hormis le « Code postal », les codes sont des codes géographiques gérés par l'INSEE (http://www.insee.fr/fr/methodes/nomenclatures/cog/default.asp)",
           "type": "string",
           "enum": [
             "Code postal",
@@ -107,7 +100,7 @@
     },
     "datePublicationDonnees": {
       "title": "Date de la publication des données essentielles du marché",
-      "description": "Date à laquelle les données essentielles du marché décrit ont été publiées pour la première fois. Cette date n’est donc pas mise à jour en cas de modification du marché.",
+      "description": "Date à laquelle les données essentielles du marché décrit ont été publiées pour la première fois. Cette date n'est donc pas mise à jour en cas de modification du marché.",
       "type": "string",
       "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
     },
@@ -182,7 +175,7 @@
         },
         "nom": {
           "title": "Nom de l'acheteur",
-          "description": "Nom de l’acheteur (le caractère univoque est assuré par le SIRET).\nExemple : \"Région Bretagne\"",
+          "description": "Nom de l'acheteur (le caractère univoque est assuré par le SIRET).\nExemple : \"Région Bretagne\"",
           "type": "string"
         }
       }
@@ -220,7 +213,7 @@
         },
         "denominationSociale": {
           "title": "Dénomination sociale du titulaire",
-          "description": "Nom de l’opérateur économique intervenant sur le marché . Exemple : \"Transit 2000 SA\"",
+          "description": "Nom de l'opérateur économique intervenant sur le marché . Exemple : \"Transit 2000 SA\"",
           "type": "string"
         }
       },
