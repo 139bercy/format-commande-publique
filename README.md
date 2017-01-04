@@ -1,6 +1,6 @@
-# Format réglementaire pour la publication des données essentielles des marchés publics français
+# Format réglementaire pour la publication des données essentielles des marchés publics français (v0.3.1)
 
-**Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français. Version 0.3.0.**
+**Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
 Ce dépôt est destiné à accueillir :
 
@@ -16,10 +16,17 @@ Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https:/
 ## Voir aussi
 
 - [Consultation publique sur les projets d’arrêtés relatifs aux fonctionnalités et exigences minimales des profils d’acheteurs et aux données essentielles, jusqu'au 28 novembre](http://www.economie.gouv.fr/daj/consultation-publique-projets-arretes-fonctionnalites-et-exigences-minimales-profils-acheteurs)
-- [Projet d’arrêté relatif aux données essentielles dans la commande publique, au 28/10/2016](http://www.economie.gouv.fr/files/files/directions_services/daj/actualites/consultation-publique-10-2016/Projet_arrete_Donnees_essentielles.pdf)
+- [Projet d’arrêté relatif aux données essentielles dans la commande publique, au 28/10/2016](http://www.economie.gouv.fr/files/files/directions_services/daj/actualites/consultation-publique-10-2016/Projet_arrete_Donnees_essentielles.pdf) (la version du 13/12/2016 sera bientôt publiée)
 - [La commande publique augmentée par la données sur forum.etalab.gouv.fr](https://forum.etalab.gouv.fr/t/la-commande-publique-augmentee-par-la-donnee/909)
 
 ## Notes de version
+
+**0.3.1** (30 décembre 2016)
+
+- Bug réglé : oubli de l'identification de l'acheteur dans le schéma des marchés défense et sécurité
+- Bug réglé : la structure du schéma des contrats de concession était invalide
+- La propriété `donneesExecution` doit être présente, mais peut être une liste vide
+- Remplacement des apostrophes ’ par des apostrophes '
 
 **0.3.0** (27 décembre 2016)
 
