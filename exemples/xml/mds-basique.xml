@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marche-defense-securite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schémas/xml/marchés-défense-sécurité.xsd">
+	<id>2014-79886</id>
+	<identificationAcheteur>État</identificationAcheteur>
+	<nature>Marché de partenariat</nature>
+	<objet>Travaux</objet>
+	<procedure>Appel d'offres ouvert</procedure>
+</marche-defense-securite>

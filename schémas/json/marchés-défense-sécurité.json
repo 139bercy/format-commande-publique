@@ -8,7 +8,10 @@
     "id": {
       "title": "Identifiant de marché",
       "description": "Exemples : 20141234567890 ou 2016C123456",
-      "$ref": "#/definitions/IdentifiantMarche"
+      "type": "string",
+      "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles.",
+      "minLength": 5,
+      "maxLength": 14
     },
     "identificationAcheteur": {
       "title": "Identification de l'acheteur",
@@ -55,14 +58,5 @@
     "nature",
     "objet",
     "procedure"
-  ],
-  "definitions": {
-    "IdentifiantMarche": {
-      "title": "Identifiant de marché",
-      "type": "string",
-      "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles.",
-      "minLength": 5,
-      "maxLength": 14
-    }
-  }
+  ]
 }

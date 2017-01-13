@@ -1,0 +1,8 @@
+{
+  "$schema": "../../schémas/json/marchés-défense-sécurité.json",
+  "id": "2014-79886",
+  "identificationAcheteur": "État",
+  "nature": "Marché de partenariat",
+  "objet": "Travaux",
+  "procedure": "Appel d'offres ouvert"
+}

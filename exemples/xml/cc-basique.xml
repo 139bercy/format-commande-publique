@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schémas/xml/contrats-concessions.xsd">
+	<id>200103452112</id>
+	<autoriteConcedante>
+		<siret>21350238800019</siret>
+		<nom>Ville de Millau</nom>
+	</autoriteConcedante>
+	<nature>Concession de travaux</nature>
+	<objet>Construction et exploitation d'un viaduc</objet>
+	<procedure>Procédure négociée restreinte</procedure>
+	<lieuExecution>
+		<code>12145</code>
+		<typeCode>Code INSEE commune</typeCode>
+		<nom>Millau</nom>
+	</lieuExecution>
+	<dureeMois>360</dureeMois>
+	<dateSignature>2001-02-21</dateSignature>
+	<datePublicationDonnees>2001-02-21</datePublicationDonnees>
+	<dateDebutExecution>2001-02-21</dateDebutExecution>
+	<valeurGlobale>27860000</valeurGlobale>
+	<montantAvantagesFinanciers>2987000</montantAvantagesFinanciers>
+	<donneesExecution/>
+	<concessionnaires>
+		<concessionnaire>
+			<typeIdentifiant>SIRET</typeIdentifiant>
+			<id>81223113200026</id>
+			<denominationSociale>Atlas SAS</denominationSociale>
+		</concessionnaire>
+	</concessionnaires>
+	<modifications/>
+</contrat-concession>

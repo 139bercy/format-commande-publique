@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+	<xs:element name="marche-defense-securite">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="id">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="5"/>
+							<xs:maxLength value="14"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="identificationAcheteur" type="xs:string"/>
+				<xs:element name="nature">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Marché"/>
+							<xs:enumeration value="Marché de partenariat"/>
+							<xs:enumeration value="Accord-cadre"/>
+							<xs:enumeration value="Marché subséquent"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="objet">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Fourniture"/>
+							<xs:enumeration value="Service"/>
+							<xs:enumeration value="Travaux"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="procedure">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Procédure adaptée"/>
+							<xs:enumeration value="Appel d'offres ouvert"/>
+							<xs:enumeration value="Appel d'offres restreint"/>
+							<xs:enumeration value="Procédure concurrentielle avec négociation"/>
+							<xs:enumeration value="Procédure négociée avec mise en concurrence préalable"/>
+							<xs:enumeration value="Marché négocié sans publicité ni mise en concurrence préalable"/>
+							<xs:enumeration value="Dialogue compétitif"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
