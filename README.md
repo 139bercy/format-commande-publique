@@ -1,4 +1,4 @@
-# Format réglementaire pour la publication des données essentielles des marchés publics français (v0.3.1)
+# Format réglementaire pour la publication des données essentielles des marchés publics français (v0.4.0)
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -7,11 +7,13 @@ Ce dépôt est destiné à accueillir :
 - les schémas (JSON et XML) permettant de vérifier la validité des données publiées
 - les référentiels qui définissent ces schémas
 - des données exemple
-- une suite de tests permettant de vérifier que les schémas couvrent bien les cas de figure envisagés, en utilisant les données exemple
+- une suite de tests permettant de vérifier que les schémas couvrent bien les cas de figure envisagés, en utilisant les données exemple (non disponible)
 
 ## Vos commentaires
 
 Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https://forum.etalab.gouv.fr/t/schemas-de-validation-des-donnees-essentielles-des-marches-publics/3141).
+
+Si vous avez un compte Github, vous pouvez également [créer un ticket](https://github.com/etalab/format-commande-publique/issues/new).
 
 ## Voir aussi
 
@@ -20,6 +22,11 @@ Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https:/
 - [La commande publique augmentée par la données sur forum.etalab.gouv.fr](https://forum.etalab.gouv.fr/t/la-commande-publique-augmentee-par-la-donnee/909)
 
 ## Notes de version
+
+**0.4.0** (13 janvier 2016)
+
+- Création de quelques données exemples en JSON et XML
+- Quelques changement esthétiques dans les référentiels
 
 **0.3.1** (30 décembre 2016)
 
