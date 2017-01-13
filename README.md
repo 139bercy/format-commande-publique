@@ -6,7 +6,7 @@ Ce dépôt est destiné à accueillir :
 
 - les schémas (JSON et XML) permettant de vérifier la validité des données publiées
 - les référentiels qui définissent ces schémas
-- des données exemple
+- des données exemples
 - une suite de tests permettant de vérifier que les schémas couvrent bien les cas de figure envisagés, en utilisant les données exemple (non disponible)
 
 ## Vos commentaires
@@ -26,7 +26,7 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 **0.4.0** (13 janvier 2016)
 
 - Création de quelques données exemples en JSON et XML
-- Quelques changement esthétiques dans les référentiels
+- Quelques changements esthétiques dans les référentiels
 
 **0.3.1** (30 décembre 2016)
 
