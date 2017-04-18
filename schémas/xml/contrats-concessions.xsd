@@ -11,6 +11,13 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
+				<xs:element name="_type">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="^Contrat de concession$"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
 				<xs:element name="autoriteConcedante">
 					<xs:complexType>
 						<xs:all>
