@@ -1,0 +1,23 @@
+{
+  "id": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/march%C3%A9s.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Format réglementaire de publication des données essentielles des marchés publics français",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "marches": {
+      "title" : "Marché et concessions",
+      "description" : "Liste de marchés et de concessions",
+      "type" : "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          { "$ref": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/march%C3%A9s.json" },
+          { "$ref": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/march%C3%A9s-d%C3%A9fense-s%C3%A9curit%C3%A9.json" },
+          { "$ref": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/contrats-concessions.json" }
+        ]
+      },
+      "uniqueItems": true
+    }
+  }
+}
