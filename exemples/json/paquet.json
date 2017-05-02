@@ -7,6 +7,7 @@
         "id": "21350238800019",
         "nom": "Ville de Rennes"
       },
+      "_type": "Marché",
       "nature": "Accord-cadre",
       "objet": "Entretien des jardins municipaux",
       "codeCPV": "77313000",
@@ -44,6 +45,7 @@
     },
     {
       "id": "200103452112",
+      "_type": "Contrat de concession",
       "autoriteConcedante": {
         "siret": "21350238800019",
         "nom": "Ville de Millau"
