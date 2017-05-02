@@ -1,4 +1,4 @@
-# Format réglementaire pour la publication des données essentielles des marchés publics français (v0.4.0)
+# Format réglementaire pour la publication des données essentielles des marchés publics français (v1.0.0)
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -21,9 +21,15 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 - [Projet d’arrêté relatif aux données essentielles dans la commande publique, au 28/10/2016](http://www.economie.gouv.fr/files/files/directions_services/daj/actualites/consultation-publique-10-2016/Projet_arrete_Donnees_essentielles.pdf) (la version du 13/12/2016 sera bientôt publiée)
 - [La commande publique augmentée par la données sur forum.etalab.gouv.fr](https://forum.etalab.gouv.fr/t/la-commande-publique-augmentee-par-la-donnee/909)
 
-## Notes de version
 
-**0.4.0** (13 janvier 2016)
+## Notes de version
+
+**1.0.0** (2 mai 2017)
+
+- Ajout du schéma "paquet" pour les données JSON, permettant d'avoir plusieurs marchés/contrats de concessions dans un même fichier.
+- La même fonctionnalité sera bientôt disponible pour les données XML
+
+**0.4.0** (13 janvier 2017)
 
 - Création de quelques données exemples en JSON et XML
 - Quelques changements esthétiques dans les référentiels
