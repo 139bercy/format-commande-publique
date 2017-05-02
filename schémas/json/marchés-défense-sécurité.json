@@ -13,6 +13,11 @@
       "minLength": 5,
       "maxLength": 14
     },
+    "_type" : {
+      "title": "Type d'objet (marché, marché de sécurité, contrat de concession)",
+      "type": "string",
+      "pattern": "^Marché défense et sécurité$"
+    },
     "identificationAcheteur": {
       "title": "Identification de l'acheteur",
       "description": "Soit le nom de l'établissement public concerné, soit 'État'",

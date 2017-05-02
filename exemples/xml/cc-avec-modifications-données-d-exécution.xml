@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schémas/xml/contrats-concessions.xsd">
 	<id>200103452112</id>
+	<_type>Contrat de concession</_type>
 	<autoriteConcedante>
 		<siret>21350238800019</siret>
 		<nom>Ville de Millau</nom>

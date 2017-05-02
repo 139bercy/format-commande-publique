@@ -10,6 +10,11 @@
       "description": "Exemples : 20141234567890 ou 2016C123456.",
       "$ref": "#/definitions/IdentifiantMarche"
     },
+    "_type" : {
+      "title": "Type d'objet (marché, marché de sécurité, contrat de concession)",
+      "type": "string",
+      "pattern": "^Contrat de concession$"
+    },
     "autoriteConcedante": {
       "$ref": "#/definitions/AutoriteConcedante"
     },
