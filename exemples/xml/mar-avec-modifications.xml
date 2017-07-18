@@ -33,21 +33,22 @@
 		</titulaire>
 	</titulaires>
 	<modifications>
-    <modification>
-      <objetModification>Changement de titulaire : remplacement d'Hellman par Amandier.</objetModification>
-      <datePublicationDonneesModification>2008-09-13</datePublicationDonneesModification>
-      <titulaires>
-    		<titulaire>
-    			<typeIdentifiant>SIRET</typeIdentifiant>
-    			<id>81223113200026</id>
-    			<denominationSociale>Garami SARL</denominationSociale>
-    		</titulaire>
-    		<titulaire>
-    			<typeIdentifiant>SIRET</typeIdentifiant>
-    			<id>87127639200012</id>
-    			<denominationSociale>Amandier SA</denominationSociale>
-    		</titulaire>
-    	</titulaires>
-    </modification>
+		<modification>
+			<objetModification>Changement de titulaire : remplacement d'Hellman par Amandier.</objetModification>
+			<datePublicationDonneesModification>2008-09-13</datePublicationDonneesModification>
+			<dateSignatureModification>2008-07-20</dateSignatureModification>
+			<titulaires>
+				<titulaire>
+					<typeIdentifiant>SIRET</typeIdentifiant>
+					<id>81223113200026</id>
+					<denominationSociale>Garami SARL</denominationSociale>
+				</titulaire>
+				<titulaire>
+					<typeIdentifiant>SIRET</typeIdentifiant>
+					<id>87127639200012</id>
+					<denominationSociale>Amandier SA</denominationSociale>
+				</titulaire>
+			</titulaires>
+		</modification>
   </modifications>
 </marche>

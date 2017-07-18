@@ -172,6 +172,7 @@
 								<xs:complexType>
 									<xs:all>
 										<xs:element name="objetModification" type="xs:string"/>
+										<xs:element name="dateSignatureModification" type="xs:date"/>
 										<xs:element name="datePublicationDonneesModification" type="xs:date"/>
 										<xs:element name="dureeMois" minOccurs="0">
 											<xs:simpleType>

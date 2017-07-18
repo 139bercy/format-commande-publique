@@ -7,7 +7,6 @@
   "properties": {
     "id": {
       "title": "Identifiant de marché",
-      "description": "Exemples : 20141234567890 ou 2016C123456",
       "type": "string",
       "description": "Un identifiant de marché utilisé dans le cadre de la publication des données essentielles.",
       "minLength": 5,

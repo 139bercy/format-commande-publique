@@ -239,6 +239,12 @@
           "type": "string",
           "maxLength": 256
         },
+        "dateSignatureModification": {
+          "title": "Date de la signature de la modification",
+          "description": "Date à laquelle la modification du marché public a été signée par l'acheteur.",
+          "type": "string",
+          "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+        },
         "datePublicationDonneesModification": {
           "title": "Date de la republication des données incluant la modification",
           "description": "Date à laquelle les données essentielles sont republiées suite à la modification, au format AAAA-MM-JJ.",

@@ -45,12 +45,14 @@
   "modifications": [
     {
       "objetModification": "Allongement de la durée",
+      "dateSignatureModification": "2002-01-06",
       "datePublicationDonneesModification": "2002-01-19",
       "dureeMois": 410
     },
     {
       "objetModification": "Allongement de la durée et révision de la valeur globale",
       "datePublicationDonneesModification": "2002-01-19",
+      "dateSignatureModification": "2002-01-06",
       "dureeMois": 540,
       "valeurGlobale": 33890000
     }
