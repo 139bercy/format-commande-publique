@@ -48,13 +48,13 @@
 			<datePublicationDonneesModification>2002-01-19</datePublicationDonneesModification>
 			<dateSignatureModification>2008-07-20</dateSignatureModification>
 			<dureeMois>410</dureeMois>
-		</modification>	
-		<modification>		
-			<objetModification>Allongement de la durée et révision de la valeur globale</objetModification>		
-			<dateSignatureModification>2008-07-20</dateSignatureModification>		
-			<datePublicationDonneesModification>2007-06-14</datePublicationDonneesModification>		
-			<dureeMois>540</dureeMois>		
-			<valeurGlobale>33890000</valeurGlobale>		
+		</modification>
+		<modification>
+			<objetModification>Allongement de la durée et révision de la valeur globale</objetModification>
+			<dateSignatureModification>2008-07-20</dateSignatureModification>
+			<datePublicationDonneesModification>2007-06-14</datePublicationDonneesModification>
+			<dureeMois>540</dureeMois>
+			<valeurGlobale>33890000</valeurGlobale>
 		</modification>
 	</modifications>
 </contrat-concession>
