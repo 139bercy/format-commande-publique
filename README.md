@@ -17,8 +17,9 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Voir aussi
 
-- [Consultation publique sur les projets d’arrêtés relatifs aux fonctionnalités et exigences minimales des profils d’acheteurs et aux données essentielles, jusqu'au 28 novembre](http://www.economie.gouv.fr/daj/consultation-publique-projets-arretes-fonctionnalites-et-exigences-minimales-profils-acheteurs)
-- [Projet d’arrêté relatif aux données essentielles dans la commande publique, au 28/10/2016](http://www.economie.gouv.fr/files/files/directions_services/daj/actualites/consultation-publique-10-2016/Projet_arrete_Donnees_essentielles.pdf) (la version du 13/12/2016 sera bientôt publiée)
+- [Le site Web thématique de la Direction des Affaires Juridiques du Ministère des Finances](https://www.economie.gouv.fr/daj/ouverture-des-donnees-commande-publique)
+- [Arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000034492587&dateTexte=&categorieLien=id)
+- [Arrêté du 14 avril 2017 relatif aux fonctionnalités et exigences minimales des profils d'acheteurs](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=00B73A5DA9B3A710ABD6B312CD109476.tpdila16v_3?cidTexte=JORFTEXT000034492557&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000034491769)
 - [La commande publique augmentée par la données sur forum.etalab.gouv.fr](https://forum.etalab.gouv.fr/t/la-commande-publique-augmentee-par-la-donnee/909)
 
 ## Notes de version
