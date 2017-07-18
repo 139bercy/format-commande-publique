@@ -11,13 +11,6 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:element name="_type">
-					<xs:simpleType>
-						<xs:restriction base="xs:string">
-							<xs:pattern value="^Marché$"/>
-						</xs:restriction>
-					</xs:simpleType>
-				</xs:element>
 				<xs:element name="acheteur">
 					<xs:complexType mixed="true">
 						<xs:sequence>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schémas/xml/marchés.xsd">
 	<id>2010-3452112</id>
-	<_type>Marché</_type>
 	<acheteur>
 		<id>21350238800019</id>
 		<nom>Ville de Rennes</nom>
