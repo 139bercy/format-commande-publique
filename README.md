@@ -29,6 +29,7 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 - Correction : le champ `dateSignatureModification` avait été oublié dans les schémas JSON et XML, et dans les exemples
 - Correction : le champ `donneesExecution` était mal écrit dans un des exemples XML
 - Correction : la clé `description` de l'objet `id` était en double dans le schéma JSON des marchés défense et sécurité
+- Suppression de la balise \<\_type> dans les schémas et exemples XML 
 - Mise à jour des liens dans le README
 
 **1.0.0** (2 mai 2017)
