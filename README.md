@@ -22,7 +22,20 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 - [Arrêté du 14 avril 2017 relatif aux fonctionnalités et exigences minimales des profils d'acheteurs](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=00B73A5DA9B3A710ABD6B312CD109476.tpdila16v_3?cidTexte=JORFTEXT000034492557&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000034491769)
 - [La commande publique augmentée par la données sur forum.etalab.gouv.fr](https://forum.etalab.gouv.fr/t/la-commande-publique-augmentee-par-la-donnee/909)
 
-## Notes de version
+
+## Notes de version
+
+**1.0.1** (18 juillet 2017)
+
+- Correction : le champ `dateSignatureModification` avait été oublié dans les schémas JSON et XML, et dans les exemples
+- Correction : le champ `donneesExecution` était mal écrit dans un des exemples XML
+- Correction : la clé `description` de l'objet `id` était en double dans le schéma JSON des marchés défense et sécurité
+- Mise à jour des liens dans le README
+
+**1.0.0** (2 mai 2017)
+
+- Ajout du concept de "paquet" via l'array `marches` dans le format JSON pour publier plusieurs marchés, de différent types, dans un même fichier JSON
+- Ajout de la propriété `_type` dans le format JSON pour distinguer le type de marché (marché public, marché défense et sécurité, contrat de concession)
 
 **0.4.0** (13 janvier 2016)
 
