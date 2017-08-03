@@ -94,6 +94,7 @@
 				</xs:element>
 				<xs:element name="dateNotification" type="xs:date"/>
 				<xs:element name="datePublicationDonnees" type="xs:date"/>
+				<xs:element name="dateTransmissionDonneesEtalab" type="xs:date"/>
 				<xs:element name="montant">
 					<xs:simpleType>
 						<xs:restriction base="xs:decimal">

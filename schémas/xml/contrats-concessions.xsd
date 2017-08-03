@@ -78,6 +78,7 @@
 				</xs:element>
 				<xs:element name="dateSignature" type="xs:date"/>
 				<xs:element name="datePublicationDonnees" type="xs:date"/>
+				<xs:element name="dateTransmissionDonneesEtalab" type="xs:date"/>
 				<xs:element name="dateDebutExecution" type="xs:date"/>
 				<xs:element name="valeurGlobale" type="xs:decimal"/>
 				<xs:element name="montantSubventionPublique">

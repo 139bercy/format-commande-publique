@@ -109,6 +109,12 @@
       "type": "string",
       "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
     },
+    "dateTransmissionDonneesEtalab": {
+      "title": "Date de la transmission des données à la mission Etalab",
+      "description": "Date à laquelle les données essentielles du marché public ont été transmises par la DGFIP à la mission Etalab, au format AAAA-MM-JJ.",
+      "type": "string",
+      "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+    },
     "montant": {
       "title": "Montant forfaitaire ou estimé maximum HT",
       "description": "",
@@ -160,6 +166,7 @@
     "dureeMois",
     "dateNotification",
     "datePublicationDonnees",
+    "dateTransmissionDonneesEtalab",
     "montant",
     "formePrix",
     "titulaires",
