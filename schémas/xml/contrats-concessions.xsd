@@ -77,7 +77,7 @@
 					</xs:simpleType>
 				</xs:element>
 				<xs:element name="dateSignature" type="xs:date"/>
-				<xs:element name="datePublicationDonnees" type="xs:date"/>
+				<xs:element name="datePublicationDonnees" type="xs:date" minOccurs="0"/>
 				<xs:element name="dateTransmissionDonneesEtalab" type="xs:date"/>
 				<xs:element name="dateDebutExecution" type="xs:date"/>
 				<xs:element name="valeurGlobale" type="xs:decimal"/>
@@ -167,7 +167,7 @@
 									<xs:all>
 										<xs:element name="objetModification" type="xs:string"/>
 										<xs:element name="dateSignatureModification" type="xs:date"/>
-										<xs:element name="datePublicationDonneesModification" type="xs:date"/>
+										<xs:element name="datePublicationDonneesModification" type="xs:date" minOccurs="0"/>
 										<xs:element name="dureeMois" minOccurs="0">
 											<xs:simpleType>
 												<xs:restriction base="xs:integer">

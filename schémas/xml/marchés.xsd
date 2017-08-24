@@ -91,7 +91,7 @@
 					</xs:simpleType>
 				</xs:element>
 				<xs:element name="dateNotification" type="xs:date"/>
-				<xs:element name="datePublicationDonnees" type="xs:date"/>
+				<xs:element name="datePublicationDonnees" type="xs:date" minOccurs="0"/>
 				<xs:element name="dateTransmissionDonneesEtalab" type="xs:date"/>
 				<xs:element name="montant">
 					<xs:simpleType>
@@ -151,7 +151,7 @@
 											</xs:simpleType>
 										</xs:element>
 										<xs:element name="dateSignatureModification" type="xs:date"/>
-										<xs:element name="datePublicationDonneesModification" type="xs:date"/>
+										<xs:element name="datePublicationDonneesModification" type="xs:date" minOccurs="0"/>
 										<xs:element name="dureeMois" type="xs:integer" minOccurs="0"/>
 										<xs:element name="montant" type="xs:decimal" minOccurs="0"/>
 										<xs:element name="titulaires" minOccurs="0">
