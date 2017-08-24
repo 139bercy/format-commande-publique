@@ -22,7 +22,7 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-							
+							<xs:element name="urlProfilAcheteur" type="xs:anyURI"/>
 						</xs:all>
 					</xs:complexType>
 				</xs:element>

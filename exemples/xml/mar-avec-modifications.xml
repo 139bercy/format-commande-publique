@@ -4,6 +4,7 @@
 	<acheteur>
 		<id>21350238800019</id>
 		<nom>Ville de Rennes</nom>
+		<urlProfilAcheteur>https://www.megalisbretagne.org</urlProfilAcheteur>
 	</acheteur>
 	<nature>Accord-cadre</nature>
 	<objet>Entretien des jardins municipaux</objet>

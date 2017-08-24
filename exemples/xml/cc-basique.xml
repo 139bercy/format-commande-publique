@@ -4,6 +4,7 @@
 	<autoriteConcedante>
 		<siret>21350238800019</siret>
 		<nom>Ville de Millau</nom>
+		<urlProfilAcheteur>http://www.marches-securises.fr</urlProfilAcheteur>
 	</autoriteConcedante>
 	<nature>Concession de travaux</nature>
 	<objet>Construction et exploitation d'un viaduc</objet>

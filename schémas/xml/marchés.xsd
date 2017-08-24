@@ -22,6 +22,7 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
+							<xs:element name="urlProfilAcheteur" type="xs:anyURI"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
