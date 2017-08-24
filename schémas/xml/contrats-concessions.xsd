@@ -191,7 +191,7 @@
 				</xs:element>
 				<xs:element name="recensement">
 				</xs:element>
-				<xs:element name="candidats-non-retenus">
+				<xs:element name="candidatsNonRetenus">
 				</xs:element>
 			</xs:all>
 		</xs:complexType>

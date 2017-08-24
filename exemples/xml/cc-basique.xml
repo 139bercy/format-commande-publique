@@ -32,7 +32,7 @@
 	<recensement>
 		<!-- bloc des données du recensement -->
 	</recensement>
-	<candidats-non-retenus>
+	<candidatsNonRetenus>
 		<!-- liste des candidats non retenus -->
-	</candidats-non-retenus>
+	</candidatsNonRetenus>
 </contrat-concession>
