@@ -188,6 +188,10 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
+				<xs:element name="recensement">
+				</xs:element>
+				<xs:element name="candidats-non-retenus">
+				</xs:element>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>

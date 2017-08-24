@@ -58,4 +58,10 @@
 			<valeurGlobale>33890000</valeurGlobale>
 		</modification>
 	</modifications>
+	<recensement>
+		<!-- bloc des données du recensement -->
+	</recensement>
+	<candidats-non-retenus>
+		<!-- liste des candidats non retenus -->
+	</candidats-non-retenus>
 </contrat-concession>
