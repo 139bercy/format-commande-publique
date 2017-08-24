@@ -33,47 +33,45 @@
 		</titulaire>
 	</titulaires>
 	<modifications>
-		<modifications>
-			<modification>
-				<objetModification>Changement de titulaire : remplacement d'Hellman par Amandier.</objetModification>
-				<datePublicationDonneesModification>2008-09-13</datePublicationDonneesModification>
-				<dateSignatureModification>2008-07-20</dateSignatureModification>
-				<titulaires>
-					<titulaire>
-						<typeIdentifiant>SIRET</typeIdentifiant>
-						<id>81223113200026</id>
-						<denominationSociale>Garami SARL</denominationSociale>
-					</titulaire>
-					<titulaire>
-						<typeIdentifiant>SIRET</typeIdentifiant>
-						<id>87127639200012</id>
-						<denominationSociale>Amandier SA</denominationSociale>
-					</titulaire>
-				</titulaires>
-			</modification>
-			<modification>
-				<objetModification>Changement de durée : allongement du marché.</objetModification>
-				<datePublicationDonneesModification>2008-11-17</datePublicationDonneesModification>
-				<dateSignatureModification>2008-11-02</dateSignatureModification>
-				<dureeMois>30</dureeMois>
-			</modification>
-			<modification>
-				<objetModification>Changement de titulaire : remplacement d'Amandier par Jullié.</objetModification>
-				<datePublicationDonneesModification>2009-06-13</datePublicationDonneesModification>
-				<dateSignatureModification>2008-05-22</dateSignatureModification>
-				<titulaires>
-					<titulaire>
-						<typeIdentifiant>SIRET</typeIdentifiant>
-						<id>81223113200026</id>
-						<denominationSociale>Garami SARL</denominationSociale>
-					</titulaire>
-					<titulaire>
-						<typeIdentifiant>SIRET</typeIdentifiant>
-						<id>87845484200015</id>
-						<denominationSociale>Jullié SA</denominationSociale>
-					</titulaire>
-				</titulaires>
-			</modification>
-		</modifications>
-  </modifications>
+		<modification>
+			<objetModification>Changement de titulaire : remplacement d'Hellman par Amandier.</objetModification>
+			<datePublicationDonneesModification>2008-09-13</datePublicationDonneesModification>
+			<dateSignatureModification>2008-07-20</dateSignatureModification>
+			<titulaires>
+				<titulaire>
+					<typeIdentifiant>SIRET</typeIdentifiant>
+					<id>81223113200026</id>
+					<denominationSociale>Garami SARL</denominationSociale>
+				</titulaire>
+				<titulaire>
+					<typeIdentifiant>SIRET</typeIdentifiant>
+					<id>87127639200012</id>
+					<denominationSociale>Amandier SA</denominationSociale>
+				</titulaire>
+			</titulaires>
+		</modification>
+		<modification>
+			<objetModification>Changement de durée : allongement du marché.</objetModification>
+			<datePublicationDonneesModification>2008-11-17</datePublicationDonneesModification>
+			<dateSignatureModification>2008-11-02</dateSignatureModification>
+			<dureeMois>30</dureeMois>
+		</modification>
+		<modification>
+			<objetModification>Changement de titulaire : remplacement d'Amandier par Jullié.</objetModification>
+			<datePublicationDonneesModification>2009-06-13</datePublicationDonneesModification>
+			<dateSignatureModification>2008-05-22</dateSignatureModification>
+			<titulaires>
+				<titulaire>
+					<typeIdentifiant>SIRET</typeIdentifiant>
+					<id>81223113200026</id>
+					<denominationSociale>Garami SARL</denominationSociale>
+				</titulaire>
+				<titulaire>
+					<typeIdentifiant>SIRET</typeIdentifiant>
+					<id>87845484200015</id>
+					<denominationSociale>Jullié SA</denominationSociale>
+				</titulaire>
+			</titulaires>
+		</modification>
+	</modifications>
 </marche>
