@@ -34,10 +34,4 @@
 		</titulaire>
 	</titulaires>
 	<modifications/>
-	<recensement>
-		<!-- bloc des données du recensement -->
-	</recensement>
-	<candidatsNonRetenus>
-		<!-- liste des candidats non retenus -->
-	</candidatsNonRetenus>
 </marche>
