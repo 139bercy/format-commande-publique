@@ -80,7 +80,7 @@
 				<xs:element name="datePublicationDonnees" type="xs:date"/>
 				<xs:element name="dateDebutExecution" type="xs:date"/>
 				<xs:element name="valeurGlobale" type="xs:decimal"/>
-				<xs:element name="montantAvantagesFinanciers">
+				<xs:element name="montantSubventionPublique">
 					<xs:simpleType>
 						<xs:restriction base="xs:decimal">
 							<xs:minInclusive value="0"/>

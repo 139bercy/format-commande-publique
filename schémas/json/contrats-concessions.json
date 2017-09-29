@@ -1,5 +1,5 @@
 {
-  "id": "uri:data.gouv.fr:format:contrats-concessions",
+  "id": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/contrats-concessions.json#",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Format réglementaire de publication des données essentielles des contrats de concession français",
   "description": "",
@@ -109,7 +109,7 @@
       "description": "",
       "type": "number"
     },
-    "montantAvantagesFinanciers": {
+    "montantSubventionPublique": {
       "title": "Montant de la subvention publique ou de tout autre avantage financier",
       "description": "Si aucune avantage financier n'est octroyée, indiquer 0.",
       "type": "number",
@@ -163,7 +163,7 @@
     "datePublicationDonnees",
     "dateDebutExecution",
     "valeurGlobale",
-    "montantAvantagesFinanciers",
+    "montantSubventionPublique",
     "donneesExecution",
     "concessionnaires",
     "modifications"
