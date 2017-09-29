@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.0.1
+> v1.0.2
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -26,6 +26,12 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Notes de version
 
+**1.0.2** (29 septembre 2017)
+
+- Correction : le champ `montantSubventionPublique` avait été appelé `montantAvantagesFinanciers`
+- Correction : les `ìd` des schémas JSON utilisaient des URN, au lieu d'URI
+- Correction : la version 2017_1 des référentiels n'était en fait pas la dernière. Se référer au [texte en ligne](https://www.legifrance.gouv.fr/affichTexte.do?$)
+
 **1.0.1** (18 juillet 2017)
 
 - Correction : le champ `dateSignatureModification` avait été oublié dans les schémas JSON et XML, et dans les exemples
@@ -33,7 +39,7 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 - Correction : la clé `description` de l'objet `id` était en double dans le schéma JSON des marchés défense et sécurité
 - Suppression de la balise \<\_type> dans les schémas et exemples XML 
 - Mise à jour des liens dans le README
-
+_
 **1.0.0** (2 mai 2017)
 
 - Ajout du concept de "paquet" via l'array `marches` dans le format JSON pour publier plusieurs marchés, de différent types, dans un même fichier JSON
