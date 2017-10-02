@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../schémas/xml/contrats-concessions.xsd">
+<contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/contrats-concessions.xsd">
 	<id>200103452112</id>
 	<autoriteConcedante>
 		<siret>21350238800019</siret>
