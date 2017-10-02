@@ -44,7 +44,7 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
-				<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+				
 			</xs:all>
 		</xs:complexType>
 	</xs:element>

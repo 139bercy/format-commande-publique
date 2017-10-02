@@ -22,7 +22,7 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-							<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+							
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
@@ -65,7 +65,7 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-							<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+							
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
@@ -78,6 +78,7 @@
 				</xs:element>
 				<xs:element name="dateSignature" type="xs:date"/>
 				<xs:element name="datePublicationDonnees" type="xs:date"/>
+				<xs:element name="dateTransmissionDonneesEtalab" type="xs:date"/>
 				<xs:element name="dateDebutExecution" type="xs:date"/>
 				<xs:element name="valeurGlobale" type="xs:decimal"/>
 				<xs:element name="montantSubventionPublique">
@@ -115,14 +116,14 @@
 																		</xs:restriction>
 																	</xs:simpleType>
 																</xs:element>
-																<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+																
 															</xs:all>
 														</xs:complexType>
 													</xs:element>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+										
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -151,7 +152,7 @@
 										</xs:element>
 										<xs:element name="id" type="xs:string"/>
 										<xs:element name="denominationSociale" type="xs:string"/>
-										<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+										
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -181,14 +182,14 @@
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
-										<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+										
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+				
 			</xs:all>
 		</xs:complexType>
 	</xs:element>

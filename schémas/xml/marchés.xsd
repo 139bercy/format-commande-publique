@@ -22,7 +22,6 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-							<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -81,7 +80,6 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-							<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
@@ -94,6 +92,7 @@
 				</xs:element>
 				<xs:element name="dateNotification" type="xs:date"/>
 				<xs:element name="datePublicationDonnees" type="xs:date"/>
+				<xs:element name="dateTransmissionDonneesEtalab" type="xs:date"/>
 				<xs:element name="montant">
 					<xs:simpleType>
 						<xs:restriction base="xs:decimal">
@@ -132,7 +131,6 @@
 										</xs:element>
 										<xs:element name="id" type="xs:string"/>
 										<xs:element name="denominationSociale" type="xs:string"/>
-										<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -178,21 +176,18 @@
 																</xs:element>
 																<xs:element name="id" type="xs:string"/>
 																<xs:element name="denominationSociale" type="xs:string"/>
-																<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
 															</xs:all>
 														</xs:complexType>
 													</xs:element>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:all>
 		</xs:complexType>
 	</xs:element>

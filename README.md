@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.0.2
+> v1.1.0
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -25,6 +25,11 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.1.0** (2 octobre 2017)
+
+- Ajout du type de document ["paquet"](https://github.com/etalab/format-commande-publique/tree/master/exemples/xml) via l'élément `marches` dans le format XML pour publier plusieurs marchés, de différent types, dans un même fichier XML
+- Exemples : remplacement de l'URL des schémas pour une URL absolue, et non relative
 
 **1.0.2** (29 septembre 2017)
 

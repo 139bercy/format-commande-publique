@@ -98,6 +98,12 @@
       "type": "string",
       "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
     },
+    "dateTransmissionDonneesEtalab": {
+      "title": "Date de la transmission des données à la mission Etalab",
+      "description": "Date à laquelle les données essentielles du contrat de concession ont été transmises par la DGFIP à la mission Etalab, au format AAAA-MM-JJ.",
+      "type": "string",
+      "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+    },
     "dateDebutExecution": {
       "title": "Date du début de l'exécution du contrat de concession",
       "description": "Date à laquelle a commencé l'exécution du contrat de concession, au format AAAA-MM-JJ.",
@@ -161,6 +167,7 @@
     "dureeMois",
     "dateSignature",
     "datePublicationDonnees",
+    "dateTransmissionDonneesEtalab",
     "dateDebutExecution",
     "valeurGlobale",
     "montantSubventionPublique",

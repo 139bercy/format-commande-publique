@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+	<xs:include schemaLocation="./march%C3%A9s.xsd"></xs:include>
+	<xs:include schemaLocation="./contrats-concessions.xsd"></xs:include>
+	<xs:include schemaLocation="./march%C3%A9s-d%C3%A9fense-s%C3%A9curit%C3%A9.xsd"></xs:include>
+	<xs:element name="marches">
+		<xs:complexType>
+			<xs:all minOccurs="0">
+				<xs:element ref="marche" minOccurs="0"></xs:element>
+				<xs:element ref="contrat-concession"  minOccurs="0"></xs:element>
+				<xs:element ref="marche-defense-securite" minOccurs="0"></xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
