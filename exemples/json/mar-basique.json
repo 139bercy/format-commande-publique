@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schémas/json/marchés.json",
+  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/marchés.json",
   "id": "2010-3452112",
   "acheteur": {
     "id": "21350238800019",
