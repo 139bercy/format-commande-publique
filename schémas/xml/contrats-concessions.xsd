@@ -55,17 +55,17 @@
 								<xs:simpleType>
 									<xs:restriction base="xs:string">
 										<xs:enumeration value="Code postal"/>
-										<xs:enumeration value="Code INSEE commune"/>
-										<xs:enumeration value="Code INSEE arrondissement"/>
-										<xs:enumeration value="Code INSEE canton"/>
-										<xs:enumeration value="Code INSEE département"/>
-										<xs:enumeration value="Code INSEE région"/>
-										<xs:enumeration value="Code INSEE pays"/>
+										<xs:enumeration value="Code commune"/>
+										<xs:enumeration value="Code arrondissement"/>
+										<xs:enumeration value="Code canton"/>
+										<xs:enumeration value="Code département"/>
+										<xs:enumeration value="Code région"/>
+										<xs:enumeration value="Code pays"/>
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-							
+
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
@@ -94,7 +94,7 @@
 							<xs:element name="donneesAnnuelles" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:all>
-										<xs:element name="datePublicationDonneesExecution" type="xs:date"/>
+										<xs:element name="datePublicationDonneesExecution" type="xs:date" minOccurs="0"/>
 										<xs:element name="depensesInvestissement">
 											<xs:simpleType>
 												<xs:restriction base="xs:decimal">
@@ -116,14 +116,14 @@
 																		</xs:restriction>
 																	</xs:simpleType>
 																</xs:element>
-																
+
 															</xs:all>
 														</xs:complexType>
 													</xs:element>
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-										
+
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -152,7 +152,7 @@
 										</xs:element>
 										<xs:element name="id" type="xs:string"/>
 										<xs:element name="denominationSociale" type="xs:string"/>
-										
+
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -182,7 +182,7 @@
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
-										
+
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
