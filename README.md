@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.1.0
+> v1.1.1
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -25,6 +25,10 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.1.1** (1er février 2018)
+
+- Résolution d'un bug dans le schéma XML des paquets
 
 **1.1.0** (2 octobre 2017)
 
