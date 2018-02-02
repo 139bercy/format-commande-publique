@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/marchés-défense-sécurité.json",
+  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/json/marchés-défense-sécurité.json",
   "id": "2014-79886",
   "identificationAcheteur": "État",
   "nature": "Marché de partenariat",

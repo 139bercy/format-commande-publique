@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/paquet.json",
+  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/json/paquet.json",
   "marches" : [
     {
       "id": "2010-3452112",

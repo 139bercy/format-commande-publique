@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/contrats-concessions.json",
+  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/json/contrats-concessions.json",
   "id": "200103452112",
   "autoriteConcedante": {
     "siret": "21350238800019",
