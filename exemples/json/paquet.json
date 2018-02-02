@@ -1,5 +1,5 @@
 {
-  "$schema": "../../schémas/json/paquet.json",
+  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/paquet.json",
   "marches" : [
     {
       "id": "2010-3452112",
@@ -63,7 +63,7 @@
       "datePublicationDonnees": "2001-02-21",
       "dateDebutExecution": "2001-02-21",
       "valeurGlobale": 27860000,
-      "montantAvantagesFinanciers": 2987000,
+      "montantSubventionPublique": 2987000,
       "donneesExecution": [],
       "concessionnaires": [
         {

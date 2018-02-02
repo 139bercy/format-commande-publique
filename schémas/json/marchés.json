@@ -1,5 +1,5 @@
 {
-  "id": "uri:data.gouv.fr:format:marchés-publics",
+  "id": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/march%C3%A9s.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Format réglementaire de publication des données essentielles des marchés publics français",
   "description": "",
