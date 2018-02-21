@@ -2,17 +2,18 @@
 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/paquet.xsd">
     <contrat-concession>
-        <id>200103452112</id>
+        <id>20010345211200</id>
         <autoriteConcedante>
             <siret>21350238800019</siret>
             <nom>Ville de Millau</nom>
+            <urlProfilAcheteur>http://marches-publics.net</urlProfilAcheteur>
         </autoriteConcedante>
         <nature>Concession de travaux</nature>
         <objet>Construction et exploitation d'un viaduc</objet>
         <procedure>Procédure négociée restreinte</procedure>
         <lieuExecution>
             <code>12145</code>
-            <typeCode>Code INSEE commune</typeCode>
+            <typeCode>Code commune</typeCode>
             <nom>Millau</nom>
         </lieuExecution>
         <dureeMois>360</dureeMois>
@@ -34,17 +35,18 @@
     </contrat-concession>
     
     <contrat-concession>
-        <id>200103452125</id>
+        <id>20010345212500</id>
         <autoriteConcedante>
             <siret>21350238800019</siret>
             <nom>Ville de Millau</nom>
+            <urlProfilAcheteur>http://marches-publics.net</urlProfilAcheteur>
         </autoriteConcedante>
         <nature>Concession de travaux</nature>
         <objet>Construction et exploitation d'un viaduc</objet>
         <procedure>Procédure négociée restreinte</procedure>
         <lieuExecution>
             <code>12145</code>
-            <typeCode>Code INSEE commune</typeCode>
+            <typeCode>Code commune</typeCode>
             <nom>Millau</nom>
         </lieuExecution>
         <dureeMois>360</dureeMois>
@@ -66,10 +68,11 @@
     </contrat-concession>
     
     <marche>
-        <id>2010-3452112</id>
+        <id>2010345211200</id>
         <acheteur>
             <id>21350238800019</id>
             <nom>Ville de Rennes</nom>
+            <urlProfilAcheteur>http://rennes.bzh/marches</urlProfilAcheteur>
         </acheteur>
         <nature>Accord-cadre</nature>
         <objet>Entretien des jardins municipaux</objet>
@@ -102,10 +105,11 @@
     </marche>
     
     <marche>
-        <id>2010-3452135</id>
+        <id>2010-345213500</id>
         <acheteur>
             <id>21350238800019</id>
             <nom>Ville de Rennes</nom>
+            <urlProfilAcheteur>http://rennes.bzh/marches</urlProfilAcheteur>
         </acheteur>
         <nature>Marché</nature>
         <objet>Entretien des jardins municipaux</objet>
@@ -138,7 +142,7 @@
     </marche>
     
     <marche-defense-securite>
-        <id>2014-79886</id>
+        <id>20147988600</id>
         <identificationAcheteur>État</identificationAcheteur>
         <nature>Marché de partenariat</nature>
         <objet>Travaux</objet>
@@ -146,7 +150,7 @@
     </marche-defense-securite>
     
     <marche-defense-securite>
-        <id>2014-79877</id>
+        <id>20147987700</id>
         <identificationAcheteur>État</identificationAcheteur>
         <nature>Marché de partenariat</nature>
         <objet>Travaux</objet>

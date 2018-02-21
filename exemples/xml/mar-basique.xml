@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/marchés.xsd">
-	<id>2010-3452112</id>
+<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/march%C3%A9s.xsd">
+	<id>2010345211200</id>
 	<acheteur>
 		<id>21350238800019</id>
 		<nom>Ville de Rennes</nom>

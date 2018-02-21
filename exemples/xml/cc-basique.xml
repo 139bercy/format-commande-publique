@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/contrats-concessions.xsd">
-	<id>200103452112</id>
+	<id>20010345211200</id>
 	<autoriteConcedante>
 		<siret>21350238800019</siret>
 		<nom>Ville de Millau</nom>
@@ -11,7 +11,7 @@
 	<procedure>Procédure négociée restreinte</procedure>
 	<lieuExecution>
 		<code>12145</code>
-		<typeCode>Code INSEE commune</typeCode>
+		<typeCode>Code commune</typeCode>
 		<nom>Millau</nom>
 	</lieuExecution>
 	<dureeMois>360</dureeMois>
