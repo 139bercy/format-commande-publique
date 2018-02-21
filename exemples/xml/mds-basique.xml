@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<marche-defense-securite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/marchés-défense-sécurité.xsd">
+<marche-defense-securite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/march%C3%A9s-d%C3%A9fense-s%C3%A9curit%C3%A9.xsd">
 	<id>2014-79886</id>
 	<identificationAcheteur>État</identificationAcheteur>
 	<nature>Marché de partenariat</nature>
