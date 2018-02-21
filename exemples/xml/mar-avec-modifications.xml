@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/march%C3%A9s.xsd">
-	<id>2010-3452112</id>
+	<id>2010345211203</id>
 	<acheteur>
 		<id>21350238800019</id>
 		<nom>Ville de Rennes</nom>
@@ -17,7 +17,6 @@
 	<dureeMois>24</dureeMois>
 	<dateNotification>2007-08-13</dateNotification>
 	<datePublicationDonnees>2007-08-19</datePublicationDonnees>
-	<dateTransmissionDonneesEtalab>2007-08-07</dateTransmissionDonneesEtalab>
 	<montant>127000</montant>
 	<formePrix>Ferme et actualisable</formePrix>
 	<titulaires>
