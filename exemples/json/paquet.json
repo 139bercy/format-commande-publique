@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/paquet.json",
   "marches" : [
     {
-      "id": "2010-3452112",
+      "id": "2010345211200",
       "acheteur": {
         "id": "21350238800019",
         "nom": "Ville de Rennes"
@@ -37,7 +37,7 @@
       "modifications": []
     },
     {
-      "id": "2014-79886",
+      "id": "20147988600",
       "identificationAcheteur": "État",
       "nature": "Marché de partenariat",
       "objet": "Travaux",

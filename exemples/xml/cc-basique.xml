@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/contrats-concessions.xsd">
-	<id>200103452112</id>
+	<id>20010345211200</id>
 	<autoriteConcedante>
 		<siret>21350238800019</siret>
 		<nom>Ville de Millau</nom>
@@ -16,7 +16,6 @@
 	<dureeMois>360</dureeMois>
 	<dateSignature>2001-02-21</dateSignature>
 	<datePublicationDonnees>2001-02-21</datePublicationDonnees>
-	<dateTransmissionDonneesEtalab>2007-08-07</dateTransmissionDonneesEtalab>
 	<dateDebutExecution>2001-02-21</dateDebutExecution>
 	<valeurGlobale>27860000</valeurGlobale>
 	<montantSubventionPublique>2987000</montantSubventionPublique>

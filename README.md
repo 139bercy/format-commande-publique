@@ -28,9 +28,10 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Notes de version
 
-**1.1.2** (20 février 2018)
+**1.1.2** (21 février 2018)
 
 - Allongement du champ identifiant de marché afin d'accueillir le numéro d'ordre de modification prévu dans l'article 1 de l'arrêté ([voir #22](/etalab/format-commande-publique/issues/22))
+- Mise à jour et résolution de problèmes dans les fichiers exemples
 
 **1.1.1** (1er février 2018)
 
