@@ -65,12 +65,12 @@
 								<xs:simpleType>
 									<xs:restriction base="xs:string">
 										<xs:enumeration value="Code postal"/>
-										<xs:enumeration value="Code INSEE commune"/>
-										<xs:enumeration value="Code INSEE arrondissement"/>
-										<xs:enumeration value="Code INSEE canton"/>
-										<xs:enumeration value="Code INSEE département"/>
-										<xs:enumeration value="Code INSEE région"/>
-										<xs:enumeration value="Code INSEE pays"/>
+										<xs:enumeration value="Code commune"/>
+										<xs:enumeration value="Code arrondissement"/>
+										<xs:enumeration value="Code canton"/>
+										<xs:enumeration value="Code département"/>
+										<xs:enumeration value="Code région"/>
+										<xs:enumeration value="Code pays"/>
 									</xs:restriction>
 								</xs:simpleType>
 							</xs:element>
