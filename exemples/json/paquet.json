@@ -55,7 +55,7 @@
       "procedure": "Procédure négociée restreinte",
       "lieuExecution": {
         "code": "12145",
-        "typeCode": "Code INSEE commune",
+        "typeCode": "Code commune",
         "nom": "Millau"
       },
       "dureeMois": 360,
