@@ -61,12 +61,12 @@
           "type": "string",
           "enum": [
             "Code postal",
-            "Code INSEE commune",
-            "Code INSEE arrondissement",
-            "Code INSEE canton",
-            "Code INSEE département",
-            "Code INSEE région",
-            "Code INSEE pays"
+            "Code commune",
+            "Code arrondissement",
+            "Code canton",
+            "Code département",
+            "Code région",
+            "Code pays"
           ]
         },
         "nom": {

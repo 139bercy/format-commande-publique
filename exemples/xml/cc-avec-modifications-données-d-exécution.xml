@@ -10,7 +10,7 @@
 	<procedure>Procédure négociée restreinte</procedure>
 	<lieuExecution>
 		<code>12145</code>
-		<typeCode>Code INSEE commune</typeCode>
+		<typeCode>Code commune</typeCode>
 		<nom>Millau</nom>
 	</lieuExecution>
 	<dureeMois>360</dureeMois>
