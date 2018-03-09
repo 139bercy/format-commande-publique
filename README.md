@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.1.2
+> v1.1.3
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -25,6 +25,11 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+
+**1.1.3** (9 mars 2018)
+
+- Harmonisation des libellés des codes de lieu
 
 **1.1.2** (21 février 2018)
 
