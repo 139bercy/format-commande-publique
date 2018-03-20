@@ -9,7 +9,7 @@
 							- l'année de notification (4 caractères),
 							- le numéro d'ordre interne propre à l'acheteur public (1 à 10 caractères alphanumériques)
 							- le numéro d'ordre de la modification (deux caractères, 00 si pas de modification, 01 si une modification, etc.)
-							
+
 							Exemples :
 							- 201872300 (2018 723 00)
 							- 2019000111202 (2019 00001112 02)</xs:documentation>
@@ -24,7 +24,7 @@
 				<xs:element name="autoriteConcedante">
 					<xs:complexType>
 						<xs:all>
-							<xs:element name="siret">
+							<xs:element name="id">
 								<xs:simpleType>
 									<xs:restriction base="xs:string">
 										<xs:pattern value="([0-9]{14,14})"/>
