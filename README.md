@@ -26,6 +26,10 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Notes de version
 
+**1.1.4** (20 mars 2018)
+
+- Harmonisation des noms de champs pour les identifiants d'acheteur/concessionnaire (remplacement de "siret" par "id" dans les schémas des concessions)
+
 
 **1.1.3** (9 mars 2018)
 
