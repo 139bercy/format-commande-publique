@@ -47,7 +47,7 @@
       "id": "200103452112",
       "_type": "Contrat de concession",
       "autoriteConcedante": {
-        "siret": "21350238800019",
+        "id": "21350238800019",
         "nom": "Ville de Millau"
       },
       "nature": "Concession de travaux",

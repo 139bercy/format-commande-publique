@@ -171,14 +171,14 @@
   "definitions": {
     "AutoriteConcedante": {
       "required": [
-        "siret",
+        "id",
         "nom"
       ],
       "title": "Autorité concédante",
       "description": "L'autorité concédante qui signe le contrat de concession.",
       "type": "object",
       "properties": {
-        "siret": {
+        "id": {
           "title": "Identifiant SIRET de l'autorité concédante",
           "description": "http://xml.insee.fr/schema/siret.html#SIRET_stype",
           "type": "string",

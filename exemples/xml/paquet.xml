@@ -4,7 +4,7 @@
     <contrat-concession>
         <id>20010345211200</id>
         <autoriteConcedante>
-            <siret>21350238800019</siret>
+            <id>21350238800019</id>
             <nom>Ville de Millau</nom>
         </autoriteConcedante>
         <nature>Concession de travaux</nature>
@@ -35,7 +35,7 @@
     <contrat-concession>
         <id>20010345212500</id>
         <autoriteConcedante>
-            <siret>21350238800019</siret>
+            <id>21350238800019</id>
             <nom>Ville de Millau</nom>
         </autoriteConcedante>
         <nature>Concession de travaux</nature>

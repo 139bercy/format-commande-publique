@@ -2,7 +2,7 @@
 <contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/contrats-concessions.xsd">
 	<id>20010345211200</id>
 	<autoriteConcedante>
-		<siret>21350238800019</siret>
+		<id>21350238800019</id>
 		<nom>Ville de Millau</nom>
 	</autoriteConcedante>
 	<nature>Concession de travaux</nature>

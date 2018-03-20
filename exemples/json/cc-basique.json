@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/contrats-concessions.json",
   "id": "20010345211200",
   "autoriteConcedante": {
-    "siret": "21350238800019",
+    "id": "21350238800019",
     "nom": "Ville de Millau"
   },
   "nature": "Concession de travaux",
