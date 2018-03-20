@@ -1,6 +1,7 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.1.2
+> Version destinée à la transmission des données entre la DGFiP et la mission Etalab
+> v1.1.3
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -25,6 +26,10 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.1.3** (20 mars 2018)
+
+- Harmonisation des noms de champs pour les identifiants d'acheteur/concessionnaire (remplacement de "siret" par "id" dans les schémas des concessions)
 
 **1.1.2** (20 février 2018)
 
