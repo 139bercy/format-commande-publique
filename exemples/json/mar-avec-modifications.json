@@ -36,20 +36,18 @@
       "objetModification": "Changement de titulaire : remplacement d'Hellman par Amandier.",
       "dateSignatureModification": "2008-07-20",
       "datePublicationDonneesModification": "2008-09-13",
-      "titulaires": {
-        "titulaire": [
-          {
-            "typeIdentifiant": "SIRET",
-            "id": "81223113200026",
-            "denominationSociale": "Garami SARL"
-          },
-          {
-            "typeIdentifiant": "SIRET",
-            "id": "87127639200012",
-            "denominationSociale": "Amandier SA"
-          }
-        ]
-      }
+      "titulaires": [
+        {
+          "typeIdentifiant": "SIRET",
+          "id": "81223113200026",
+          "denominationSociale": "Garami SARL"
+        },
+        {
+          "typeIdentifiant": "SIRET",
+          "id": "87127639200012",
+          "denominationSociale": "Amandier SA"
+        }
+      ]
     }
   ]
 }
