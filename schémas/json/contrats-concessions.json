@@ -32,7 +32,7 @@
     "objet": {
       "title": "Objet du contrat de concession",
       "description": "Description synthétique de l'objet du contrat de concession.",
-      "maxSize": 256,
+      "maxLength": 256,
       "type": "string"
     },
     "procedure": {
@@ -54,7 +54,7 @@
           "title": "Identifiant du lieu principal d'exécution",
           "description": "Code du lieu d'exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002.",
           "type": "string",
-          "maxSize": 6
+          "maxLength": 6
         },
         "typeCode": {
           "title": "Type d'identifiant utilisé pour le lieu principal d'exécution",
@@ -250,7 +250,7 @@
           "title": "Objet de la modification",
           "description": "Exemple : \"Modification de la durée, de 24 à 36 mois.",
           "type": "string",
-          "maxSize": 256
+          "maxLength": 256
         },
         "dateSignatureModification": {
           "title": "Date de la signature de la modification",
@@ -325,7 +325,7 @@
         "intituleTarif": {
           "title": "Intitulé du tarif",
           "type": "string",
-          "maxSize": 256
+          "maxLength": 256
         },
         "tarif": {
           "title": "Tarif",
