@@ -1,8 +1,10 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.1.3
+> v1.1.5
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
+
+L'arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique définit le cadre de l'ouverture des données des marchés publics. Ainsi, au 1er octobre, les données de tous les marchés supérieurs à 25 000 euros devront être publiées en Open Data sur le profil d'acheteur.
 
 Ce dépôt est destiné à accueillir :
 
@@ -25,6 +27,12 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.1.5** (21 août 2018)
+
+- Propriété (invalide) `maxSize` remplacée par `maxLength` dans le schéma JSON des contrats de concessions ([#29](https://github.com/etalab/format-commande-publique/issues/29))
+- Suppression des sauts de ligne dans les schémas JSON afin de les rendre scrictement valides
+- Suppression des propriétés `titulaire`, résultant de la conversion initiale depuis le XML ([#26](https://github.com/etalab/format-commande-publique/issues/26) et [#28](https://github.com/etalab/format-commande-publique/issues/28))
 
 **1.1.4** (20 mars 2018)
 

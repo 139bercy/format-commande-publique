@@ -32,7 +32,7 @@
     "objet": {
       "title": "Objet du contrat de concession",
       "description": "Description synthétique de l'objet du contrat de concession.",
-      "maxSize": 256,
+      "maxLength": 256,
       "type": "string"
     },
     "procedure": {
@@ -54,7 +54,7 @@
           "title": "Identifiant du lieu principal d'exécution",
           "description": "Code du lieu d'exécution (code postal, commune, canton, arrondissement, département, région, pays). Les codes INSEE sont à privilégier aux dépens du code postal. Exemple : 2B002.",
           "type": "string",
-          "maxSize": 6
+          "maxLength": 6
         },
         "typeCode": {
           "title": "Type d'identifiant utilisé pour le lieu principal d'exécution",
@@ -194,14 +194,7 @@
     "IdentifiantMarche": {
       "title": "Identifiant de marché",
       "type": "string",
-      "description": "L'identifiant de contrat de concession est composé de trois parties:
-          - l'année de notification (4 caractères),
-          - le numéro d'ordre interne propre à l'acheteur public (1 à 10 caractères alphanumériques)
-          - le numéro d'ordre de la modification (deux caractères, 00 si pas de modification, 01 si une modification, etc.)
-
-          Exemples :
-          - 201872300 (2018 723 00)
-          - 2019000111202 (2019 00001112 02)",
+      "description": "L'identifiant de contrat de concession est composé de trois parties: l'année de notification (4 caractères), le numéro d'ordre interne propre à l'acheteur public (1 à 10 caractères alphanumériques), le numéro d'ordre de la modification (2 caractères, 00 si pas de modification, 01 si une modification, etc.). Exemples : 201872300 (2018 723 00), 2019000111202 (2019 00001112 02).",
       "minLength": 7,
       "maxLength": 16
     },
@@ -250,7 +243,7 @@
           "title": "Objet de la modification",
           "description": "Exemple : \"Modification de la durée, de 24 à 36 mois.",
           "type": "string",
-          "maxSize": 256
+          "maxLength": 256
         },
         "dateSignatureModification": {
           "title": "Date de la signature de la modification",
@@ -325,7 +318,7 @@
         "intituleTarif": {
           "title": "Intitulé du tarif",
           "type": "string",
-          "maxSize": 256
+          "maxLength": 256
         },
         "tarif": {
           "title": "Tarif",
