@@ -28,9 +28,11 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Notes de version
 
-**1.1.5** (20 août 2018)
+**1.1.5** (21 août 2018)
 
 - Propriété (invalide) `maxSize` remplacée par `maxLength` dans le schéma JSON des contrats de concessions ([#29](https://github.com/etalab/format-commande-publique/issues/29))
+- Suppression des sauts de ligne dans les schémas JSON afin de les rendre scrictement valides
+- Suppression des propriétés `titulaire`, résultant de la conversion initiale depuis le XML ([#26](https://github.com/etalab/format-commande-publique/issues/26) et [#28](https://github.com/etalab/format-commande-publique/issues/28))
 
 **1.1.4** (20 mars 2018)
 
