@@ -12,6 +12,20 @@ Ce dépôt est destiné à accueillir :
 - les référentiels qui définissent ces schémas
 - des données exemples
 
+## Test des schémas et des exemples
+
+Un script de test, `test.sh`, est proposé pour tester...
+
+- la validité des schémas XML par rapport à la spécification XML Schema 1.1
+- la validité des exemples XML et JSON par rapport aux schémas XML et JSON correspondants
+
+Pré-requis pour exécuter la suite de tests :
+
+- bash
+- libxml2-utils (pour `xmllint`)
+- [ajv](https://www.npmjs.com/package/ajv-cli) (vous devez donc également installer [NodeJS et npm](https://nodejs.org/fr/))
+- Java JDK (pour exécuter `xsd11-validator.jar`)
+
 ## Vos commentaires
 
 Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https://forum.etalab.gouv.fr/t/schemas-de-validation-des-donnees-essentielles-des-marches-publics/3141).
@@ -27,6 +41,10 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.2.0**
+
+- Suppression des schémas et des références aux marchés défense et sécurité (voir article 2 de l'[arrêté du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id))
 
 **1.1.5** (21 août 2018)
 
