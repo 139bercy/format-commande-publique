@@ -4,8 +4,6 @@
 
 base=`pwd`
 
-
-
 function testExemplesJson {
     prefixe=$1
     schema=$2
@@ -67,7 +65,6 @@ then
 
     testExemplesJson "mar" "marchés.json"
     testExemplesJson "cc" "contrats-concessions.json"
-    testExemplesJson "mds" "marchés-défense-sécurité.json"
 else
     echo "Pas de schémas JSON à valider."
 fi
@@ -88,7 +85,6 @@ then
 
     testExemplesXml "mar" "marchés.xsd"
     testExemplesXml "cc" "contrats-concessions.xsd"
-    testExemplesXml "mds" "marchés-défense-sécurité.xsd"
 else
     echo "Pas de schémas XML à valider."
 fi
