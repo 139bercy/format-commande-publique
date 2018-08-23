@@ -42,6 +42,10 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Notes de version
 
+**1.2.0**
+
+- Suppression des schémas et des références aux marchés défense et sécurité (voir article 2 de l'[arrêté du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id))
+
 **1.1.5** (21 août 2018)
 
 - Propriété (invalide) `maxSize` remplacée par `maxLength` dans le schéma JSON des contrats de concessions ([#29](https://github.com/etalab/format-commande-publique/issues/29))
