@@ -58,27 +58,37 @@ function testExemplesXml {
     done
 }
 
-echo "Test des exemples JSON"
-echo ""
+if [ -d $base/schémas/json ]
+then
+    echo "Test des exemples JSON"
+    echo ""
 
-cd $base/exemples/json
+    cd $base/exemples/json
 
-testExemplesJson "mar" "marchés.json"
-testExemplesJson "cc" "contrats-concessions.json"
-testExemplesJson "mds" "marchés-défense-sécurité.json"
+    testExemplesJson "mar" "marchés.json"
+    testExemplesJson "cc" "contrats-concessions.json"
+    testExemplesJson "mds" "marchés-défense-sécurité.json"
+else
+    echo "Pas de schémas JSON à valider."
+fi
 
-echo "Validation des schémas XML"
-echo ""
+if [ -d $base/schémas/xml ]
+then
+    echo "Validation des schémas XML"
+    echo ""
 
-cd $base/schémas/xml
+    cd $base/schémas/xml
 
-testSchémasXml
+    testSchémasXml
 
-echo "Test des exemples XML"
-echo ""
+    echo "Test des exemples XML"
+    echo ""
 
-cd $base/exemples/xml
+    cd $base/exemples/xml
 
-testExemplesXml "mar" "marchés.xsd"
-testExemplesXml "cc" "contrats-concessions.xsd"
-testExemplesXml "mds" "marchés-défense-sécurité.xsd"
+    testExemplesXml "mar" "marchés.xsd"
+    testExemplesXml "cc" "contrats-concessions.xsd"
+    testExemplesXml "mds" "marchés-défense-sécurité.xsd"
+else
+    echo "Pas de schémas XML à valider."
+fi
