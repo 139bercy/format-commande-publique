@@ -13,7 +13,6 @@
       "items": {
         "oneOf": [
           { "$ref": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/march%C3%A9s.json#" },
-          { "$ref": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/march%C3%A9s-d%C3%A9fense-s%C3%A9curit%C3%A9.json#" },
           { "$ref": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/contrats-concessions.json#" }
         ]
       },

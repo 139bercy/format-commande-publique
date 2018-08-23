@@ -8,7 +8,6 @@
 			<xs:sequence maxOccurs="unbounded">
 				<xs:element ref="marche" minOccurs="0"></xs:element>
 				<xs:element ref="contrat-concession"  minOccurs="0"></xs:element>
-				<xs:element ref="marche-defense-securite" minOccurs="0"></xs:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
