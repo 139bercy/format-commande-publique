@@ -71,12 +71,18 @@ fi
 
 if [ -d $base/schémas/xml ]
 then
-    echo "Validation des schémas XML"
-    echo ""
+    if [ $1 == "-noSchema" ]
+    then
+        echo "Pas de validation des schémas XML (--noSchema)"
+        echo ""
+    else
+        echo "Validation des schémas XML"
+        echo ""
 
-    cd $base/schémas/xml
+        cd $base/schémas/xml
 
-    testSchémasXml
+        testSchémasXml
+    fi
 
     echo "Test des exemples XML"
     echo ""
