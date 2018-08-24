@@ -272,7 +272,8 @@
       },
       "required": [
         "objetModification",
-        "datePublicationDonneesModification"
+        "datePublicationDonneesModification",
+        "dateSignatureModification"
       ]
     },
     "DonneesExecution": {
