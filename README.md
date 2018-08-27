@@ -1,13 +1,13 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
 > Version destinée à la transmission des données entre la DGFiP et la mission Etalab
-> v1.1.3
+> v1.2.0
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
 Ce dépôt est destiné à accueillir :
 
-- les schémas (JSON et XML) permettant de vérifier la validité des données publiées
+- les schémas XML permettant de vérifier la validité des données publiées
 - les référentiels qui définissent ces schémas
 - des données exemples
 
@@ -20,12 +20,19 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 ## Voir aussi
 
 - [Le site Web thématique de la Direction des Affaires Juridiques du Ministère des Finances](https://www.economie.gouv.fr/daj/ouverture-des-donnees-commande-publique)
-- [Arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000034492587&dateTexte=&categorieLien=id)
+- [Arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000034492587&dateTexte=&categorieLien=id) (modifié par [l'arrêté du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id))
 - [Arrêté du 14 avril 2017 relatif aux fonctionnalités et exigences minimales des profils d'acheteurs](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=00B73A5DA9B3A710ABD6B312CD109476.tpdila16v_3?cidTexte=JORFTEXT000034492557&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000034491769)
 - [La commande publique augmentée par la données sur forum.etalab.gouv.fr](https://forum.etalab.gouv.fr/t/la-commande-publique-augmentee-par-la-donnee/909)
 
 
 ## Notes de version
+
+**1.2.0** (27 août 2018)
+
+- Suppression des schémas et des références aux marchés défense et sécurité ([#32](https://github.com/etalab/format-commande-publique/issues/32))
+- Remplacement de `dateSignatureModification` par `dateNotificationModification` dans les schémas de marchés XML ([#34](https://github.com/etalab/format-commande-publique/issues/34))
+- Ajout d'un script de test des exemples XML et des schémas XML (`test.sh`) ([#2](https://github.com/etalab/format-commande-publique/issues/2))
+- *bug résolu* : dans le schéma XML des contrats de concession, l'objet d'une modification est maintenant limité à 256 caractères
 
 **1.1.3** (20 mars 2018)
 
