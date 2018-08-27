@@ -9,7 +9,7 @@
 							- l'année de notification (4 caractères),
 							- le numéro d'ordre interne propre à l'acheteur public (1 à 10 caractères alphanumériques)
 							- le numéro d'ordre de la modification (deux caractères, 00 si pas de modification, 01 si une modification, etc.)
-						
+
 						Exemples :
 							- 201872300 (2018 723 00)
 							- 2019000111202 (2019 00001112 02)</xs:documentation>
@@ -161,7 +161,7 @@
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
-										<xs:element name="dateSignatureModification" type="xs:date"/>
+										<xs:element name="dateNotificationModification" type="xs:date"/>
 										<xs:element name="datePublicationDonneesModification" type="xs:date" minOccurs="0"/>
 										<xs:element name="dureeMois" type="xs:integer" minOccurs="0"/>
 										<xs:element name="montant" type="xs:decimal" minOccurs="0"/>
