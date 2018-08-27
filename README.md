@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.1.5
+> v1.2.0
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -35,16 +35,20 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 ## Voir aussi
 
 - [Le site Web thématique de la Direction des Affaires Juridiques du Ministère des Finances](https://www.economie.gouv.fr/daj/ouverture-des-donnees-commande-publique)
-- [Arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000034492587&dateTexte=&categorieLien=id)
+- [Arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000034492587&dateTexte=&categorieLien=id) (modifié par [l'arrêté du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id))
 - [Arrêté du 14 avril 2017 relatif aux fonctionnalités et exigences minimales des profils d'acheteurs](https://www.legifrance.gouv.fr/affichTexte.do;jsessionid=00B73A5DA9B3A710ABD6B312CD109476.tpdila16v_3?cidTexte=JORFTEXT000034492557&dateTexte=&oldAction=rechJO&categorieLien=id&idJO=JORFCONT000034491769)
 - [La commande publique augmentée par la données sur forum.etalab.gouv.fr](https://forum.etalab.gouv.fr/t/la-commande-publique-augmentee-par-la-donnee/909)
 
 
 ## Notes de version
 
-**1.2.0**
+**1.2.0** (27 août 2018)
 
-- Suppression des schémas et des références aux marchés défense et sécurité (voir article 2 de l'[arrêté du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id))
+- Suppression des schémas et des références aux marchés défense et sécurité ([#32](https://github.com/etalab/format-commande-publique/issues/32))
+- Remplacement de `dateSignatureModification` par `dateNotificationModification` dans les schémas de marchés JSON et XML ([#34](https://github.com/etalab/format-commande-publique/issues/34))
+- Ajout d'un script de test des exemples JSON/XML et des schémas XML (`test.sh`) ([#2](https://github.com/etalab/format-commande-publique/issues/2))
+- *bug résolu* : Dans les schémas JSON, la date de signature de modification d'un contrat de concession et la date de notification d'une modification de marché sont maintenant des champs obligatoires
+- *bug résolu* : dans le schéma XML des contrats de concession, l'objet d'une modification est maintenant limité à 256 caractères
 
 **1.1.5** (21 août 2018)
 
