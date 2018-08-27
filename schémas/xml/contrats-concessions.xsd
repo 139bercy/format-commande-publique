@@ -75,7 +75,6 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
@@ -133,7 +132,6 @@
 												</xs:sequence>
 											</xs:complexType>
 										</xs:element>
-
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -162,7 +160,6 @@
 										</xs:element>
 										<xs:element name="id" type="xs:string"/>
 										<xs:element name="denominationSociale" type="xs:string"/>
-
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
@@ -192,7 +189,6 @@
 												</xs:restriction>
 											</xs:simpleType>
 										</xs:element>
-
 									</xs:all>
 								</xs:complexType>
 							</xs:element>
