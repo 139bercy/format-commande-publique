@@ -172,8 +172,13 @@
 							<xs:element name="modification" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:all>
-										<xs:element name="objetModification" type="xs:string"/>
-										<xs:element name="dateSignatureModification" type="xs:date"/>
+                                        <xs:element name="objetModification">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:maxLength value="256"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>										<xs:element name="dateSignatureModification" type="xs:date"/>
 										<xs:element name="datePublicationDonneesModification" type="xs:date" minOccurs="0"/>
 										<xs:element name="dureeMois" minOccurs="0">
 											<xs:simpleType>
