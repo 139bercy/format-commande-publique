@@ -132,20 +132,4 @@
         </titulaires>
         <modifications/>
     </marche>
-
-    <marche-defense-securite>
-        <id>20147988600</id>
-        <identificationAcheteur>État</identificationAcheteur>
-        <nature>Marché de partenariat</nature>
-        <objet>Travaux</objet>
-        <procedure>Appel d'offres ouvert</procedure>
-    </marche-defense-securite>
-
-    <marche-defense-securite>
-        <id>20147987700</id>
-        <identificationAcheteur>État</identificationAcheteur>
-        <nature>Marché de partenariat</nature>
-        <objet>Travaux</objet>
-        <procedure>Appel d'offres ouvert</procedure>
-    </marche-defense-securite>
 </marches>

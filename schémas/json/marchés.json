@@ -239,9 +239,9 @@
           "type": "string",
           "maxLength": 256
         },
-        "dateSignatureModification": {
-          "title": "Date de la signature de la modification",
-          "description": "Date à laquelle la modification du marché public a été signée par l'acheteur.",
+        "dateNotificationModification": {
+          "title": "Date de la notification de la modification",
+          "description": "Date à laquelle la modification du marché public a été notifiée par l'acheteur.",
           "type": "string",
           "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
         },
@@ -276,7 +276,8 @@
       },
       "required": [
         "objetModification",
-        "datePublicationDonneesModification"
+        "datePublicationDonneesModification",
+        "dateNotificationModification"
       ]
     }
   }

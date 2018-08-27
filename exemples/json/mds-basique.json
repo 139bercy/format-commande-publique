@@ -1,8 +1,0 @@
-{
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/marchés-défense-sécurité.json",
-  "id": "20147988600",
-  "identificationAcheteur": "État",
-  "nature": "Marché de partenariat",
-  "objet": "Travaux",
-  "procedure": "Appel d'offres ouvert"
-}
