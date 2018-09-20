@@ -85,6 +85,7 @@ then
 
     testExemplesXml "mar" "marchés.xsd"
     testExemplesXml "cc" "contrats-concessions.xsd"
+    testExemplesXml "paquet" "paquet.xsd"
 else
     echo "Pas de schémas XML à valider."
 fi
