@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/march%C3%A9s.xsd">
+    <id>2010345211200</id>
+    <uid>213502388000192010345211200</uid>
+	<acheteur>
+		<id>21350238800019</id>
+		<nom>Ville de Rennes</nom>
+	</acheteur>
+	<nature>Accord-cadre</nature>
+	<objet>Entretien des jardins municipaux</objet>
+	<codeCPV>77313000</codeCPV>
+	<procedure>Marché négocié sans publicité ni mise en concurrence préalable</procedure>
+	<lieuExecution>
+		<code>35238</code>
+		<typeCode>Code commune</typeCode>
+		<nom>Rennes</nom>
+	</lieuExecution>
+	<dureeMois>24</dureeMois>
+	<dateNotification>2007-08-13</dateNotification>
+	<datePublicationDonnees>2007-08-19</datePublicationDonnees>
+	<montant>127000</montant>
+	<formePrix>Ferme et actualisable</formePrix>
+	<titulaires>
+		<titulaire>
+			<typeIdentifiant>SIRET</typeIdentifiant>
+			<id>81223113200026</id>
+			<denominationSociale>Garami SARL</denominationSociale>
+		</titulaire>
+		<titulaire>
+			<typeIdentifiant>TVA</typeIdentifiant>
+			<id>DE814864138</id>
+			<denominationSociale>Hellman Gmbh</denominationSociale>
+		</titulaire>
+	</titulaires>
+	<modifications/>
+</marche>

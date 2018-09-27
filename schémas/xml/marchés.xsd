@@ -5,7 +5,7 @@
 			<xs:all>
 				<xs:element name="id">
 					<xs:annotation>
-						<xs:documentation>L'identifiant de contrat de concession est composé de trois parties:
+						<xs:documentation>L'identifiant de marché est composé de trois parties:
 							- l'année de notification (4 caractères),
 							- le numéro d'ordre interne propre à l'acheteur public (1 à 10 caractères alphanumériques)
 							- le numéro d'ordre de la modification (deux caractères, 00 si pas de modification, 01 si une modification, etc.)
@@ -18,6 +18,20 @@
 						<xs:restriction base="xs:string">
 							<xs:minLength value="7"/>
 							<xs:maxLength value="16"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+                <xs:element name="uid" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>L'identifiant unique de marché est composé du SIRET de l'acheteur et de l'identifiant de marché, et permet d'éviter les conflits d'identifiants entre marchés passé par des acheteurs différents.
+
+							Exemples :
+							- 23350001600040201872300 (23350001600040 201872300)
+							- 233500016000402019000111202 (23350001600040 20190000111202)</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+                            <xs:pattern value="[0-9]{14}.{7,16}"/>
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>

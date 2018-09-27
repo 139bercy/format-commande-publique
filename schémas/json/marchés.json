@@ -10,6 +10,11 @@
       "description": "Exemples : 20141234567890 ou 2016C123456",
       "$ref": "#/definitions/IdentifiantMarche"
     },
+    "uid": {
+      "title": "Identifiant de marché",
+      "description": "Exemples : 2135023880001920141234567890 ou 213502388000192016C123456",
+      "$ref": "#/definitions/IdentifiantUniqueMarche"
+    },
     "_type" : {
       "title": "Type d'objet (marché, marché de sécurité, contrat de concession)",
       "type": "string",
@@ -191,6 +196,12 @@
       "maxLength": 16,
       "minLength": 7,
       "description": "L'identifiant de marché est composé de trois parties: l'année de notification (4 caractères), le numéro d'ordre interne propre à l'acheteur public (1 à 10 caractères alphanumériques), le numéro d'ordre de la modification (2 caractères, 00 si pas de modification, 01 si une modification, etc.). Exemples : 201872300 (2018 723 00), 2019000111202 (2019 00001112 02)."
+    },
+    "IdentifiantUniqueMarche": {
+      "title": "Identifiant unique de marché",
+      "type": "string",
+      "pattern": "^[0-9]{14}.{7,16}$",
+      "description": "L'identifiant unique de marché est composé du SIRET de l'acheteur et de l'identifiant de marché, et permet d'éviter les conflits d'identifiants entre marchés passé par des acheteurs différents. Exemples : 23350001600040201872300 (23350001600040 201872300), 233500016000402019000111202 (23350001600040 20190000111202)."
     },
     "Titulaire": {
       "title": "Titulaire",
