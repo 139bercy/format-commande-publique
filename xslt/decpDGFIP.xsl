@@ -14,7 +14,7 @@
             <xsl:variable name="acheteur" select="acheteur|autoriteConcedante"/>
             <xsl:variable name="siret" select="$acheteur/id/text()"/>
             <xsl:variable name="year" select="year-from-date(current-date())"/>
-            <xsl:variable name="month" select="month-from-date(current-date())"/>
+            <xsl:variable name="month" select="format-date(current-date(),'[M01]')"/>
             <xsl:variable name="day" select="day-from-date(current-date())"/>
             <xsl:variable name="id" select="replace(id/text(),'[/\\.\?!\*\$]','_')"/>
             <xsl:result-document method="xml" href="../exemples/xml/{$siret}/{$year}/{$month}/{$day}/{$siret}_{$year}-{$month}-{$day}_{$id}.xml">
