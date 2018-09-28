@@ -35,7 +35,7 @@
         </dateNotificationModification>
     </xsl:template>
     
-    <xsl:template match="ns2:marche/id">
+    <xsl:template match="(ns2:marche|ns2:contrat-concession)/id">
         <ui><xsl:value-of select="text()"/></ui>
         <uid><xsl:value-of select="concat(../acheteur/id/text(),./text())"/></uid>
     </xsl:template>
