@@ -12,7 +12,7 @@
     
     <xsl:template match="ns2:marches">
         <xsl:for-each-group select="ns2:marche|ns2:contrat-concession" group-by="acheteur/id/text()|autoriteConcedante/id/text()">
-            <xsl:variable name="acheteur" select="acheteur|autoriteConcedante"/>
+            <xsl:variable name="urlProfilAcheteur" select="(acheteur|autoriteConcedante)/urlProfilAcheteur"/>
             <xsl:variable name="siret" select="current-grouping-key()"/>
             <xsl:variable name="year" select="year-from-date(current-date())"/>
             <xsl:variable name="month" select="format-date(current-date(),'[M01]')"/>
@@ -26,6 +26,7 @@
                 </marches>
             </xsl:result-document>
             <xsl:result-document method="text" href="../exemples/xml/sirets/{$year}/{$month}/{$day}/{$filename}/{$siret}">
+                <xsl:value-of select="concat('&quot;',$siret,'&quot;,&quot;',$urlProfilAcheteur,'&quot;')"/>
             </xsl:result-document>
         </xsl:for-each-group>
     </xsl:template>
