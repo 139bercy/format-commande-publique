@@ -25,7 +25,7 @@
                     </xsl:for-each>
                 </marches>
             </xsl:result-document>
-            <xsl:result-document href="../exemples/xml/sirets/{$year}/{$month}/{$day}/{$filename}/{$siret}">
+            <xsl:result-document method="text" href="../exemples/xml/sirets/{$year}/{$month}/{$day}/{$filename}/{$siret}">
             </xsl:result-document>
         </xsl:for-each-group>
     </xsl:template>
