@@ -4,6 +4,7 @@
     version="2.0">
 
     <xsl:output encoding="UTF-8" method="xml"/>
+    <xsl:param name="filename" select="subsequence(reverse(tokenize(base-uri(), '/')), 1, 1)"></xsl:param>
 
     <xsl:template match="/">
         <xsl:apply-templates/>
@@ -19,10 +20,12 @@
             <xsl:variable name="id" select="replace(id/text(),'[/\\.\?!\*\$&amp;]','_')"/>
             <xsl:result-document method="xml" href="../exemples/xml/{$siret}/{$year}/{$month}/{$day}/{$siret}_{$year}-{$month}-{$day}.xml">
                 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/paquet.xsd">
-               <xsl:for-each select="current-group()">
-                <xsl:apply-templates select="."/>
-               </xsl:for-each>
-            </marches>
+                    <xsl:for-each select="current-group()">
+                        <xsl:apply-templates select="."/>
+                    </xsl:for-each>
+                </marches>
+            </xsl:result-document>
+            <xsl:result-document href="../exemples/xml/sirets/{$year}/{$month}/{$day}/{$filename}/{$siret}">
             </xsl:result-document>
         </xsl:for-each-group>
     </xsl:template>
