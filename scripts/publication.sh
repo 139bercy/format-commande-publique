@@ -5,29 +5,35 @@ annee=`date +%Y`
 mois=`date +%m`
 jour=`date +%d`
 
-source configPublication.sh
+source configTransformation.sh
 scriptDir=`pwd`
+
+# Paramètre 1 : le chemin absolu du répertoire où les zips ont été téléchargés
+zips=$1
 
 mkdir -p $racine
 
+
+echo "\n\nMise en lecture seule des ZIPs et décompression des fichiers XML vers l'historique..."
+
+echo "Répertoire courant (zips) : $zips"
+cd $zips
+chmod 444 *.zip
+mkdir -p $racine/historiqueXML/$date
+unzip '*.zip' -d $racine/historiqueXML/$date
+
+echo "\n\nCopie des fichiers XML vers un dossier temporaire..."
+
+echo "Répertoire courant (racine) : $racine"
 cd $racine
-
-echo "Décompression des fichiers XML vers l'historique..."
-
-mkdir -p historiqueXML/$date
-unzip 'HELSTATG*' -d historiqueXML/$date
-unzip '*.zip' -d historiqueXML/$date
-
-echo "Copie des fichiers XML vers un dossier temporaire..."
 
 mkdir temp
 cp -rv historiqueXML/$date/* temp/
 
-echo "Déplacement des fichiers ZIP vers l'historique ZIP..."
+echo "\n\nDéplacement des fichiers ZIP vers l'historique ZIP..."
 
 mkdir -p historiqueZIP/$date
-mv -v HELSTATG* historiqueZIP/$date
-mv -v *.zip historiqueZIP/$date
+mv -v $zips/*.zip historiqueZIP/$date
 
 echo "\n\nRéencodage en UTF-8 et transformation des fichiers XML..."
 
@@ -42,5 +48,6 @@ done
 # echo "Fusion des fichiers XML (quand c'est nécessaire)..."
 
 echo "Fusion et dédoublonnage des données urlProfilAcheteur..."
-mkdir $racine/profilsAcheteurs
+mkdir -p $racine/profilsAcheteurs
 sort `ls sirets/$annee/$mois/$jour/*.xml/*` | uniq > $racine/profilsAcheteurs/profilsAcheteurs-$date.csv
+
