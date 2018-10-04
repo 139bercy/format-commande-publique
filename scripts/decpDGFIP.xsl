@@ -16,16 +16,16 @@
             <xsl:variable name="siret" select="current-grouping-key()"/>
             <xsl:variable name="year" select="year-from-date(current-date())"/>
             <xsl:variable name="month" select="format-date(current-date(),'[M01]')"/>
-            <xsl:variable name="day" select="day-from-date(current-date())"/>
+            <xsl:variable name="day" select="format-date(current-date(),'[D01]')"/>
             <xsl:variable name="id" select="replace(id/text(),'[/\\.\?!\*\$&amp;]','_')"/>
-            <xsl:result-document method="xml" href="../exemples/xml/{$siret}/{$year}/{$month}/{$day}/{$siret}_{$year}-{$month}-{$day}.xml">
+            <xsl:result-document method="xml" href="xml/{$siret}/{$year}/{$month}/{$day}/{$siret}_{$year}-{$month}-{$day}.xml">
                 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/paquet.xsd">
                     <xsl:for-each select="current-group()">
                         <xsl:apply-templates select="."/>
                     </xsl:for-each>
                 </marches>
             </xsl:result-document>
-            <xsl:result-document method="text" href="../exemples/xml/sirets/{$year}/{$month}/{$day}/{$filename}/{$siret}">
+            <xsl:result-document method="text" href="sirets/{$year}/{$month}/{$day}/{$filename}/{$siret}">
                 <xsl:value-of select="concat('&quot;',$siret,'&quot;,&quot;',$urlProfilAcheteur,'&quot;')"/>
             </xsl:result-document>
         </xsl:for-each-group>
