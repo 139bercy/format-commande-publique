@@ -29,11 +29,13 @@ mkdir -p historiqueZIP/$date
 mv -v HELSTATG* historiqueZIP/$date
 mv -v *.zip historiqueZIP/$date
 
-echo "Transformation des fichiers XML..."
+echo "\n\nRéencodage en UTF-8 et transformation des fichiers XML..."
 
 cd temp
 for xml in `find -path **/*.xml`
 do
+iconv -f ISO-8859-1 -t UTF-8 $xml -o $xml.utf8.xml
+mv $xml.utf8.xml $xml
 java -jar $saxonJar -s:$xml -xsl:$scriptDir/decpDGFIP.xsl
 done
 
