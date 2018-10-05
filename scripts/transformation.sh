@@ -48,7 +48,7 @@ for xml in `find -path **/*.xml`
 do
     if [ -s $xml ]; then
         echo -e "$xml : réencodage et transformation"
-        iconv --verbose -f ISO-8859-1 -t UTF-8 $xml | java -jar $saxonJar -s:- -xsl:$scriptDir/decpDGFIP.xsl
+        java -jar $saxonJar -s:$xml -xsl:$scriptDir/decpDGFIP.xsl
         ((pasvides++))
     else
         echo -e "$xml : fichier vide"
