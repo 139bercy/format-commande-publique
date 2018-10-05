@@ -10,15 +10,15 @@
         <xsl:apply-templates/>
     </xsl:template>
     
-    <xsl:template match="ns2:marches">
-        <xsl:for-each-group select="ns2:marche|ns2:contrat-concession" group-by="acheteur/id/text()|autoriteConcedante/id/text()">
+    <xsl:template match="*[local-name()='marches']">
+        <xsl:for-each-group select="*[local-name()='marche']|*[local-name()='contrat-concession']" group-by="acheteur/id/text()|autoriteConcedante/id/text()">
             <xsl:variable name="urlProfilAcheteur" select="(acheteur|autoriteConcedante)/urlProfilAcheteur"/>
             <xsl:variable name="siret" select="current-grouping-key()"/>
             <xsl:variable name="year" select="year-from-date(current-date())"/>
             <xsl:variable name="month" select="format-date(current-date(),'[M01]')"/>
             <xsl:variable name="day" select="format-date(current-date(),'[D01]')"/>
             <xsl:variable name="id" select="replace(id/text(),'[/\\.\?!\*\$&amp;]','_')"/>
-            <xsl:result-document method="xml" href="xml/{$siret}/{$year}/{$month}/{$day}/{$siret}_{$year}-{$month}-{$day}.xml">
+            <xsl:result-document method="xml" href="xml/{$siret}/{$year}/{$month}/{$day}/DECP-{$siret}_{$year}-{$month}-{$day}.xml">
                 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/paquet.xsd">
                     <xsl:for-each select="current-group()">
                         <xsl:apply-templates select="."/>
@@ -43,7 +43,7 @@
         </dateNotificationModification>
     </xsl:template>
     
-    <xsl:template match="(ns2:marche|ns2:contrat-concession)/id">
+    <xsl:template match="(*[local-name()='marche']|*[local-name()='contrat-concession'])/id">
         <ui><xsl:value-of select="text()"/></ui>
         <uid><xsl:value-of select="concat(../acheteur/id/text(),./text())"/></uid>
     </xsl:template>
