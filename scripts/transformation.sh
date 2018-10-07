@@ -59,7 +59,23 @@ done
 total=$((pasvides + vides))
 echo -e "\nFichiers traités : $pasvides Fichiers vides : $vides Total : $total"
 
-# echo -e "Fusion des fichiers XML (quand c'est nécessaire)..."
+echo -e "\033[1m\n\nFusion des fichiers XML par SIRET (quand c'est nécessaire)...\033[0m"
+
+cd $racine/xml
+
+for dossier in `find -path '*/2018/10/07'`
+do
+    cd $dossier
+    pwd
+    for xml in `ls *.xml`
+    do
+        nouveauFichier=${xml/__*/.xml}
+        echo $nouveauFichier
+        java -jar $saxonJar -s:$xml -xsl:$scriptDir/merge.xsl > $nouveauFichier
+        break
+    done
+    cd $racine/xml
+done
 
 echo -e "\033[1m\n\nFusion et dédoublonnage des données urlProfilAcheteur...\033[0m"
 mkdir -p $racine/profilsAcheteurs
