@@ -4,9 +4,11 @@
     version="2.0">
 
     <xsl:output encoding="UTF-8" method="xml"/>
-    <xsl:param name="filename" select="subsequence(reverse(tokenize(base-uri(), '/')), 1, 1)"></xsl:param>
+    <xsl:param name="nomfichier" select="subsequence(reverse(tokenize(base-uri(), '/')), 1, 1)"></xsl:param>
+    <xsl:param name="racine"/>
 
     <xsl:template match="/">
+        <xsl:message select="$racine"></xsl:message>
         <xsl:apply-templates/>
     </xsl:template>
     
@@ -25,7 +27,7 @@
                     </xsl:for-each>
                 </marches>
             </xsl:result-document>
-            <xsl:result-document method="text" href="sirets/{$year}/{$month}/{$day}/{$filename}/{$siret}">
+            <xsl:result-document method="text" href="{$racine}/sirets/{$year}/{$month}/{$day}/{$nomfichier}/{$siret}">
                 <xsl:value-of select="concat('&quot;',$siret,'&quot;,&quot;',$urlProfilAcheteur,'&quot;')"/>
             </xsl:result-document>
         </xsl:for-each-group>

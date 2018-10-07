@@ -48,7 +48,7 @@ for xml in `find -path **/*.xml`
 do
     if [ -s $xml ]; then
         echo -e "$xml : réencodage et transformation"
-        java -jar $saxonJar -s:$xml -xsl:$scriptDir/decpDGFIP.xsl
+        java -jar $saxonJar -s:$xml -xsl:$scriptDir/decpDGFIP.xsl racine="$racine"
         ((pasvides++))
     else
         echo -e "$xml : fichier vide"
@@ -79,4 +79,4 @@ done
 
 echo -e "\033[1m\n\nFusion et dédoublonnage des données urlProfilAcheteur...\033[0m"
 mkdir -p $racine/profilsAcheteurs
-sort `ls sirets/$annee/$mois/$jour/*.xml/*` | uniq > $racine/profilsAcheteurs/profilsAcheteurs-$date.csv
+sort `ls $racine/sirets/$annee/$mois/$jour/*.xml/*` | uniq > $racine/profilsAcheteurs/profilsAcheteurs-$date.csv
