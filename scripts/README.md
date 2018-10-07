@@ -16,6 +16,30 @@ Un fichier `configTransformation.sh` doit être créé dans le même dossier pou
 - `saxonJar` : chemin vers le JAR Saxon (télécharger [ici](https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/SaxonHE9-9-0-1J.zip/download), extraire `saxon9he.jar`)
 - `racine` : chemin du dossier où les dossier d'archives des ZIP et des XML sont stockés
 
+### Hiérarchie de dossiers produite par `transformation.sh`
+
+Entre parenthèses, les fichiers contenus dans le dossier.
+
+- historiqueXML
+    - *date du jour de traitement AAAA-MM-JJ* (les XML du jour)
+- historiqueZIP
+    - *date du jour de traitement AAAA-MM-JJ* (les ZIP du jour, en lecture seule)
+- profilsAcheteurs (un CSV par jour avec la liste des profils d'acheteurs fournis)
+- sirets
+    - *année de traitement*
+        - *mois de traitement*
+            - *jour de traitement*
+                - *nom du fichier XML source* (un fichier tabulaire par SIRET repéré dans le fichier)
+- temp (fichiers temporaires, le temps de transformer les fichiers)
+- xml
+    - *siret acheteur*
+        - *année de traitement*
+            - *mois de traitement*
+                - *jour de traitement* (XML format données essentielles publié)
+
+
+### Modifications apportées sur les fichiers XML envoyés par la DGFiP
+
 Les modifications apportées aux XML envoyés sont les suivantes :
 
 - les éléments XML se voient retirer l'espace de nom (namespace) renseigné par la DGFiP (http://data.gouv.fr/marches/etalab)
