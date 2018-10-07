@@ -18,7 +18,7 @@
             <xsl:variable name="month" select="format-date(current-date(),'[M01]')"/>
             <xsl:variable name="day" select="format-date(current-date(),'[D01]')"/>
             <xsl:variable name="id" select="replace(id/text(),'[/\\.\?!\*\$&amp;]','_')"/>
-            <xsl:result-document method="xml" href="xml/{$siret}/{$year}/{$month}/{$day}/DECP-{$siret}_{$year}-{$month}-{$day}.xml">
+            <xsl:result-document method="xml" href="{$racine}/xml/{$siret}/{$year}/{$month}/{$day}/DECP-{$siret}_{$year}-{$month}-{$day}__{$nomfichier}.xml">
                 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/paquet.xsd">
                     <xsl:for-each select="current-group()">
                         <xsl:apply-templates select="."/>
