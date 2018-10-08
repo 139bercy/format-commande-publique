@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/paquet.xsd">
+    <contrat-concession>
+        <id>20010345211200</id>
+        <uid>2135023880001920010345211200</uid>
+        <autoriteConcedante>
+            <id>21350238800019</id>
+            <nom>Ville de Millau</nom>
+        </autoriteConcedante>
+        <nature>Concession de travaux</nature>
+        <objet>Construction et exploitation d'un viaduc</objet>
+        <procedure>Procédure négociée restreinte</procedure>
+        <lieuExecution>
+            <code>12145</code>
+            <typeCode>Code commune</typeCode>
+            <nom>Millau</nom>
+        </lieuExecution>
+        <dureeMois>360</dureeMois>
+        <dateSignature>2001-02-21</dateSignature>
+        <datePublicationDonnees>2001-02-21</datePublicationDonnees>
+        <dateDebutExecution>2001-02-21</dateDebutExecution>
+        <valeurGlobale>27860000</valeurGlobale>
+        <montantSubventionPublique>2987000</montantSubventionPublique>
+        <donneesExecution/>
+        <concessionnaires>
+            <concessionnaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>81223113200026</id>
+                <denominationSociale>Atlas SAS</denominationSociale>
+            </concessionnaire>
+        </concessionnaires>
+        <modifications/>
+    </contrat-concession>
+
+    <contrat-concession>
+        <id>20010345212500</id>
+        <uid>2135023880001920010345212500</uid>
+        <autoriteConcedante>
+            <id>21350238800019</id>
+            <nom>Ville de Millau</nom>
+        </autoriteConcedante>
+        <nature>Concession de travaux</nature>
+        <objet>Construction et exploitation d'un viaduc</objet>
+        <procedure>Procédure négociée restreinte</procedure>
+        <lieuExecution>
+            <code>12145</code>
+            <typeCode>Code commune</typeCode>
+            <nom>Millau</nom>
+        </lieuExecution>
+        <dureeMois>360</dureeMois>
+        <dateSignature>2001-02-21</dateSignature>
+        <datePublicationDonnees>2001-02-21</datePublicationDonnees>
+        <dateDebutExecution>2001-02-21</dateDebutExecution>
+        <valeurGlobale>27860000</valeurGlobale>
+        <montantSubventionPublique>2987000</montantSubventionPublique>
+        <donneesExecution/>
+        <concessionnaires>
+            <concessionnaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>81223113200026</id>
+                <denominationSociale>Atlas SAS</denominationSociale>
+            </concessionnaire>
+        </concessionnaires>
+        <modifications/>
+    </contrat-concession>
+
+    <marche>
+        <id>2010345211200</id>
+        <uid>213502388000192010345211200</uid>
+        <acheteur>
+            <id>21350238800019</id>
+            <nom>Ville de Rennes</nom>
+        </acheteur>
+        <nature>Accord-cadre</nature>
+        <objet>Entretien des jardins municipaux</objet>
+        <codeCPV>77313000</codeCPV>
+        <procedure>Marché négocié sans publicité ni mise en concurrence préalable</procedure>
+        <lieuExecution>
+            <code>35238</code>
+            <typeCode>Code commune</typeCode>
+            <nom>Rennes</nom>
+        </lieuExecution>
+        <dureeMois>24</dureeMois>
+        <dateNotification>2007-08-13</dateNotification>
+        <datePublicationDonnees>2007-08-19</datePublicationDonnees>
+        <montant>127000</montant>
+        <formePrix>Ferme et actualisable</formePrix>
+        <titulaires>
+            <titulaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>81223113200026</id>
+                <denominationSociale>Garami SARL</denominationSociale>
+            </titulaire>
+            <titulaire>
+                <typeIdentifiant>TVA</typeIdentifiant>
+                <id>DE814864138</id>
+                <denominationSociale>Hellman Gmbh</denominationSociale>
+            </titulaire>
+        </titulaires>
+        <modifications/>
+    </marche>
+
+    <marche>
+        <id>2010345213500</id>
+        <uid>213502388000192010345213500</uid>
+        <acheteur>
+            <id>21350238800019</id>
+            <nom>Ville de Rennes</nom>
+        </acheteur>
+        <nature>Marché</nature>
+        <objet>Entretien des jardins municipaux</objet>
+        <codeCPV>77313000</codeCPV>
+        <procedure>Marché négocié sans publicité ni mise en concurrence préalable</procedure>
+        <lieuExecution>
+            <code>35238</code>
+            <typeCode>Code commune</typeCode>
+            <nom>Rennes</nom>
+        </lieuExecution>
+        <dureeMois>24</dureeMois>
+        <dateNotification>2007-08-13</dateNotification>
+        <datePublicationDonnees>2007-08-19</datePublicationDonnees>
+        <montant>127000</montant>
+        <formePrix>Ferme et actualisable</formePrix>
+        <titulaires>
+            <titulaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>81223113200026</id>
+                <denominationSociale>Garami SARL</denominationSociale>
+            </titulaire>
+            <titulaire>
+                <typeIdentifiant>TVA</typeIdentifiant>
+                <id>DE814864138</id>
+                <denominationSociale>Hellman Gmbh</denominationSociale>
+            </titulaire>
+        </titulaires>
+        <modifications/>
+    </marche>
+</marches>

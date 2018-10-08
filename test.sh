@@ -65,6 +65,7 @@ then
 
     testExemplesJson "mar" "marchés.json"
     testExemplesJson "cc" "contrats-concessions.json"
+    testExemplesJson "paquet" "paquet.json"
 else
     echo "Pas de schémas JSON à valider."
 fi
@@ -85,6 +86,8 @@ then
 
     testExemplesXml "mar" "marchés.xsd"
     testExemplesXml "cc" "contrats-concessions.xsd"
+    testExemplesXml "paquet" "paquet.xsd"
+
 else
     echo "Pas de schémas XML à valider."
 fi

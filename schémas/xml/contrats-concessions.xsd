@@ -21,6 +21,20 @@
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>
+                <xs:element name="uid" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>L'identifiant unique de contrat de concession est composé du SIRET de l'acheteur et de l'identifiant de contrat de concession, et permet d'éviter les conflits d'identifiants entre contrats de concession passé par des acheteurs différents.
+
+							Exemples :
+							- 23350001600040201872300 (23350001600040 201872300)
+							- 233500016000402019000111202 (23350001600040 20190000111202)</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[0-9]{14}.{7,16}"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
 				<xs:element name="autoriteConcedante">
 					<xs:complexType>
 						<xs:all>
@@ -32,7 +46,6 @@
 								</xs:simpleType>
 							</xs:element>
 							<xs:element name="nom" type="xs:string"/>
-
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
