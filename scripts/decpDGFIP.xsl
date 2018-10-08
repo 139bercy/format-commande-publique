@@ -46,7 +46,7 @@
     </xsl:template>
     
     <xsl:template match="(*[local-name()='marche']|*[local-name()='contrat-concession'])/id">
-        <ui><xsl:value-of select="text()"/></ui>
+        <id><xsl:value-of select="text()"/></id>
         <uid><xsl:value-of select="concat(../acheteur/id/text(),./text())"/></uid>
     </xsl:template>
 
