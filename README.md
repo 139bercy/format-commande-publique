@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.2.0
+> v1.3.0
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -41,6 +41,11 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.3.0** (8 octobre 2018)
+
+- ajout du champ optionnel `uid` qui contient l'`id` du marché préfixé du SIRET de l'acheteur (et ajout de nouveaux exemples)
+- ajout des tests de paquets dans le script de test
 
 **1.2.0** (27 août 2018)
 
