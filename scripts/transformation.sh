@@ -16,7 +16,7 @@ if [[ -z $schemasDir || -z $saxonJar || -z $validatorJar || -z $xsltDir ]] ; the
     exit 1
 fi
 
-mkdir -p $racine
+echo "Début du traitement des fichiers : $date $heure"
 
 
 echo -e "\033[1m\n\nMise en lecture seule des ZIPs et décompression des fichiers XML vers l'historique...\033[0m"
@@ -25,28 +25,18 @@ echo -e "Répertoire courant (*.zip) : $zips"
 cd $zips
 ls -1 *.zip
 chmod 444 *.zip
-mkdir -p $racine/historiqueXML/$date
-unzip -q '*.zip' -d $racine/historiqueXML/$date
-
-echo -e "\033[1m\n\nCopie des fichiers XML vers un dossier temporaire...\033[0m"
-
-echo -e "Répertoire courant (racine) : $racine"
-cd $racine
-
-if [ ! -d temp ]; then
-    mkdir temp
-fi
-
-cp -rv historiqueXML/$date/* temp/
+mkdir -p $racine/sourceXML
+unzip -q '*.zip' -d $racine/sourceXML
+chmod -R 544 $racine/sourceXML
 
 echo -e "\033[1m\n\nDéplacement des fichiers ZIP vers l'historique ZIP...\033[0m"
 
-mkdir -p historiqueZIP/$date
-mv -v $zips/*.zip historiqueZIP/$date
+mkdir sourceZIP
+mv -v $zips/*.zip sourceZIP
 
 echo -e "\033[1m\n\nRéencodage en UTF-8 et transformation des fichiers XML...\033[0m"
 
-cd temp
+cd $racine/sourceXML
 vides=0
 pasvides=0
 for xml in `find -path **/*.xml`
@@ -68,15 +58,16 @@ echo -e "\033[1m\n\nFusion et validation des fichiers XML par SIRET...\033[0m"
 
 cd $racine
 
-sirets=`ls sirets/$annee/$mois/$jour`
 
 echo -e "\nSIRETs de la session :"
-ls -1 sirets/$annee/$mois/$jour
+ls -1 sirets
 echo ""
+
+sirets=`ls sirets`
 
 for siret in $sirets
 do
-    cd xml/$siret/$annee/$mois/$jour
+    cd $racine/sortieXML/$siret
 
     pwd
     for xml in `ls *.xml`
@@ -86,10 +77,10 @@ do
         java -jar $validatorJar -sf $schemasDir/paquet.xsd -if $nouveauFichier
         break
     done
-    ls -l
+    echo -e "\n`ls -l`\n"
     cd $racine
 done
 
 echo -e "\033[1m\n\nFusion et dédoublonnage des données urlProfilAcheteur...\033[0m"
-mkdir -p $racine/profilsAcheteurs
-sort `ls $racine/sirets/$annee/$mois/$jour/*` | uniq > $racine/profilsAcheteurs/profilsAcheteurs-$date.csv
+sort `ls $racine/sirets/*` | uniq > $racine/profilsAcheteurs.csv
+

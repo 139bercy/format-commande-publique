@@ -11,7 +11,7 @@
         <xsl:message select="$racine"></xsl:message>
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="*[local-name()='marches']">
         <xsl:for-each-group select="*[local-name()='marche']|*[local-name()='contrat-concession']" group-by="acheteur/id/text()|autoriteConcedante/id/text()">
             <xsl:variable name="urlProfilAcheteur" select="(acheteur|autoriteConcedante)/urlProfilAcheteur"/>
@@ -20,14 +20,14 @@
             <xsl:variable name="month" select="format-date(current-date(),'[M01]')"/>
             <xsl:variable name="day" select="format-date(current-date(),'[D01]')"/>
             <xsl:variable name="id" select="replace(id/text(),'[/\\.\?!\*\$&amp;]','_')"/>
-            <xsl:result-document method="xml" href="{$racine}/xml/{$siret}/{$year}/{$month}/{$day}/DECP-{$siret}_{$year}-{$month}-{$day}__{$nomfichier}.xml">
+            <xsl:result-document method="xml" href="{$racine}/sortieXML/{$siret}/DECP-{$siret}-{$year}-{$month}-{$day}__{$nomfichier}.xml">
                 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/paquet.xsd">
                     <xsl:for-each select="current-group()">
                         <xsl:apply-templates select="."/>
                     </xsl:for-each>
                 </marches>
             </xsl:result-document>
-            <xsl:result-document method="text" href="{$racine}/sirets/{$year}/{$month}/{$day}/{$siret}">
+            <xsl:result-document method="text" href="{$racine}/sirets/{$siret}">
                 <xsl:value-of select="concat('&quot;',$siret,'&quot;,&quot;',$urlProfilAcheteur,'&quot;')"/>
             </xsl:result-document>
         </xsl:for-each-group>
@@ -44,7 +44,7 @@
             <xsl:apply-templates/>
         </dateNotificationModification>
     </xsl:template>
-    
+
     <xsl:template match="(*[local-name()='marche']|*[local-name()='contrat-concession'])/id">
         <id><xsl:value-of select="text()"/></id>
         <uid><xsl:value-of select="concat(../acheteur/id/text(),./text())"/></uid>

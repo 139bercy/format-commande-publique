@@ -12,44 +12,35 @@
 
 **decpDGFIP.xslt** : Une feuille de style XSLT qui met en oeuvre les étapes 4 et 5 ci-dessus
 
+### Paramétrage
+
 Le script **transformation.sh** prend en paramètre (`$1`) le chemin vers le dossier contenant les archives ZIP du jour.
 
 Un fichier `configTransformation.sh` doit être créé dans le même dossier pour renseigner les variables suivantes :
 
 - `saxonJar` : chemin vers le JAR Saxon (à télécharger [ici](https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/SaxonHE9-9-0-1J.zip/download), extraire `saxon9he.jar`)
 - `validatorJar` : chemin vers le JAR de xsd11-validator (à télécharger [ici](https://www.dropbox.com/s/939jv39ihnluem0/xsd11-validator.jar?dl=1))
-- `racine` : chemin du dossier où les dossier d'archives des ZIP et des XML sont stockés
 - `schemasDir` : chemin vers le dossier qui contient les schémas XML
 - `xsltDir` : chemin vers le dossier qui contient les feuilles de style XSLT (`decpDGFIP.xsl` et `merge.xsl`)
 
 ### Hiérarchie de dossiers produite par `transformation.sh`
 
-Entre parenthèses, les fichiers contenus dans le dossier.
+Entre parenthèses, les fichiers contenus dans le dossier. Cette hiérarchie est produite dans le même dossier que le chemin passé en paramètre de `transformation.sh`.
 
-- historiqueXML
-    - *date du jour de traitement AAAA-MM-JJ* (les XML du jour)
-- historiqueZIP
-    - *date du jour de traitement AAAA-MM-JJ* (les ZIP du jour, en lecture seule)
-- profilsAcheteurs (un CSV par jour avec la liste des profils d'acheteurs fournis)
-- sirets
-    - *année de traitement*
-        - *mois de traitement*
-            - *jour de traitement*
-                - *nom du fichier XML source* (un fichier tabulaire par SIRET repéré dans le fichier)
-- temp (fichiers temporaires, le temps de transformer les fichiers)
-- xml
-    - *siret acheteur*
-        - *année de traitement*
-            - *mois de traitement*
-                - *jour de traitement* (XML format données essentielles publié)
+- sourceXML (les XML du jour, en lecture seule)
+- sourceZIP (les ZIP du jour, en lecture seule)
+- sirets (un fichier tabulaire par SIRET repéré dans le fichier)
+- sortieXML
+    - *siret acheteur* (XML format données essentielles publié)
+- `profilsAcheteurs.csv` (un CSV listant les URL de profils d'acheteur extraites lors du traitement)
 
+### Modifications apportées aux les fichiers XML reçus de la DGFiP
 
-### Modifications apportées aux les fichiers XML envoyés par la DGFiP
-
-Les modifications apportées aux XML envoyés sont les suivantes :
+Les modifications apportées aux XML reçus sont les suivantes :
 
 - les éléments XML se voient retirer l'espace de nom (namespace) renseigné par la DGFiP (http://data.gouv.fr/marches/etalab)
 - l'élément `dateSignatureModification` est remplacé par `dateNotificationModification`, conformément à [l'article 1er](https://www.legifrance.gouv.fr/affichTexteArticle.do;jsessionid=827F7B40490885361A36CF0736F37AA4.tplgfr29s_3?idArticle=JORFARTI000037283011&cidTexte=JORFTEXT000037282994&dateTexte=29990101&categorieLien=id) de l'arrêté modificatif du 27 juillet 2018
 - les éléments suivants sont supprimés
     - `dateTransmissionDonneesEtalab`
     - `urlProfilAcheteur`
+- l'élément `uid` est ajouté, concaténant le SIRET de l'acheteur et l'ID du marché
