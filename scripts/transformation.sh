@@ -9,6 +9,7 @@ source configTransformation.sh
 
 # Paramètre 1 : le chemin absolu du répertoire où les zips ont été téléchargés
 zips=$1
+racine=$1
 
 mkdir -p $racine
 
