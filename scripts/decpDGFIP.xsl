@@ -27,7 +27,7 @@
                     </xsl:for-each>
                 </marches>
             </xsl:result-document>
-            <xsl:result-document method="text" href="{$racine}/sirets/{$year}/{$month}/{$day}/{$nomfichier}/{$siret}">
+            <xsl:result-document method="text" href="{$racine}/sirets/{$year}/{$month}/{$day}/{$siret}">
                 <xsl:value-of select="concat('&quot;',$siret,'&quot;,&quot;',$urlProfilAcheteur,'&quot;')"/>
             </xsl:result-document>
         </xsl:for-each-group>
