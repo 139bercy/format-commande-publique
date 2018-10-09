@@ -4,6 +4,7 @@ date=`date +%Y-%m-%d`
 annee=`date +%Y`
 mois=`date +%m`
 jour=`date +%d`
+heure=`date +%H:%M:%S`
 
 source configTransformation.sh
 
@@ -12,7 +13,7 @@ zips=$1
 racine=$1
 
 if [[ -z $schemasDir || -z $saxonJar || -z $validatorJar || -z $xsltDir ]] ; then
-    echo -n "\n[Erreur] Vous devez renseigner les variables de configuration suivantes dans configTransformation.sh : schemasDir, saxonJar, validatorJar, xsltDir."
+    echo -e "\n[Erreur] Vous devez renseigner les variables de configuration suivantes dans configTransformation.sh : schemasDir, saxonJar, validatorJar, xsltDir."
     exit 1
 fi
 
@@ -75,6 +76,7 @@ do
         nouveauFichier=${xml/__*/.xml}
         java -jar $saxonJar -s:$xml -xsl:$xsltDir/merge.xsl > $nouveauFichier
         java -jar $validatorJar -sf $schemasDir/paquet.xsd -if $nouveauFichier
+        rm *.xml.xml
         break
     done
     echo -e "\n`ls -l`\n"
@@ -84,3 +86,7 @@ done
 echo -e "\033[1m\n\nFusion et dédoublonnage des données urlProfilAcheteur...\033[0m"
 sort `ls $racine/sirets/*` | uniq > $racine/profilsAcheteurs.csv
 
+date=`date +%Y-%m-%d`
+heure=`date +%H:%M:%S`
+
+echo -e "\nFin du traitement des fichiers : $date $heure"
