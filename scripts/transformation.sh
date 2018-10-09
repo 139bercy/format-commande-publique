@@ -61,20 +61,25 @@ echo -e "\nFichiers traités : $pasvides Fichiers vides : $vides Total : $total"
 
 echo -e "\033[1m\n\nFusion des fichiers XML par SIRET (quand c'est nécessaire)...\033[0m"
 
-cd $racine/xml
+cd $racine
 
-for dossier in `find -path '*/2018/10/07'`
+sirets=`ls sirets/$annee/$mois/$jour`
+
+echo -e "\nSIRETs de la session :"
+echo `ls -l sirets/$annee/$mois/$jour`
+
+for siret in $sirets
 do
-    cd $dossier
+    cd xml/$siret/$annee/$mois/$jour
     pwd
     for xml in `ls *.xml`
     do
         nouveauFichier=${xml/__*/.xml}
-        echo $nouveauFichier
         java -jar $saxonJar -s:$xml -xsl:$scriptDir/merge.xsl > $nouveauFichier
         break
     done
-    cd $racine/xml
+    ls -l
+    cd $racine
 done
 
 echo -e "\033[1m\n\nFusion et dédoublonnage des données urlProfilAcheteur...\033[0m"
