@@ -6,7 +6,6 @@ mois=`date +%m`
 jour=`date +%d`
 
 source configTransformation.sh
-scriptDir=`pwd`
 
 # Paramètre 1 : le chemin absolu du répertoire où les zips ont été téléchargés
 zips=$1
@@ -16,9 +15,9 @@ mkdir -p $racine
 
 echo -e "\033[1m\n\nMise en lecture seule des ZIPs et décompression des fichiers XML vers l'historique...\033[0m"
 
-echo -e "Répertoire courant (zips) : $zips"
+echo -e "Répertoire courant (*.zip) : $zips"
 cd $zips
-ls -alF --color -h --group-directories-first
+ls -1 *.zip
 chmod 444 *.zip
 mkdir -p $racine/historiqueXML/$date
 unzip -q '*.zip' -d $racine/historiqueXML/$date
@@ -66,7 +65,8 @@ cd $racine
 sirets=`ls sirets/$annee/$mois/$jour`
 
 echo -e "\nSIRETs de la session :"
-echo `ls -l sirets/$annee/$mois/$jour`
+ls -1 sirets/$annee/$mois/$jour
+echo ""
 
 for siret in $sirets
 do
@@ -75,7 +75,7 @@ do
     for xml in `ls *.xml`
     do
         nouveauFichier=${xml/__*/.xml}
-        java -jar $saxonJar -s:$xml -xsl:$scriptDir/merge.xsl > $nouveauFichier
+        java -jar $saxonJar -s:$xml -xsl:$xsltDir/merge.xsl > $nouveauFichier
         java -jar $validatorJar -sf $schemas/paquet.xsd -if $nouveauFichier
         break
     done
@@ -85,4 +85,4 @@ done
 
 echo -e "\033[1m\n\nFusion et dédoublonnage des données urlProfilAcheteur...\033[0m"
 mkdir -p $racine/profilsAcheteurs
-sort `ls $racine/sirets/$annee/$mois/$jour/*.xml/*` | uniq > $racine/profilsAcheteurs/profilsAcheteurs-$date.csv
+sort `ls $racine/sirets/$annee/$mois/$jour/*` | uniq > $racine/profilsAcheteurs/profilsAcheteurs-$date.csv
