@@ -48,7 +48,7 @@ for xml in `find -path **/*.xml`
 do
     if [ -s $xml ]; then
         echo -e "$xml : réencodage et transformation"
-        java -jar $saxonJar -s:$xml -xsl:$scriptDir/decpDGFIP.xsl racine="$racine"
+        java -jar $saxonJar -s:$xml -xsl:$xsltDir/decpDGFIP.xsl racine="$racine"
         ((pasvides++))
     else
         echo -e "$xml : fichier vide"
@@ -59,7 +59,7 @@ done
 total=$((pasvides + vides))
 echo -e "\nFichiers traités : $pasvides Fichiers vides : $vides Total : $total"
 
-echo -e "\033[1m\n\nFusion des fichiers XML par SIRET (quand c'est nécessaire)...\033[0m"
+echo -e "\033[1m\n\nFusion et validation des fichiers XML par SIRET...\033[0m"
 
 cd $racine
 
@@ -76,6 +76,7 @@ do
     do
         nouveauFichier=${xml/__*/.xml}
         java -jar $saxonJar -s:$xml -xsl:$scriptDir/merge.xsl > $nouveauFichier
+        java -jar $validatorJar -sf $schemas/paquet.xsd -if $nouveauFichier
         break
     done
     ls -l

@@ -6,6 +6,7 @@
     1. le réencodage des fichiers XML d'ISO-8859-1 vers UTF-8
     3. la transformation des fichiers XML vers une structure valide
     3. le découpage des données par SIRET
+    4. la validation des fichiers XML produits
     2. l'extraction et l'archivage des URL de profils d'acheteurs
 - **decpDGFIP.xslt** : Une feuille de style XSLT qui met en oeuvre les étapes 4 et 5 ci-dessus
 
@@ -14,7 +15,9 @@ Le script **transformation.sh** prend en paramètre (`$1`) le chemin vers le dos
 Un fichier `configTransformation.sh` doit être créé dans le même dossier pour renseigner les variables suivantes :
 
 - `saxonJar` : chemin vers le JAR Saxon (télécharger [ici](https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/SaxonHE9-9-0-1J.zip/download), extraire `saxon9he.jar`)
+- `validatorJar` : chemin vers le JAR de xsd11-validator (à télécharger [ici](https://www.dropbox.com/s/939jv39ihnluem0/xsd11-validator.jar?dl=1))
 - `racine` : chemin du dossier où les dossier d'archives des ZIP et des XML sont stockés
+- `schemasDir` : chemin vers le dossier qui contient les schémas XML
 
 ### Hiérarchie de dossiers produite par `transformation.sh`
 
