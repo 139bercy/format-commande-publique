@@ -11,6 +11,11 @@ source configTransformation.sh
 zips=$1
 racine=$1
 
+if [[ -z $schemasDir || -z $saxonJar || -z $validatorJar || -z $xsltDir ]] ; then
+    echo -n "\n[Erreur] Vous devez renseigner les variables de configuration suivantes dans configTransformation.sh : schemasDir, saxonJar, validatorJar, xsltDir."
+    exit 1
+fi
+
 mkdir -p $racine
 
 
