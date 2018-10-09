@@ -72,12 +72,13 @@ echo ""
 for siret in $sirets
 do
     cd xml/$siret/$annee/$mois/$jour
+
     pwd
     for xml in `ls *.xml`
     do
         nouveauFichier=${xml/__*/.xml}
         java -jar $saxonJar -s:$xml -xsl:$xsltDir/merge.xsl > $nouveauFichier
-        java -jar $validatorJar -sf $schemas/paquet.xsd -if $nouveauFichier
+        java -jar $validatorJar -sf $schemasDir/paquet.xsd -if $nouveauFichier
         break
     done
     ls -l
