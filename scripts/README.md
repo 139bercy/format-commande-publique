@@ -16,12 +16,12 @@
 
 Le script **transformation.sh** prend en paramètre (`$1`) le chemin vers le dossier contenant les archives ZIP du jour.
 
-Un fichier `configTransformation.sh` doit être créé dans le même dossier pour renseigner les variables suivantes :
+Un fichier `configTransformation.sh` doit être créé dans le dossier `scripts` pour renseigner les variables suivantes (un modèle est fourni) :
 
 - `saxonJar` : chemin vers le JAR Saxon (à télécharger [ici](https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/SaxonHE9-9-0-1J.zip/download), extraire `saxon9he.jar`)
 - `validatorJar` : chemin vers le JAR de xsd11-validator (à télécharger [ici](https://www.dropbox.com/s/939jv39ihnluem0/xsd11-validator.jar?dl=1))
 - `schemasDir` : chemin vers le dossier qui contient les schémas XML
-- `xsltDir` : chemin vers le dossier qui contient les feuilles de style XSLT (`decpDGFIP.xsl` et `merge.xsl`)
+- `scriptsDir` : chemin vers le dossier qui contient le fichier de configuration et les feuilles de style XSLT (`decpDGFIP.xsl` et `merge.xsl`)
 
 ### Hiérarchie de dossiers produite par `transformation.sh`
 
