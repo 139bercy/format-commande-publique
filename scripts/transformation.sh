@@ -9,8 +9,13 @@ heure=`date +%H:%M:%S`
 source configTransformation.sh
 
 # Paramètre 1 : le chemin absolu du répertoire où les zips ont été téléchargés
-zips=$1
-racine=$1
+if [ -z $1 ] ; then
+    zips=`pwd`
+else
+    zips=$1
+fi
+
+racine=$zips
 
 if [[ -z $schemasDir || -z $saxonJar || -z $validatorJar || -z $scriptsDir ]] ; then
     echo -e "\n[Erreur] Vous devez renseigner les variables de configuration suivantes dans configTransformation.sh : schemasDir, saxonJar, validatorJar, scriptsDir."
