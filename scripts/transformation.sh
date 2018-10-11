@@ -1,9 +1,6 @@
 #/bin/bash
 
 date=`date +%Y-%m-%d`
-annee=`date +%Y`
-mois=`date +%m`
-jour=`date +%d`
 heure=`date +%H:%M:%S`
 
 source configTransformation.sh
