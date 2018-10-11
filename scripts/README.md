@@ -29,7 +29,7 @@ Entre parenthèses, les fichiers contenus dans le dossier. Cette hiérarchie est
 
 - sourceXML (les XML du jour, en lecture seule)
 - sourceZIP (les ZIP du jour, en lecture seule)
-- sirets (un fichier tabulaire par SIRET repéré dans le fichier)
+- sirets (un fichier tabulaire par SIRET repéré dans les fichiers, contenant les données du profil d'acheteur)
 - sortieXML
     - *siret acheteur* (XML format données essentielles publié)
 - `profilsAcheteurs.csv` (un CSV listant les URL de profils d'acheteur extraites lors du traitement)
