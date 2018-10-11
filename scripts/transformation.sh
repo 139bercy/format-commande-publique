@@ -25,7 +25,6 @@ echo -e "\033[1m\n\nMise en lecture seule des ZIPs et décompression des fichier
 echo -e "Répertoire courant (*.zip) : $zips"
 cd $zips
 ls -1 *.zip
-chmod 444 *.zip
 mkdir -p $racine/sourceXML
 unzip -q '*.zip' -d $racine/sourceXML
 chmod -R 544 $racine/sourceXML
