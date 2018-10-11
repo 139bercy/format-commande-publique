@@ -12,13 +12,12 @@ source configTransformation.sh
 zips=$1
 racine=$1
 
-if [[ -z $schemasDir || -z $saxonJar || -z $validatorJar || -z $xsltDir ]] ; then
-    echo -e "\n[Erreur] Vous devez renseigner les variables de configuration suivantes dans configTransformation.sh : schemasDir, saxonJar, validatorJar, xsltDir."
+if [[ -z $schemasDir || -z $saxonJar || -z $validatorJar || -z $scriptsDir ]] ; then
+    echo -e "\n[Erreur] Vous devez renseigner les variables de configuration suivantes dans configTransformation.sh : schemasDir, saxonJar, validatorJar, scriptsDir."
     exit 1
 fi
 
 echo "Début du traitement des fichiers : $date $heure"
-
 
 echo -e "\033[1m\n\nMise en lecture seule des ZIPs et décompression des fichiers XML vers l'historique...\033[0m"
 
@@ -43,7 +42,7 @@ for xml in `find -path **/*.xml`
 do
     if [ -s $xml ]; then
         echo -e "$xml : réencodage et transformation"
-        java -jar $saxonJar -s:$xml -xsl:$xsltDir/decpDGFIP.xsl racine="$racine"
+        java -jar $saxonJar -s:$xml -xsl:$scriptsDir/decpDGFIP.xsl racine="$racine"
         ((pasvides++))
     else
         echo -e "$xml : fichier vide"
@@ -73,7 +72,7 @@ do
     for xml in `ls *.xml`
     do
         nouveauFichier=${xml/__*/.xml}
-        java -jar $saxonJar -s:$xml -xsl:$xsltDir/merge.xsl > $nouveauFichier
+        java -jar $saxonJar -s:$xml -xsl:$scriptsDir/merge.xsl > $nouveauFichier
         java -jar $validatorJar -sf $schemasDir/paquet.xsd -if $nouveauFichier
         rm *.xml.xml
         break
