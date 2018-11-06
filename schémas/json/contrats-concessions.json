@@ -95,19 +95,19 @@
       "title": "Date de la signature du marché",
       "description": "Date à laquelle le contrat de concession a été signé par l'autorité concédante, au format AAAA-MM-JJ.",
       "type": "string",
-      "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+      "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
     },
     "datePublicationDonnees": {
       "title": "Date de la publication des données essentielles du contrat de concession",
       "description": "Date à laquelle les données essentielles du contrat de concession ont été publiées sur le profil d'autorité concédante, au format AAAA-MM-JJ.",
       "type": "string",
-      "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+      "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
     },
     "dateDebutExecution": {
       "title": "Date du début de l'exécution du contrat de concession",
       "description": "Date à laquelle a commencé l'exécution du contrat de concession, au format AAAA-MM-JJ.",
       "type": "string",
-      "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+      "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
     },
     "valeurGlobale": {
       "title": "Valeur globale attribuée",
@@ -260,13 +260,13 @@
           "title": "Date de la signature de la modification",
           "description": "Date à laquelle la modification du contrat de concession a été signée par l'autorité concédante.",
           "type": "string",
-          "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+          "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
         },
         "datePublicationDonneesModification": {
           "title": "Date de la republication des données incluant la modification",
           "description": "Date à laquelle les données essentielles sont republiées suite à la modification, au format AAAA-MM-JJ.",
           "type": "string",
-          "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+          "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
         },
         "dureeMois": {
           "title": "Nouvelle durée en mois.",
@@ -299,7 +299,7 @@
         "datePublicationDonneesExecution": {
           "title": "Date de publication des données d'exécution",
           "type": "string",
-          "pattern": "^[0-9]{4}\\-[0-9]{2}\\-[0-9]{2}$"
+          "pattern": "^\\d{4}-[01]\\d-[0-3]\\d([+-][0-2]\\d:[0-5]\\dZ?)?$"
         },
         "depensesInvestissement": {
           "title": "Dépenses d'investissement",
