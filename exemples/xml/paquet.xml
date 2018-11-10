@@ -23,7 +23,32 @@
         <dateDebutExecution>2001-02-21</dateDebutExecution>
         <valeurGlobale>27860000</valeurGlobale>
         <montantSubventionPublique>2987000</montantSubventionPublique>
-        <donneesExecution/>
+        <donneesExecution>
+            <donneesAnnuelles>
+                <datePublicationDonneesExecution>2016-09-21</datePublicationDonneesExecution>
+                <depensesInvestissement>3877.22</depensesInvestissement>
+                <tarifs>
+                    <tarif>
+                        <intituleTarif>Tarif véhicule A</intituleTarif>
+                        <tarif>7.87</tarif>
+                    </tarif>
+                </tarifs>
+            </donneesAnnuelles>
+            <donneesAnnuelles>
+                <datePublicationDonneesExecution>2017-02-01</datePublicationDonneesExecution>
+                <depensesInvestissement>88754.12</depensesInvestissement>
+                <tarifs>
+                    <tarif>
+                        <intituleTarif>Tarif véhicule A</intituleTarif>
+                        <tarif>7.87</tarif>
+                    </tarif>
+                    <tarif>
+                        <intituleTarif>Tarif véhicule B</intituleTarif>
+                        <tarif>11.64</tarif>
+                    </tarif>
+                </tarifs>
+            </donneesAnnuelles>
+        </donneesExecution>
         <concessionnaires>
             <concessionnaire>
                 <typeIdentifiant>SIRET</typeIdentifiant>
@@ -56,7 +81,22 @@
         <dateDebutExecution>2001-02-21</dateDebutExecution>
         <valeurGlobale>27860000</valeurGlobale>
         <montantSubventionPublique>2987000</montantSubventionPublique>
-        <donneesExecution/>
+        <donneesExecution>
+            <donneesAnnuelles>
+                <datePublicationDonneesExecution>2017-07-18</datePublicationDonneesExecution>
+                <depensesInvestissement>679877.65</depensesInvestissement>
+                <tarifs>
+                    <tarif>
+                        <intituleTarif>Tarif véhicule A</intituleTarif>
+                        <tarif>7.87</tarif>
+                    </tarif>
+                    <tarif>
+                        <intituleTarif>Tarif véhicule B</intituleTarif>
+                        <tarif>9.67</tarif>
+                    </tarif>
+                </tarifs>
+            </donneesAnnuelles>
+        </donneesExecution>
         <concessionnaires>
             <concessionnaire>
                 <typeIdentifiant>SIRET</typeIdentifiant>
