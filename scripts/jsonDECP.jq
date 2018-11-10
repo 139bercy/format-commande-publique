@@ -6,26 +6,38 @@ def walk(f):
   elif type == "array" then map( walk(f) ) | f
   else f
   end;
-def processModification(modification):
+def safeToNumber(value):
+    if (value | type) == "string" then
+    value | tonumber
+    else empty
+    end;
+def processModificationMarche(modification):
     modification | {
         objetModification,
-        dureeMois,
+        dureeMois: safeToNumber(.dureeMois),
         datePublicationDonneesModification,
         dateNotificationModification,
-        montant,
+        montant: safeToNumber(.montant),
         titulaires :
         .titulaires.titulaire | (if type == "array" then
             map(.)
             else [.]
             end)
-    }
-    ;
+    };
+def processModificationConcession(modification):
+    modification | {
+        objetModification,
+        dureeMois: safeToNumber(.dureeMois),
+        datePublicationDonneesModification,
+        dateNotificationModification,
+        valeurGlobale: safeToNumber(.valeurGlobale)
+    };
 def processMarche(marche):
     marche |{
     id,
     uid,
     acheteur,
-    "_type": "Marché",
+    _type: "Marché",
     nature,
     objet,
     codeCPV,
@@ -43,21 +55,60 @@ def processMarche(marche):
         end),
     modifications:
     .modifications?.modification | (if type == "array" then
-        map(processModification(.))
-        elif type == "object" then [processModification(.)]
+        map(processModificationMarche(.))
+        elif type == "object" then [processModificationMarche(.)]
         else []
         end)
     };
+def processContratConcession(concession):
+    concession | {
+    id,
+    uid,
+    autoriteConcedante,
+    _type: "Contrat de concession",
+    nature,
+    procedure,
+    lieuExecution,
+    "dureeMois": .dureeMois | tonumber,
+    dateSignature,
+    datePublicationDonnees,
+    dateDebutExecution,
+    valeurGlobale,
+    montantSubventionPublique: .montantSubventionPublique | tonumber,
+    donneesExecution,
+    concessionnaires:
+    .concessionnaires.concessionnaire | (if type == "array" then
+        map(.)
+        else [.]
+        end),
+    modifications:
+    .modifications?.modification | (if type == "array" then
+        map(processModificationConcession(.))
+        elif type == "object" then [processModificationConcession(.)]
+        else []
+        end)
+
+};
+
+    .marches.marche as $marches |
+    .marches."contrat-concession" as $concessions |
 
     {
     "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/paquet.json",
     marches :
-    .marches.marche | (if type == "array" then
-        map(
-        processMarche(.)
-        )
-        else processMarche(.)
-        end)
+    ($marches |
+    (if type == "array" then
+        map(processMarche(.))
+    else
+        [processMarche(.)]
+    end)
+    +
+    ($concessions |
+    (if type == "array" then
+        map(processContratConcession(.))
+    else
+        [processContratConcession(.)]
+    end)))
 }
 # Added to remove all null properties from the resulting tree
 | walk(
