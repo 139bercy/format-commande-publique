@@ -60,6 +60,22 @@ def processMarche(marche):
         else []
         end)
     };
+def processTarif(tarif):
+    tarif | {
+        intituleTarif,
+        tarif: safeToNumber(.tarif)
+    };
+def processDonneesExecution(donneesExecution):
+    donneesExecution | {
+        datePublicationDonneesExecution,
+        depensesInvestissement: safeToNumber(.depensesInvestissement),
+        tarifs:
+        .tarifs.tarif | (if type == "array" then
+            map(processTarif(.))
+            elif type == "object" then [processTarif(.)]
+            else []
+            end),
+    };
 def processContratConcession(concession):
     concession | {
     id,
@@ -75,7 +91,12 @@ def processContratConcession(concession):
     dateDebutExecution,
     valeurGlobale,
     montantSubventionPublique: .montantSubventionPublique | tonumber,
-    donneesExecution,
+    donneesExecution:
+    .donneesExecution?.donneesAnnuelles | (if type == "array" then
+        map(processDonneesExecution(.))
+        elif type == "object" then [processDonneesExecution(.)]
+        else []
+        end),
     concessionnaires:
     .concessionnaires.concessionnaire | (if type == "array" then
         map(.)
@@ -113,7 +134,7 @@ def processContratConcession(concession):
 # Added to remove all null properties from the resulting tree
 | walk(
     if type == "object" then
-        with_entries(select( .value != null and .value != {} and .value != [] or .key == "modifications" ))
+        with_entries(select( .value != null and .value != {} and .value != [] or .key == "modifications" or .key == "donneesExecution"))
     elif type == "array" then
         map(select( . != null and . != {} ))
     else
