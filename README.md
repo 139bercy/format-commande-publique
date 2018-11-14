@@ -25,6 +25,11 @@ Pré-requis pour exécuter la suite de tests :
 - [ajv](https://www.npmjs.com/package/ajv-cli) (vous devez donc également installer [NodeJS et npm](https://nodejs.org/fr/))
 - Java JDK (pour exécuter `xsd11-validator.jar`)
 
+## Transformation du XML extrait du PES Marché et mis à disposition par la DGFiP
+
+Voir la [documentation](https://github.com/etalab/format-commande-publique/tree/dgfip/scripts).
+
+
 ## Vos commentaires
 
 Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https://forum.etalab.gouv.fr/t/schemas-de-validation-des-donnees-essentielles-des-marches-publics/3141).

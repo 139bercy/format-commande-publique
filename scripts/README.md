@@ -6,6 +6,7 @@
     2. l'archivage des ZIPs et des XML
     1. le réencodage des fichiers XML d'ISO-8859-1 vers UTF-8
     3. la transformation des fichiers XML vers une structure valide
+    4. la transformation vers le format JSON
     3. le découpage des données par SIRET
     4. la validation des fichiers XML produits
     2. l'extraction et l'archivage des URL de profils d'acheteurs
@@ -21,7 +22,7 @@ Un fichier `configTransformation.sh` doit être créé dans le dossier `scripts`
 - `saxonJar` : chemin vers le JAR Saxon (à télécharger [ici](https://sourceforge.net/projects/saxon/files/Saxon-HE/9.9/SaxonHE9-9-0-1J.zip/download), extraire `saxon9he.jar`)
 - `validatorJar` : chemin vers le JAR de xsd11-validator (à télécharger [ici](https://www.dropbox.com/s/939jv39ihnluem0/xsd11-validator.jar?dl=1))
 - `schemasDir` : chemin vers le dossier qui contient les schémas XML
-- `scriptsDir` : chemin vers le dossier qui contient le fichier de configuration et les feuilles de style XSLT (`decpDGFIP.xsl` et `merge.xsl`)
+- `scriptsDir` : chemin vers le dossier qui contient le fichier de configuration, les feuilles de style XSLT (`decpDGFIP.xsl` et `merge.xsl`) et le script `jq` (`jsonDECP.jq`)
 
 ### Hiérarchie de dossiers produite par `transformation.sh`
 
@@ -32,6 +33,8 @@ Entre parenthèses, les fichiers contenus dans le dossier. Cette hiérarchie est
 - sirets (un fichier tabulaire par SIRET repéré dans les fichiers, contenant les données du profil d'acheteur)
 - sortieXML
     - *siret acheteur* (XML format données essentielles publié)
+- sortieJSON
+    - *siret acheteur* (JSON format données essentielles publié)
 - `profilsAcheteurs.csv` (un CSV listant les URL de profils d'acheteur extraites lors du traitement)
 
 ### Modifications apportées aux les fichiers XML reçus de la DGFiP
@@ -44,3 +47,15 @@ Les modifications apportées aux XML reçus sont les suivantes :
     - `dateTransmissionDonneesEtalab`
     - `urlProfilAcheteur`
 - l'élément `uid` est ajouté, concaténant le SIRET de l'acheteur et l'ID du marché
+
+### Notes de version
+
+**1.1.0** (14 novembre 2018)
+
+- transformation DECP XML > DECP JSON
+
+**1.0.0** (9 octobre 2018)
+
+- transformation DGFIP > DECP XML
+- extraction de URL de profils d'acheteurs
+- structuration des données par SIRET d'acheteur
