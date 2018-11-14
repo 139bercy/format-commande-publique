@@ -55,7 +55,7 @@ done
 total=$((pasvides + vides))
 echo -e "\nFichiers traités : $pasvides Fichiers vides : $vides Total : $total"
 
-echo -e "\033[1m\n\nFusion et validation des fichiers XML par SIRET...\033[0m"
+echo -e "\033[1m\n\nFusion et validation des fichiers XML par SIRET + JSON...\033[0m"
 
 cd $racine
 
@@ -68,14 +68,18 @@ sirets=`ls sirets`
 
 for siret in $sirets
 do
+    # Le répertoire sortieXML est créé par le script XSLT
+    mkdir -p $racine/sortieJSON/$siret
     cd $racine/sortieXML/$siret
 
     pwd
     for xml in `ls *.xml`
     do
-        nouveauFichier=${xml/__*/.xml}
-        java -jar $saxonJar -s:$xml -xsl:$scriptsDir/merge.xsl > $nouveauFichier
-        java -jar $validatorJar -sf $schemasDir/paquet.xsd -if $nouveauFichier
+        nouveauXML=${xml/__*/.xml}
+        nouveauJSON=${nouveauXML/\.xml/.json}
+        java -jar $saxonJar -s:$xml -xsl:$scriptsDir/merge.xsl > $nouveauXML
+        java -jar $validatorJar -sf $schemasDir/paquet.xsd -if $nouveauXML
+        $scriptsDir/xml2jsonDECP.sh $nouveauXML > $racine/sortieJSON/$siret/$nouveauJSON
         rm *.xml.xml
         break
     done
