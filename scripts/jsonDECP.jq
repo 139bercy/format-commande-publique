@@ -43,10 +43,10 @@ def processMarche(marche):
     codeCPV,
     procedure,
     lieuExecution,
-    "dureeMois": .dureeMois | tonumber,
+    "dureeMois": safeToNumber(.dureeMois),
     dateNotification,
     datePublicationDonnees,
-    "montant": .montant | tonumber,
+    "montant": safeToNumber(.montant),
     formePrix,
     titulaires:
     .titulaires.titulaire | (if type == "array" then
@@ -85,12 +85,12 @@ def processContratConcession(concession):
     nature,
     procedure,
     lieuExecution,
-    "dureeMois": .dureeMois | tonumber,
+    "dureeMois": safeToNumber(.dureeMois),
     dateSignature,
     datePublicationDonnees,
     dateDebutExecution,
     valeurGlobale,
-    montantSubventionPublique: .montantSubventionPublique | tonumber,
+    montantSubventionPublique: safeToNumber(.montantSubventionPublique),
     donneesExecution:
     .donneesExecution?.donneesAnnuelles | (if type == "array" then
         map(processDonneesExecution(.))
