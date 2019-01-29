@@ -1,7 +1,7 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
 > Version destinée à la transmission des données entre la DGFiP et la mission Etalab
-> v1.2.0
+> v1.3.0
 
 **Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -45,6 +45,10 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.3.0** (29 janvier 2019)
+
+- Renommage des dossiers `schémas` et `référentiels`, et du fichier `marchés.xml` pour retirer les caractères accentués ([#41](https://github.com/etalab/format-commande-publique/issues/41))
 
 **1.2.0** (27 août 2018)
 
