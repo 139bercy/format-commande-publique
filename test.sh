@@ -10,7 +10,7 @@ function testExemplesJson {
     for exemple in `ls $prefixe*`
     do
         echo "$exemple ($schema)"
-        ajv -s ../../schémas/json/$schema -d $exemple > testlog
+        ajv -s ../../schemas/json/$schema -d $exemple > testlog
         if [ `head -n 1 testlog | grep invalid` ]
         then
             cat testlog
@@ -44,7 +44,7 @@ function testExemplesXml {
     for exemple in `ls $prefixe*`
     do
         echo "$exemple ($schema)"
-        java -jar $base/test/xsd11-validator.jar -sf ../../schémas/xml/$schema -if $exemple 2> testlog
+        java -jar $base/test/xsd11-validator.jar -sf ../../schemas/xml/$schema -if $exemple 2> testlog
         if [ -s testlog ]
         then
             cat testlog
@@ -56,25 +56,25 @@ function testExemplesXml {
     done
 }
 
-if [ -d $base/schémas/json ]
+if [ -d $base/schemas/json ]
 then
     echo "Test des exemples JSON"
     echo ""
 
     cd $base/exemples/json
 
-    testExemplesJson "mar" "marchés.json"
+    testExemplesJson "mar" "marches.json"
     testExemplesJson "cc" "contrats-concessions.json"
 else
     echo "Pas de schémas JSON à valider."
 fi
 
-if [ -d $base/schémas/xml ]
+if [ -d $base/schemas/xml ]
 then
     echo "Validation des schémas XML"
     echo ""
 
-    cd $base/schémas/xml
+    cd $base/schemas/xml
 
     testSchémasXml
 
@@ -83,7 +83,7 @@ then
 
     cd $base/exemples/xml
 
-    testExemplesXml "mar" "marchés.xsd"
+    testExemplesXml "mar" "marches.xsd"
     testExemplesXml "cc" "contrats-concessions.xsd"
     testExemplesXml "paquet" "paquet.xsd"
 else

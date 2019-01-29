@@ -22,7 +22,7 @@
             <xsl:variable name="day" select="format-date(current-date(),'[D01]')"/>
             <xsl:variable name="id" select="replace(id/text(),'[/\\.\?!\*\$&amp;]','_')"/>
             <xsl:result-document method="xml" href="{$racine}/sortieXML/{$siret}/DECP-{$siret}-{$year}-{$month}-{$day}__{$nomfichier}.xml">
-                <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/sch%C3%A9mas/xml/paquet.xsd">
+                <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/dgfip/schemas/xml/paquet.xsd">
                     <xsl:for-each select="current-group()">
                         <xsl:apply-templates select="."/>
                     </xsl:for-each>

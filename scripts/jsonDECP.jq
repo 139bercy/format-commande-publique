@@ -115,7 +115,7 @@ def processContratConcession(concession):
     .marches."contrat-concession" as $concessions |
 
     {
-    "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/paquet.json",
+    "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/schemas/json/paquet.json",
     marches :
     ($marches |
     (if type == "array" then
