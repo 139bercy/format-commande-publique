@@ -1,0 +1,10 @@
+title: "Données essentielles des marchés publics français"
+description : "Données de tous les marchés supérieurs à 25 000 euros émanant de la commande publique"
+homepage: "https://github.com/etalab/format-commande-publique"
+schemas:
+  -
+    path: "schémas/xml/contrats-concessions.xsd"
+    title: "Contrats de concessions"
+  -
+    path: "schémas/xml/marchés.xsd"
+    title: "Marchés"
