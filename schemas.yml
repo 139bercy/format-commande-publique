@@ -3,8 +3,8 @@ description : "Données de tous les marchés supérieurs à 25 000 euros émanan
 homepage: "https://github.com/etalab/format-commande-publique"
 schemas:
   -
-    path: "schémas/xml/contrats-concessions.xsd"
+    path: "schémas/json/contrats-concessions.json"
     title: "Contrats de concessions"
   -
-    path: "schémas/xml/marchés.xsd"
+    path: "schémas/json/marchés.json"
     title: "Marchés"
