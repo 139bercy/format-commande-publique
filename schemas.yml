@@ -4,4 +4,4 @@ homepage: "https://github.com/etalab/format-commande-publique"
 schemas:
   -
     path: "marches.json"
-    title: "Contrats de commande publique JSON"
+    title: "Contrats de commande publique"
