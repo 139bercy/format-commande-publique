@@ -1,16 +1,16 @@
-#/bin/bash
+#!/bin/bash
 
 # Ce script sert à tester la validité des fichiers d'exemples par rapport aux schémas. Il teste les exemples JSON et XML.
 
-base=`pwd`
+root=`pwd`
 
 function testExemplesJson {
     prefixe=$1
-    schema=$2
+    schema=marches.json
     for exemple in `ls $prefixe*`
     do
         echo "$exemple ($schema)"
-        ajv -s ../../schémas/json/$schema -d $exemple > testlog
+        ajv -s $root/$schema -d $exemple > testlog
         if [ `head -n 1 testlog | grep invalid` ]
         then
             cat testlog
@@ -26,7 +26,7 @@ function testSchémasXml {
     for xsd in `ls *.xsd`
     do
         echo "$xsd"
-        xmllint --noout --schema $base/test/XMLSchema.xsd $xsd 2> testlog
+        xmllint --noout --schema $root/test/XMLSchema.xsd $xsd 2> testlog
         if [[ $(< testlog) == "$xsd validates" ]]
         then
             echo "> OK"
@@ -40,11 +40,11 @@ function testSchémasXml {
 
 function testExemplesXml {
     prefixe=$1
-    schema=$2
+    schema=marches.xsd
     for exemple in `ls $prefixe*`
     do
         echo "$exemple ($schema)"
-        java -jar $base/test/xsd11-validator.jar -sf ../../schémas/xml/$schema -if $exemple 2> testlog
+        java -jar $root/test/xsd11-validator.jar -sf $root/$schema -if $exemple 2> testlog
         if [ -s testlog ]
         then
             cat testlog
@@ -56,38 +56,27 @@ function testExemplesXml {
     done
 }
 
-if [ -d $base/schémas/json ]
-then
-    echo "Test des exemples JSON"
-    echo ""
+echo "## Test des exemples JSON"
+echo ""
 
-    cd $base/exemples/json
+cd $root/exemples/json
 
-    testExemplesJson "mar" "marchés.json"
-    testExemplesJson "cc" "contrats-concessions.json"
-    testExemplesJson "paquet" "paquet.json"
-else
-    echo "Pas de schémas JSON à valider."
-fi
+testExemplesJson "mar"
+testExemplesJson "cc"
+testExemplesJson "paquet"
 
-if [ -d $base/schémas/xml ]
-then
-    echo "Validation des schémas XML"
-    echo ""
+echo "## Validation des schémas XML"
+echo ""
 
-    cd $base/schémas/xml
+cd $root
+testSchémasXml
 
-    testSchémasXml
+echo "## Test des exemples XML"
+echo ""
 
-    echo "Test des exemples XML"
-    echo ""
+cd $root/exemples/xml
 
-    cd $base/exemples/xml
+testExemplesXml "mar"
+testExemplesXml "cc"
+testExemplesXml "paquet"
 
-    testExemplesXml "mar" "marchés.xsd"
-    testExemplesXml "cc" "contrats-concessions.xsd"
-    testExemplesXml "paquet" "paquet.xsd"
-
-else
-    echo "Pas de schémas XML à valider."
-fi
