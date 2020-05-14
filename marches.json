@@ -158,9 +158,9 @@
           "type": "array",
           "minItems": 1,
           "uniqueItems": true,
-          "items": [{
+          "items": {
             "$ref": "#/definitions/marche/definitions/Titulaire"
-          }]
+          }
         },
         "modifications": {
           "title": "Modifications des données du marché après leur publication initiale",
@@ -294,9 +294,9 @@
               "title": "Liste des titulaires après la modification",
               "description": "",
               "type": "array",
-              "items": [{
+              "items": {
                 "$ref": "#/definitions/marche/definitions/Titulaire"
-              }],
+              },
               "minItems": 1,
               "uniqueItems": true
             }
