@@ -36,14 +36,17 @@
       ],
       "modifications": [
         {
-          "dureeMois": "86",
+          "dureeMois": 86,
           "titulaires": [
             {
               "typeIdentifiant": "SIRET",
               "id": "31587164001876",
               "denominationSociale": "JERICHO APT SARL"
             }
-          ]
+          ],
+          "objetModification": "Allongement du marché et remplacement des titulaires par Jericho APT SARL",
+          "datePublicationDonneesModification": "2019-01-14",
+          "dateNotificationModification": "2019-01-03"
         }
       ]
     },
