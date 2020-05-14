@@ -1,10 +1,7 @@
 title: "Données essentielles des marchés publics français"
-description : "Données de tous les marchés supérieurs à 25 000 euros émanant de la commande publique"
+description : "Données des attributions de marchés publics et de contrats de concessions supérieures à 40 000 euros."
 homepage: "https://github.com/etalab/format-commande-publique"
 schemas:
   -
-    path: "schémas/json/contrats-concessions.json"
-    title: "Contrats de concessions"
-  -
-    path: "schémas/json/marchés.json"
-    title: "Marchés"
+    path: "marches.json"
+    title: "Contrats de commande publique"
