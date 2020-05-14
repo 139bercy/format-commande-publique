@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.3.0
+> v1.4.0
 
 ** Schémas du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -10,6 +10,13 @@ Ce dépôt est destiné à accueillir :
 
 - les schémas (JSON et XML) permettant de vérifier la validité des données publiées
 - des données exemples
+
+## Les schémas
+
+Les schémas sont conformes à l'[arrêté modificatif du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id).
+
+- marches.json pour valider les données de marchés publics au format JSON
+- marches.xsd pour valider les données de marchés au format XML
 
 ## Test des schémas et des exemples
 
@@ -40,6 +47,11 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.4.0** (14 mai 2020)
+
+- Rassemblement des schémas en un seul fichier (ancien schéma "paquet")
+- Suppression des référentiels et des scripts
 
 **1.3.0** (8 octobre 2018)
 
