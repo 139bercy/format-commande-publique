@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/139bercy/format-commande-publique/master/sch%C3%A9mas/xml/paquet.xsd">
+    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.xsd">
     <contrat-concession>
         <id>20010345211200</id>
         <autoriteConcedante>
