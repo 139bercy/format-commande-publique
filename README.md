@@ -17,18 +17,20 @@ Les schémas sont conformes à l'[arrêté du 22 mars 2019](https://www.legifran
 
 - marches.json pour valider les données de marchés publics au format JSON
 - marches.xsd pour valider les données de marchés au format XML
+- marches-dgfip.xsd est un format dédié à la transmission des données des données du PES Marché par la DGFiP, avec des champs supplémentaires
 
 Pour référencer ces schémas dans vos données et dans votre code informatique, voici les URL que nous vous recommandons d'utiliser :
 
 - Toujours la dernière version :
   - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/latest/marches.json
-  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/latest/marches.xml
+  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/latest/marches.xsd
+  - XML DGFiP : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/latest/marches-dgfip.xsd
 - Version 1.5.0 (arrêté du 22 mars 2019) :
   - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches.json
-  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches.xml
+  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches.xsd
 - Version 1.4.0 (arrêté modificatif du 27 juillet 2018) :
   - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.4.0/marches.json
-  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.4.0/marches.xml
+  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.4.0/marches.xsd
 
 ## Test des schémas et des exemples
 
@@ -63,6 +65,7 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 **1.5.0** 
 
 - Mise à jour des schémas afin d'être conforme à l'arrêté du 22 mars 2019
+- Migration vers 139bercy
 
 **1.4.0** (14 mai 2020)
 
