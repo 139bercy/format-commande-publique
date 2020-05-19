@@ -1,16 +1,22 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.3.0
+> v1.4.0
 
-**Outils et documents divers autour du format réglementaire pour la publication des données essentielles des marchés publics français.**
+** Schémas du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
 L'arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique définit le cadre de l'ouverture des données des marchés publics. Ainsi, au 1er octobre, les données de tous les marchés supérieurs à 25 000 euros devront être publiées en Open Data sur le profil d'acheteur.
 
 Ce dépôt est destiné à accueillir :
 
 - les schémas (JSON et XML) permettant de vérifier la validité des données publiées
-- les référentiels qui définissent ces schémas
 - des données exemples
+
+## Les schémas
+
+Les schémas sont conformes à l'[arrêté modificatif du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id).
+
+- marches.json pour valider les données de marchés publics au format JSON
+- marches.xsd pour valider les données de marchés au format XML
 
 ## Test des schémas et des exemples
 
@@ -30,7 +36,7 @@ Pré-requis pour exécuter la suite de tests :
 
 Vos questions et commentaires sont les bienvenus [sur le forum d'Etalab](https://forum.etalab.gouv.fr/t/schemas-de-validation-des-donnees-essentielles-des-marches-publics/3141).
 
-Si vous avez un compte Github, vous pouvez également [créer un ticket](https://github.com/etalab/format-commande-publique/issues/new).
+Si vous avez un compte Github, vous pouvez également [créer un ticket](https://github.com/139bercy/format-commande-publique/issues/new).
 
 ## Voir aussi
 
@@ -42,6 +48,11 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Notes de version
 
+**1.4.0** (14 mai 2020)
+
+- Rassemblement des schémas en un seul fichier (ancien schéma "paquet")
+- Suppression des référentiels et des scripts
+
 **1.3.0** (8 octobre 2018)
 
 - ajout du champ optionnel `uid` qui contient l'`id` du marché préfixé du SIRET de l'acheteur (et ajout de nouveaux exemples)
@@ -49,17 +60,17 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 **1.2.0** (27 août 2018)
 
-- Suppression des schémas et des références aux marchés défense et sécurité ([#32](https://github.com/etalab/format-commande-publique/issues/32))
-- Remplacement de `dateSignatureModification` par `dateNotificationModification` dans les schémas de marchés JSON et XML ([#34](https://github.com/etalab/format-commande-publique/issues/34))
-- Ajout d'un script de test des exemples JSON/XML et des schémas XML (`test.sh`) ([#2](https://github.com/etalab/format-commande-publique/issues/2))
+- Suppression des schémas et des références aux marchés défense et sécurité ([#32](https://github.com/139bercy/format-commande-publique/issues/32))
+- Remplacement de `dateSignatureModification` par `dateNotificationModification` dans les schémas de marchés JSON et XML ([#34](https://github.com/139bercy/format-commande-publique/issues/34))
+- Ajout d'un script de test des exemples JSON/XML et des schémas XML (`test.sh`) ([#2](https://github.com/139bercy/format-commande-publique/issues/2))
 - *bug résolu* : Dans les schémas JSON, la date de signature de modification d'un contrat de concession et la date de notification d'une modification de marché sont maintenant des champs obligatoires
 - *bug résolu* : dans le schéma XML des contrats de concession, l'objet d'une modification est maintenant limité à 256 caractères
 
 **1.1.5** (21 août 2018)
 
-- Propriété (invalide) `maxSize` remplacée par `maxLength` dans le schéma JSON des contrats de concessions ([#29](https://github.com/etalab/format-commande-publique/issues/29))
+- Propriété (invalide) `maxSize` remplacée par `maxLength` dans le schéma JSON des contrats de concessions ([#29](https://github.com/139bercy/format-commande-publique/issues/29))
 - Suppression des sauts de ligne dans les schémas JSON afin de les rendre scrictement valides
-- Suppression des propriétés `titulaire`, résultant de la conversion initiale depuis le XML ([#26](https://github.com/etalab/format-commande-publique/issues/26) et [#28](https://github.com/etalab/format-commande-publique/issues/28))
+- Suppression des propriétés `titulaire`, résultant de la conversion initiale depuis le XML ([#26](https://github.com/139bercy/format-commande-publique/issues/26) et [#28](https://github.com/139bercy/format-commande-publique/issues/28))
 
 **1.1.4** (20 mars 2018)
 
@@ -72,7 +83,7 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 **1.1.2** (21 février 2018)
 
-- Allongement du champ identifiant de marché afin d'accueillir le numéro d'ordre de modification prévu dans l'article 1 de l'arrêté ([voir #22](/etalab/format-commande-publique/issues/22))
+- Allongement du champ identifiant de marché afin d'accueillir le numéro d'ordre de modification prévu dans l'article 1 de l'arrêté ([voir #22](/139bercy/format-commande-publique/issues/22))
 - Mise à jour et résolution de problèmes dans les fichiers exemples
 
 **1.1.1** (1er février 2018)
@@ -81,7 +92,7 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 **1.1.0** (2 octobre 2017)
 
-- Ajout du type de document ["paquet"](https://github.com/etalab/format-commande-publique/tree/master/exemples/xml) via l'élément `marches` dans le format XML pour publier plusieurs marchés, de différent types, dans un même fichier XML
+- Ajout du type de document ["paquet"](https://github.com/139bercy/format-commande-publique/tree/master/exemples/xml) via l'élément `marches` dans le format XML pour publier plusieurs marchés, de différent types, dans un même fichier XML
 - Exemples : remplacement de l'URL des schémas pour une URL absolue, et non relative
 
 **1.0.2** (29 septembre 2017)
@@ -129,7 +140,7 @@ _
 
 **0.2.1** (9 novembre 2016)
 
-- ajout de liens autour de la spécification JSON Schema ([ici](https://github.com/etalab/format-commande-publique/tree/master/json-schema))
+- ajout de liens autour de la spécification JSON Schema ([ici](https://github.com/139bercy/format-commande-publique/tree/master/json-schema))
 - correction de coquilles
 
 **0.2.0** (28 octobre 2016)

@@ -1,41 +1,26 @@
 {
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/marchés.json",
-  "id": "2010345211201",
-  "acheteur": {
-    "id": "21350238800019",
-    "nom": "Ville de Rennes"
-  },
-  "nature": "Accord-cadre",
-  "objet": "Entretien des jardins municipaux",
-  "codeCPV": "77313000",
-  "procedure": "Marché négocié sans publicité ni mise en concurrence préalable",
-  "lieuExecution": {
-    "code": "35238",
-    "typeCode": "Code commune",
-    "nom": "Rennes"
-  },
-  "dureeMois": 24,
-  "dateNotification": "2007-08-13",
-  "datePublicationDonnees": "2007-08-19",
-  "montant": 127000,
-  "formePrix": "Ferme et actualisable",
-  "titulaires": [
+  "$schema": "https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.json",
+  "marches": [
     {
-      "typeIdentifiant": "SIRET",
-      "id": "81223113200026",
-      "denominationSociale": "Garami SARL"
-    },
-    {
-      "typeIdentifiant": "TVA",
-      "id": "DE814864138",
-      "denominationSociale": "Hellman Gmbh"
-    }
-  ],
-  "modifications": [
-    {
-      "objetModification": "Changement de titulaire : remplacement d'Hellman par Amandier.",
-      "dateNotificationModification": "2008-07-20",
-      "datePublicationDonneesModification": "2008-09-13",
+      "id": "2010345211201",
+      "acheteur": {
+        "id": "21350238800019",
+        "nom": "Ville de Rennes"
+      },
+      "nature": "Accord-cadre",
+      "objet": "Entretien des jardins municipaux",
+      "codeCPV": "77313000",
+      "procedure": "Marché négocié sans publicité ni mise en concurrence préalable",
+      "lieuExecution": {
+        "code": "35238",
+        "typeCode": "Code commune",
+        "nom": "Rennes"
+      },
+      "dureeMois": 24,
+      "dateNotification": "2007-08-13",
+      "datePublicationDonnees": "2007-08-19",
+      "montant": 127000,
+      "formePrix": "Ferme et actualisable",
       "titulaires": [
         {
           "typeIdentifiant": "SIRET",
@@ -43,9 +28,28 @@
           "denominationSociale": "Garami SARL"
         },
         {
-          "typeIdentifiant": "SIRET",
-          "id": "87127639200012",
-          "denominationSociale": "Amandier SA"
+          "typeIdentifiant": "TVA",
+          "id": "DE814864138",
+          "denominationSociale": "Hellman Gmbh"
+        }
+      ],
+      "modifications": [
+        {
+          "objetModification": "Changement de titulaire : remplacement d'Hellman par Amandier.",
+          "dateNotificationModification": "2008-07-20",
+          "datePublicationDonneesModification": "2008-09-13",
+          "titulaires": [
+            {
+              "typeIdentifiant": "SIRET",
+              "id": "81223113200026",
+              "denominationSociale": "Garami SARL"
+            },
+            {
+              "typeIdentifiant": "SIRET",
+              "id": "87127639200012",
+              "denominationSociale": "Amandier SA"
+            }
+          ]
         }
       ]
     }

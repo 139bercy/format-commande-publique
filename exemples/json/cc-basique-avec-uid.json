@@ -1,32 +1,36 @@
 {
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/contrats-concessions.json",
-  "id": "20010345211200",
-  "uid": "2135023880001920010345211200",
-  "autoriteConcedante": {
-    "id": "21350238800019",
-    "nom": "Ville de Millau"
-  },
-  "nature": "Concession de travaux",
-  "objet": "Construction et exploitation d'un viaduc",
-  "procedure": "Procédure négociée restreinte",
-  "lieuExecution": {
-    "code": "12145",
-    "typeCode": "Code commune",
-    "nom": "Millau"
-  },
-  "dureeMois": 360,
-  "dateSignature": "2001-02-21",
-  "datePublicationDonnees": "2001-02-21",
-  "dateDebutExecution": "2001-02-21",
-  "valeurGlobale": 27860000,
-  "montantSubventionPublique": 2987000,
-  "donneesExecution": [],
-  "concessionnaires": [
+  "$schema": "https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.json",
+  "marches": [
     {
-      "typeIdentifiant": "SIRET",
-      "id": "81223113200026",
-      "denominationSociale": "Atlas SAS"
+      "id": "20010345211200",
+      "uid": "2135023880001920010345211200",
+      "autoriteConcedante": {
+        "id": "21350238800019",
+        "nom": "Ville de Millau"
+      },
+      "nature": "Concession de travaux",
+      "objet": "Construction et exploitation d'un viaduc",
+      "procedure": "Procédure négociée restreinte",
+      "lieuExecution": {
+        "code": "12145",
+        "typeCode": "Code commune",
+        "nom": "Millau"
+      },
+      "dureeMois": 360,
+      "dateSignature": "2001-02-21",
+      "datePublicationDonnees": "2001-02-21",
+      "dateDebutExecution": "2001-02-21",
+      "valeurGlobale": 27860000,
+      "montantSubventionPublique": 2987000,
+      "donneesExecution": [],
+      "concessionnaires": [
+        {
+          "typeIdentifiant": "SIRET",
+          "id": "81223113200026",
+          "denominationSociale": "Atlas SAS"
+        }
+      ],
+      "modifications": []
     }
-  ],
-  "modifications": []
+  ]
 }

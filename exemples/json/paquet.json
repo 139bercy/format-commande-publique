@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/paquet.json",
+  "$schema": "https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.json",
   "marches" : [
     {
       "id": "2010345211200",
@@ -35,13 +35,6 @@
         }
       ],
       "modifications": []
-    },
-    {
-      "id": "20147988600",
-      "identificationAcheteur": "État",
-      "nature": "Marché de partenariat",
-      "objet": "Travaux",
-      "procedure": "Appel d'offres ouvert"
     },
     {
       "id": "200103452112",

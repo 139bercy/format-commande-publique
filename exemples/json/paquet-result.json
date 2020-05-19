@@ -1,0 +1,85 @@
+{
+  "marches": [
+    {
+      "id": "201890230",
+      "uid": "23350001600040201890230",
+      "acheteur": {
+        "id": "23350001600040",
+        "nom": "Région de Bretagne"
+      },
+      "_type": "Marché",
+      "nature": "Marché",
+      "objet": "Maintenance et exploitation des installations de chauffage, de climatisation, de ventilation et de p",
+      "codeCPV": "50720000-8",
+      "procedure": "Appel d'offres ouvert",
+      "lieuExecution": {
+        "code": "35000",
+        "typeCode": "Code postal",
+        "nom": "35000"
+      },
+      "dureeMois": 72,
+      "dateNotification": "2018-07-10+02:00",
+      "datePublicationDonnees": "2018-10-04+02:00",
+      "montant": 59153.83,
+      "formePrix": "Révisable",
+      "titulaires": [
+        {
+          "typeIdentifiant": "SIRET",
+          "id": "31587164001603",
+          "denominationSociale": "IDEX ENERGIES"
+        },
+        {
+          "typeIdentifiant": "SIRET",
+          "id": "31587164001999",
+          "denominationSociale": "SUPER FOURNISSEUR SARL"
+        }
+      ],
+      "modifications": [
+        {
+          "dureeMois": 86,
+          "titulaires": [
+            {
+              "typeIdentifiant": "SIRET",
+              "id": "31587164001876",
+              "denominationSociale": "JERICHO APT SARL"
+            }
+          ],
+          "objetModification": "Allongement du marché et remplacement des titulaires par Jericho APT SARL",
+          "datePublicationDonneesModification": "2019-01-14",
+          "dateNotificationModification": "2019-01-03"
+        }
+      ]
+    },
+    {
+      "id": "201890299",
+      "uid": "23350001600040201890866",
+      "acheteur": {
+        "id": "23350001600045",
+        "nom": "Région de Normandie"
+      },
+      "_type": "Marché",
+      "nature": "Marché",
+      "objet": "Maintenance et exploitation des installations de chauffage, de climatisation, de ventilation et de p",
+      "codeCPV": "50720000-8",
+      "procedure": "Appel d'offres ouvert",
+      "lieuExecution": {
+        "code": "35000",
+        "typeCode": "Code postal",
+        "nom": "35000"
+      },
+      "dureeMois": 72,
+      "dateNotification": "2018-07-10+02:00",
+      "datePublicationDonnees": "2018-10-04+02:00",
+      "montant": 59153.83,
+      "formePrix": "Révisable",
+      "titulaires": [
+        {
+          "typeIdentifiant": "SIRET",
+          "id": "31587164001603",
+          "denominationSociale": "IDEX ENERGIES"
+        }
+      ],
+      "modifications": []
+    }
+  ]
+}
