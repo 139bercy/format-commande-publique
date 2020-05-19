@@ -1,5 +1,5 @@
 {
-  "id": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/schémas/json/marches.json",
+  "id": "https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "title": "Format réglementaire de publication des données essentielles des marchés publics français",
   "description": "",

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/json/contrats-concessions.json",
+  "$schema": "https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.json",
   "marches": [
     {
       "id": "2010345211200",

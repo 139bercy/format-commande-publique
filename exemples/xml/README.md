@@ -10,6 +10,3 @@ Ces fichiers contiennent des données fictives mais réalistes, vous permettant 
 - **mar-basique** : un marché public, de nature accord-cadre, avec plusieurs titulaires mais pas de modifications
 - **paquet** : plusieurs marchés ou contrats de concession dans un même fichier
 
-### Schémas correspondants
-
-Vous trouverez les schémas pour ces fichiers exemples [ici](../../schémas/xml/).
