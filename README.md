@@ -1,10 +1,10 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.4.0
+> v1.5.0
 
 ** Schémas du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
-L'arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique définit le cadre de l'ouverture des données des marchés publics. Ainsi, au 1er octobre, les données de tous les marchés supérieurs à 25 000 euros devront être publiées en Open Data sur le profil d'acheteur.
+L'arrêté du 14 avril 2017 relatif aux données essentielles dans la commande publique définit le cadre de l'ouverture des données des marchés publics. Ainsi, au 1er octobre, les données de tous les marchés supérieurs à 40 000 euros devront être publiées en Open Data sur le profil d'acheteur.
 
 Ce dépôt est destiné à accueillir :
 
@@ -13,10 +13,26 @@ Ce dépôt est destiné à accueillir :
 
 ## Les schémas
 
-Les schémas sont conformes à l'[arrêté modificatif du 27 juillet 2018](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000037282994&dateTexte=&categorieLien=id).
+Les schémas sont conformes à l'[arrêté du 22 mars 2019](https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000038318675&categorieLien=id).
 
 - marches.json pour valider les données de marchés publics au format JSON
 - marches.xsd pour valider les données de marchés au format XML
+- marches-dgfip.xsd est un format dédié à la transmission des données des données du PES Marché par la DGFiP, avec des champs supplémentaires
+
+Pour référencer ces schémas dans vos données et dans votre code informatique, voici les URL que nous vous recommandons d'utiliser :
+
+- Toujours la dernière version :
+  - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/latest/marches.json
+  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/latest/marches.xsd
+  - XML DGFiP : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/latest/marches-dgfip.xsd
+- Version 1.5.0 (arrêté du 22 mars 2019) :
+  - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches.json
+  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches.xsd
+  - XML DGFiP : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches-dgfip.xsd
+- Version 1.4.0 (arrêté modificatif du 27 juillet 2018) :
+  - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.4.0/marches.json
+  - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.4.0/marches.xsd
+  - XML DGFiP : non disponible en version 1.4.0
 
 ## Test des schémas et des exemples
 
@@ -47,6 +63,11 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 
 ## Notes de version
+
+**1.5.0** (19 mai 2020)
+
+- Mise à jour des schémas afin d'être conforme à l'arrêté du 22 mars 2019
+- Migration vers 139bercy
 
 **1.4.0** (14 mai 2020)
 

@@ -8,3 +8,6 @@ schemas:
   -
     path: "marches.xsd"
     title: "Contrats de commande publique XML"
+  -
+    path: "marches-dgfip.xsd"
+    title: "Contrats de commande publique DGFiP XML"
