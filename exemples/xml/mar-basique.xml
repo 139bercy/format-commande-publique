@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/etalab/format-commande-publique/master/sch%C3%A9mas/xml/march%C3%A9s.xsd">
+<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/139bercy/format-commande-publique/master/sch%C3%A9mas/xml/march%C3%A9s.xsd">
 	<id>2010345211200</id>
 	<acheteur>
 		<id>21350238800019</id>
