@@ -1,6 +1,6 @@
 # Format réglementaire pour la publication des données essentielles des marchés publics français
 
-> v1.4.0
+> v1.5.0
 
 ** Schémas du format réglementaire pour la publication des données essentielles des marchés publics français.**
 
@@ -28,9 +28,11 @@ Pour référencer ces schémas dans vos données et dans votre code informatique
 - Version 1.5.0 (arrêté du 22 mars 2019) :
   - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches.json
   - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches.xsd
+  - XML DGFiP : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.5.0/marches-dgfip.xsd
 - Version 1.4.0 (arrêté modificatif du 27 juillet 2018) :
   - JSON : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.4.0/marches.json
   - XML : https://schema.data.gouv.fr/schemas/etalab/format-commande-publique/1.4.0/marches.xsd
+  - XML DGFiP : non disponible en version 1.4.0
 
 ## Test des schémas et des exemples
 
@@ -62,7 +64,7 @@ Si vous avez un compte Github, vous pouvez également [créer un ticket](https:/
 
 ## Notes de version
 
-**1.5.0** 
+**1.5.0** (19 mai 2020)
 
 - Mise à jour des schémas afin d'être conforme à l'arrêté du 22 mars 2019
 - Migration vers 139bercy
