@@ -4,4 +4,10 @@ homepage: "https://github.com/etalab/format-commande-publique"
 schemas:
   -
     path: "marches.json"
-    title: "Contrats de commande publique"
+    title: "Contrats de commande publique JSON"
+  -
+    path: "marches.xsd"
+    title: "Contrats de commande publique XML"
+  -
+    path: "marches-dgfip.xsd"
+    title: "Contrats de commande publique DGFiP XML"
