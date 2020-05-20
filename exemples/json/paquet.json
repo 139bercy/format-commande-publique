@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.json",
+  "$schema": "https://schema.data.gouv.fr/schemas/139bercy/format-commande-publique/1.5.0/marches.json",
   "marches" : [
     {
       "id": "2010345211200",
