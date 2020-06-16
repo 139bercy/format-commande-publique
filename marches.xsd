@@ -87,7 +87,7 @@
               <xs:enumeration value="Procédure adaptée"/>
               <xs:enumeration value="Appel d'offres ouvert"/>
               <xs:enumeration value="Appel d'offres restreint"/>
-              <xs:enumeration value="Procédure avec négotiation"/>
+              <xs:enumeration value="Procédure avec négociation"/>
               <xs:enumeration value="Marché passé sans publicité ni mise en concurrence préalable"/>
               <xs:enumeration value="Dialogue compétitif"/>
             </xs:restriction>
