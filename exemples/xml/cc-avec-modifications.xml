@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.xsd">
-	<id>20010345211202</id>
+<contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../marches.xsd">
+	<id>cc_12655</id>
 	<autoriteConcedante>
 		<id>21350238800019</id>
-		<nom>Ville de Millau</nom>
 	</autoriteConcedante>
 	<nature>Concession de travaux</nature>
 	<objet>Construction et exploitation d'un viaduc</objet>
 	<procedure>Procédure négociée restreinte</procedure>
-	<lieuExecution>
-		<code>12145</code>
-		<typeCode>Code commune</typeCode>
-		<nom>Millau</nom>
-	</lieuExecution>
 	<dureeMois>360</dureeMois>
 	<dateSignature>2001-02-21</dateSignature>
 	<datePublicationDonnees>2001-02-21</datePublicationDonnees>
@@ -39,20 +33,23 @@
 		<concessionnaire>
 			<typeIdentifiant>SIRET</typeIdentifiant>
 			<id>81223113200026</id>
-			<denominationSociale>Atlas SAS</denominationSociale>
 		</concessionnaire>
 	</concessionnaires>
+	<considerationsSociales/>
+	<considerationsEnvironnementales>
+		<considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+	</considerationsEnvironnementales>
 	<modifications>
 		<modification>
-			<objetModification>Allongement de la durée</objetModification>
+			<id>1</id>
 			<datePublicationDonneesModification>2002-01-19</datePublicationDonneesModification>
 			<dateSignatureModification>2008-07-20</dateSignatureModification>
 			<dureeMois>410</dureeMois>
 		</modification>
 		<modification>
-			<objetModification>Allongement de la durée et révision de la valeur globale</objetModification>
-			<dateSignatureModification>2008-07-20</dateSignatureModification>
+			<id>3</id>
 			<datePublicationDonneesModification>2007-06-14</datePublicationDonneesModification>
+			<dateSignatureModification>2008-07-20</dateSignatureModification>
 			<dureeMois>540</dureeMois>
 			<valeurGlobale>33890000</valeurGlobale>
 		</modification>

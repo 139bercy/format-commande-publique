@@ -1,74 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.xsd">
-	<id>2010345211203</id>
+<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../marches.xsd">
+	<id>MP90765-8</id>
 	<acheteur>
 		<id>21350238800019</id>
-		<nom>Ville de Rennes</nom>
 	</acheteur>
-	<nature>Accord-cadre</nature>
+	<nature>Marché</nature>
 	<objet>Entretien des jardins municipaux</objet>
 	<codeCPV>77313000</codeCPV>
 	<procedure>Marché passé sans publicité ni mise en concurrence préalable</procedure>
 	<lieuExecution>
 		<code>35238</code>
 		<typeCode>Code commune</typeCode>
-		<nom>Rennes</nom>
 	</lieuExecution>
 	<dureeMois>24</dureeMois>
 	<dateNotification>2007-08-13</dateNotification>
 	<datePublicationDonnees>2007-08-19</datePublicationDonnees>
 	<montant>127000</montant>
-	<formePrix>Ferme et actualisable</formePrix>
+	<formePrix>Mixte</formePrix>
 	<titulaires>
 		<titulaire>
 			<typeIdentifiant>SIRET</typeIdentifiant>
 			<id>81223113200026</id>
-			<denominationSociale>Garami SARL</denominationSociale>
 		</titulaire>
 		<titulaire>
 			<typeIdentifiant>TVA</typeIdentifiant>
 			<id>DE814864138</id>
-			<denominationSociale>Hellman Gmbh</denominationSociale>
 		</titulaire>
 	</titulaires>
+	<considerationsSociales>
+		<considerationSociale>Critère social</considerationSociale>
+		<considerationSociale>Marché réservé</considerationSociale>
+	</considerationsSociales>
+	<considerationsEnvironnementales/>
+	<technique/>
+	<modaliteExecution>
+		<modaliteExecution>Marché subséquent</modaliteExecution>
+	</modaliteExecution>
+	<idAccordCadre>87655</idAccordCadre>
+	<typePrix>
+		<typePrix>Provisoire</typePrix>
+	</typePrix>
+	<marcheInnovant>1</marcheInnovant>
+	<ccag/>
+	<offresRecues>4</offresRecues>
+	<attributionAvance>0</attributionAvance>
+	<typeGroupementOperateurs/>
+	<sousTraitanceDeclaree>1</sousTraitanceDeclaree>
+	<origineUE/>
+	<origineFrance/>
+	<actesSousTraitance>
+		<acteSousTraitance>
+			<id>0</id>
+			<sousTraitant>
+				<id>81223178800044</id>
+				<typeIdentifiant>SIRET</typeIdentifiant>
+			</sousTraitant>
+			<dureeMois>17</dureeMois>
+			<dateNotification>2007-08-22</dateNotification>
+			<montant>6000</montant>
+			<variationPrix>Ferme</variationPrix>
+			<datePublicationDonnees>2007-08-19</datePublicationDonnees>
+		</acteSousTraitance>
+		<acteSousTraitance>
+			<id>3</id>
+			<sousTraitant>
+				<id>56789543300011</id>
+				<typeIdentifiant>SIRET</typeIdentifiant>
+			</sousTraitant>
+			<dureeMois>14</dureeMois>
+			<dateNotification>2008-11-02</dateNotification>
+			<montant>11000</montant>
+			<variationPrix>Actualisable</variationPrix>
+			<datePublicationDonnees>2008-11-17</datePublicationDonnees>
+		</acteSousTraitance>
+	</actesSousTraitance>
+	<modificationsActesSousTraitance>
+		<modificationActeSousTraitance>
+			<id>3</id>
+			<dateNotificationModificationActeSousTraitance>2009-01-19</dateNotificationModificationActeSousTraitance>
+			<datePublicationDonneesModificationActeSousTraitance>2009-01-24</datePublicationDonneesModificationActeSousTraitance>
+			<montant>13400</montant>
+		</modificationActeSousTraitance>
+	</modificationsActesSousTraitance>
 	<modifications>
 		<modification>
-			<objetModification>Changement de titulaire : remplacement d'Hellman par Amandier.</objetModification>
+			<id>1</id>
 			<datePublicationDonneesModification>2008-09-13</datePublicationDonneesModification>
 			<dateNotificationModification>2008-07-20</dateNotificationModification>
 			<titulaires>
 				<titulaire>
 					<typeIdentifiant>SIRET</typeIdentifiant>
 					<id>81223113200026</id>
-					<denominationSociale>Garami SARL</denominationSociale>
 				</titulaire>
 				<titulaire>
 					<typeIdentifiant>SIRET</typeIdentifiant>
 					<id>87127639200012</id>
-					<denominationSociale>Amandier SA</denominationSociale>
 				</titulaire>
 			</titulaires>
 		</modification>
 		<modification>
-			<objetModification>Changement de durée : allongement du marché.</objetModification>
+			<id>2</id>
 			<datePublicationDonneesModification>2008-11-17</datePublicationDonneesModification>
 			<dateNotificationModification>2008-11-02</dateNotificationModification>
 			<dureeMois>30</dureeMois>
 		</modification>
 		<modification>
-			<objetModification>Changement de titulaire : remplacement d'Amandier par Jullié.</objetModification>
+			<id>3</id>
 			<datePublicationDonneesModification>2009-06-13</datePublicationDonneesModification>
 			<dateNotificationModification>2008-05-22</dateNotificationModification>
 			<titulaires>
 				<titulaire>
 					<typeIdentifiant>SIRET</typeIdentifiant>
 					<id>81223113200026</id>
-					<denominationSociale>Garami SARL</denominationSociale>
 				</titulaire>
 				<titulaire>
 					<typeIdentifiant>SIRET</typeIdentifiant>
 					<id>87845484200015</id>
-					<denominationSociale>Jullié SA</denominationSociale>
 				</titulaire>
 			</titulaires>
 		</modification>

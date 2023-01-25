@@ -10,7 +10,7 @@ function testExemplesJson {
     for exemple in `ls $prefixe*`
     do
         echo "$exemple ($schema)"
-        ajv -s $root/$schema -d $exemple > testlog
+        ajv --spec=draft7 -s $root/$schema -d $exemple > testlog
         if [ `head -n 1 testlog | grep invalid` ]
         then
             cat testlog
