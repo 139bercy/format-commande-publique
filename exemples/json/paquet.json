@@ -1,56 +1,69 @@
 {
-  "$schema": "https://schema.data.gouv.fr/schemas/139bercy/format-commande-publique/1.5.0/marches.json",
+  "$schema": "../../marches.json",
   "marches" : [
     {
-      "id": "2010345211200",
+      "id": "mp-889",
       "acheteur": {
-        "id": "21350238800019",
-        "nom": "Ville de Rennes"
+        "id": "21350238800019"
       },
-      "_type": "Marché",
-      "nature": "Accord-cadre",
+      "nature": "Marché de partenariat",
       "objet": "Entretien des jardins municipaux",
       "codeCPV": "77313000",
+      "technique": [
+        "Concours"
+      ],
+      "modaliteExecution": [
+        "Marché subséquent"
+      ],
+      "idAccordCadre": "DFD_U8877",
       "procedure": "Marché passé sans publicité ni mise en concurrence préalable",
       "lieuExecution": {
         "code": "35238",
-        "typeCode": "Code commune",
-        "nom": "Rennes"
+        "typeCode": "Code commune"
       },
       "dureeMois": 24,
       "dateNotification": "2007-08-13",
       "datePublicationDonnees": "2007-08-19",
       "montant": 127000,
-      "formePrix": "Ferme et actualisable",
+      "typePrix": [
+        "Définitif révisable"
+      ],
+      "formePrix": "Forfaitaire",
+      "marcheInnovant": true,
+      "ccag": "Travaux",
+      "offresRecues": 3,
+      "attributionAvance": true,
+      "tauxAvance": 0.25,
+      "typeGroupementOperateurs": "Conjoint",
+      "sousTraitanceDeclaree": false,
+      "actesSousTraitance": [],
+      "origineUE": null,
+      "origineFrance": null,
       "titulaires": [
         {
           "typeIdentifiant": "SIRET",
-          "id": "81223113200026",
-          "denominationSociale": "Garami SARL"
+          "id": "81223113200026"
         },
         {
           "typeIdentifiant": "TVA",
-          "id": "DE814864138",
-          "denominationSociale": "Hellman Gmbh"
+          "id": "DE814864138"
         }
       ],
+      "considerationsSociales": [],
+      "considerationsEnvironnementales": [
+        "Critère environnemental"
+      ],
+      "modificationsActesSousTraitance": [],
       "modifications": []
     },
     {
-      "id": "200103452112",
-      "_type": "Contrat de concession",
+      "id": "cc-67",
       "autoriteConcedante": {
-        "id": "21350238800019",
-        "nom": "Ville de Millau"
+        "id": "21350238800019"
       },
       "nature": "Concession de travaux",
       "objet": "Construction et exploitation d'un viaduc",
       "procedure": "Procédure négociée restreinte",
-      "lieuExecution": {
-        "code": "12145",
-        "typeCode": "Code commune",
-        "nom": "Millau"
-      },
       "dureeMois": 360,
       "dateSignature": "2001-02-21",
       "datePublicationDonnees": "2001-02-21",
@@ -61,9 +74,12 @@
       "concessionnaires": [
         {
           "typeIdentifiant": "SIRET",
-          "id": "81223113200026",
-          "denominationSociale": "Atlas SAS"
+          "id": "81223113200026"
         }
+      ],
+      "considerationsSociales": [],
+      "considerationsEnvironnementales": [
+        "Critère environnemental"
       ],
       "modifications": []
     }
