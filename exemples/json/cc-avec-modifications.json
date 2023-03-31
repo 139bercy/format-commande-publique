@@ -1,20 +1,14 @@
 {
-  "$schema": "https://schema.data.gouv.fr/schemas/139bercy/format-commande-publique/1.5.0/marches.json",
+  "$schema": "../../marches.json",
   "marches": [
     {
-      "id": "20010345211202",
+      "id": "1234",
       "autoriteConcedante": {
-        "id": "21350238800019",
-        "nom": "Ville de Millau"
+        "id": "21350238800019"
       },
       "nature": "Concession de travaux",
       "objet": "Construction et exploitation d'un viaduc",
       "procedure": "Procédure négociée restreinte",
-      "lieuExecution": {
-        "code": "12145",
-        "typeCode": "Code commune",
-        "nom": "Millau"
-      },
       "dureeMois": 360,
       "dateSignature": "2001-02-21",
       "datePublicationDonnees": "2001-02-21",
@@ -40,21 +34,26 @@
       "concessionnaires": [
         {
           "typeIdentifiant": "SIRET",
-          "id": "81223113200026",
-          "denominationSociale": "Atlas SAS"
+          "id": "81223113200026"
         }
       ],
+      "considerationsSociales": [
+        "Concession réservée"
+      ],
+      "considerationsEnvironnementales": [],
       "modifications": [
         {
+          "id": 1,
           "objetModification": "Allongement de la durée",
           "dateSignatureModification": "2002-01-06",
           "datePublicationDonneesModification": "2002-01-19",
           "dureeMois": 410
         },
         {
+          "id": 3,
           "objetModification": "Allongement de la durée et révision de la valeur globale",
-          "datePublicationDonneesModification": "2002-01-19",
-          "dateSignatureModification": "2002-01-06",
+          "datePublicationDonneesModification": "2002-03-22",
+          "dateSignatureModification": "2002-03-09",
           "dureeMois": 540,
           "valeurGlobale": 33890000
         }

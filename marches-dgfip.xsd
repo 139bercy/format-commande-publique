@@ -3,8 +3,8 @@
   <xs:element name="marches">
     <xs:complexType>
       <xs:sequence maxOccurs="unbounded">
-        <xs:element ref="marche" minOccurs="0"></xs:element>
-        <xs:element ref="contrat-concession"  minOccurs="0"></xs:element>
+        <xs:element ref="marche" minOccurs="0"/>
+        <xs:element ref="contrat-concession" minOccurs="0"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -64,7 +64,7 @@
         <xs:element name="codeCPV">
           <xs:simpleType>
             <xs:restriction base="xs:string">
-              <xs:pattern value="([0-9]{8,8}(\-[0-9])?)"/>
+              <xs:pattern value="([0-9]{8}(-[0-9])?)"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
@@ -236,7 +236,7 @@
               <xs:element name="id">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:pattern value="([0-9]{14,14})"/>
+                    <xs:pattern value="([0-9]{14})"/>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

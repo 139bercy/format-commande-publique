@@ -1,23 +1,17 @@
 {
-  "$schema": "https://schema.data.gouv.fr/schemas/139bercy/format-commande-publique/1.5.0/marches.json",
+  "$schema": "../../marches.json",
   "marches": [
     {
-      "id": "20010345211200",
+      "id": "CC_18933b",
       "autoriteConcedante": {
-        "id": "21350238800019",
-        "nom": "Ville de Millau"
+        "id": "21350238800019"
       },
       "nature": "Concession de travaux",
       "objet": "Construction et exploitation d'un viaduc",
       "procedure": "Procédure négociée restreinte",
-      "lieuExecution": {
-        "code": "12145",
-        "typeCode": "Code commune",
-        "nom": "Millau"
-      },
       "dureeMois": 360,
       "dateSignature": "2001-02-21",
-      "datePublicationDonnees": "2001-02-21+02:00",
+      "datePublicationDonnees": "2001-02-21",
       "dateDebutExecution": "2001-02-21",
       "valeurGlobale": 27860000,
       "montantSubventionPublique": 2987000,
@@ -25,10 +19,14 @@
       "concessionnaires": [
         {
           "typeIdentifiant": "SIRET",
-          "id": "81223113200026",
-          "denominationSociale": "Atlas SAS"
+          "id": "81223113200026"
         }
       ],
+      "considerationsSociales": [
+        "Clause sociale",
+        "Critère social"
+      ],
+      "considerationsEnvironnementales": [],
       "modifications": []
     }
   ]

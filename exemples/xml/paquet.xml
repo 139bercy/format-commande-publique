@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.xsd">
+    xsi:noNamespaceSchemaLocation="../../marches.xsd">
     <contrat-concession>
-        <id>20010345211200</id>
+        <id>cc7889</id>
         <autoriteConcedante>
             <id>21350238800019</id>
-            <nom>Ville de Millau</nom>
         </autoriteConcedante>
         <nature>Concession de travaux</nature>
         <objet>Construction et exploitation d'un viaduc</objet>
         <procedure>Procédure négociée restreinte</procedure>
-        <lieuExecution>
-            <code>12145</code>
-            <typeCode>Code commune</typeCode>
-            <nom>Millau</nom>
-        </lieuExecution>
         <dureeMois>360</dureeMois>
         <dateSignature>2001-02-21</dateSignature>
         <datePublicationDonnees>2001-02-21</datePublicationDonnees>
@@ -26,26 +20,24 @@
             <concessionnaire>
                 <typeIdentifiant>SIRET</typeIdentifiant>
                 <id>81223113200026</id>
-                <denominationSociale>Atlas SAS</denominationSociale>
             </concessionnaire>
         </concessionnaires>
+        <considerationsSociales>
+            <considerationSociale>Critère social</considerationSociale>
+            <considerationSociale>Concession réservée</considerationSociale>
+        </considerationsSociales>
+        <considerationsEnvironnementales/>
         <modifications/>
     </contrat-concession>
 
     <contrat-concession>
-        <id>20010345212500</id>
+        <id>cc_12655</id>
         <autoriteConcedante>
             <id>21350238800019</id>
-            <nom>Ville de Millau</nom>
         </autoriteConcedante>
         <nature>Concession de travaux</nature>
         <objet>Construction et exploitation d'un viaduc</objet>
         <procedure>Procédure négociée restreinte</procedure>
-        <lieuExecution>
-            <code>12145</code>
-            <typeCode>Code commune</typeCode>
-            <nom>Millau</nom>
-        </lieuExecution>
         <dureeMois>360</dureeMois>
         <dateSignature>2001-02-21</dateSignature>
         <datePublicationDonnees>2001-02-21</datePublicationDonnees>
@@ -57,52 +49,18 @@
             <concessionnaire>
                 <typeIdentifiant>SIRET</typeIdentifiant>
                 <id>81223113200026</id>
-                <denominationSociale>Atlas SAS</denominationSociale>
             </concessionnaire>
         </concessionnaires>
+        <considerationsSociales/>
+        <considerationsEnvironnementales>
+            <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+        </considerationsEnvironnementales>
         <modifications/>
     </contrat-concession>
-
     <marche>
-        <id>2010345211200</id>
+        <id>987755_mp</id>
         <acheteur>
             <id>21350238800019</id>
-            <nom>Ville de Rennes</nom>
-        </acheteur>
-        <nature>Accord-cadre</nature>
-        <objet>Entretien des jardins municipaux</objet>
-        <codeCPV>77313000</codeCPV>
-        <procedure>Marché passé sans publicité ni mise en concurrence préalable</procedure>
-        <lieuExecution>
-            <code>35238</code>
-            <typeCode>Code commune</typeCode>
-            <nom>Rennes</nom>
-        </lieuExecution>
-        <dureeMois>24</dureeMois>
-        <dateNotification>2007-08-13</dateNotification>
-        <datePublicationDonnees>2007-08-19</datePublicationDonnees>
-        <montant>127000</montant>
-        <formePrix>Ferme et actualisable</formePrix>
-        <titulaires>
-            <titulaire>
-                <typeIdentifiant>SIRET</typeIdentifiant>
-                <id>81223113200026</id>
-                <denominationSociale>Garami SARL</denominationSociale>
-            </titulaire>
-            <titulaire>
-                <typeIdentifiant>TVA</typeIdentifiant>
-                <id>DE814864138</id>
-                <denominationSociale>Hellman Gmbh</denominationSociale>
-            </titulaire>
-        </titulaires>
-        <modifications/>
-    </marche>
-
-    <marche>
-        <id>2010345213500</id>
-        <acheteur>
-            <id>21350238800019</id>
-            <nom>Ville de Rennes</nom>
         </acheteur>
         <nature>Marché</nature>
         <objet>Entretien des jardins municipaux</objet>
@@ -111,25 +69,118 @@
         <lieuExecution>
             <code>35238</code>
             <typeCode>Code commune</typeCode>
-            <nom>Rennes</nom>
         </lieuExecution>
         <dureeMois>24</dureeMois>
         <dateNotification>2007-08-13</dateNotification>
         <datePublicationDonnees>2007-08-19</datePublicationDonnees>
         <montant>127000</montant>
-        <formePrix>Ferme et actualisable</formePrix>
+        <formePrix>Unitaire</formePrix>
         <titulaires>
             <titulaire>
                 <typeIdentifiant>SIRET</typeIdentifiant>
                 <id>81223113200026</id>
-                <denominationSociale>Garami SARL</denominationSociale>
+            </titulaire>
+        </titulaires>
+        <considerationsSociales>
+		    <considerationSociale>Marché réservé</considerationSociale>
+        </considerationsSociales>
+        <considerationsEnvironnementales/>
+        <technique>
+            <technique>Catalogue électronique</technique>
+        </technique>
+        <modaliteExecution>
+            <modaliteExecution>Marché subséquent</modaliteExecution>
+        </modaliteExecution>
+        <idAccordCadre>AC_997Y66</idAccordCadre>
+        <typePrix>
+            <typePrix>Provisoire</typePrix>
+        </typePrix>
+        <marcheInnovant>0</marcheInnovant>
+        <ccag/>
+        <offresRecues>4</offresRecues>
+        <attributionAvance>1</attributionAvance>
+        <tauxAvance>0.25</tauxAvance>
+        <typeGroupementOperateurs>Conjoint</typeGroupementOperateurs>
+        <sousTraitanceDeclaree>1</sousTraitanceDeclaree>
+        <actesSousTraitance>
+            <acteSousTraitance>
+                <id>0</id>
+                <sousTraitant>
+                    <id>81223178800044</id>
+                    <typeIdentifiant>SIRET</typeIdentifiant>
+                </sousTraitant>
+                <dureeMois>17</dureeMois>
+                <dateNotification>2007-08-22</dateNotification>
+                <montant>6000</montant>
+                <variationPrix>Ferme</variationPrix>
+                <datePublicationDonnees>2007-08-19</datePublicationDonnees>
+            </acteSousTraitance>
+            <acteSousTraitance>
+                <id>2</id>
+                <sousTraitant>
+                    <id>56789543300011</id>
+                    <typeIdentifiant>SIRET</typeIdentifiant>
+                </sousTraitant>
+                <dureeMois>14</dureeMois>
+                <dateNotification>2008-11-02</dateNotification>
+                <montant>11000</montant>
+                <variationPrix>Actualisable</variationPrix>
+                <datePublicationDonnees>2008-11-17</datePublicationDonnees>
+            </acteSousTraitance>
+        </actesSousTraitance>
+        <origineUE/>
+        <origineFrance/>
+        <modificationsActesSousTraitance/>
+        <modifications/>
+    </marche>
+    <marche>
+        <id>213500</id>
+        <acheteur>
+            <id>21350238800019</id>
+        </acheteur>
+        <nature>Marché</nature>
+        <objet>Entretien des jardins municipaux</objet>
+        <codeCPV>77313000</codeCPV>
+        <procedure>Marché passé sans publicité ni mise en concurrence préalable</procedure>
+        <lieuExecution>
+            <code>35238</code>
+            <typeCode>Code commune</typeCode>
+        </lieuExecution>
+        <dureeMois>24</dureeMois>
+        <dateNotification>2007-08-13</dateNotification>
+        <datePublicationDonnees>2007-08-19</datePublicationDonnees>
+        <montant>127000</montant>
+        <formePrix>Mixte</formePrix>
+        <titulaires>
+            <titulaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>81223113200026</id>
             </titulaire>
             <titulaire>
                 <typeIdentifiant>TVA</typeIdentifiant>
                 <id>DE814864138</id>
-                <denominationSociale>Hellman Gmbh</denominationSociale>
             </titulaire>
         </titulaires>
+        <considerationsSociales>
+		    <considerationSociale>Marché réservé</considerationSociale>
+        </considerationsSociales>
+        <considerationsEnvironnementales/>
+        <technique/>
+        <modaliteExecution/>
+        <idAccordCadre/>
+        <typePrix>
+            <typePrix>Provisoire</typePrix>
+        </typePrix>
+        <marcheInnovant>true</marcheInnovant>
+        <ccag>Travaux</ccag>
+        <offresRecues>1</offresRecues>
+        <attributionAvance>0</attributionAvance>
+        <typeGroupementOperateurs/>
+        <sousTraitanceDeclaree>1</sousTraitanceDeclaree>
+        <actesSousTraitance/>
+        <origineUE/>
+        <origineFrance/>
+	    <modificationsActesSousTraitance/>
         <modifications/>
     </marche>
 </marches>
