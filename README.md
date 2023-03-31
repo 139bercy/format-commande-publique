@@ -2,6 +2,8 @@
 
 ## Description des schémas de données essentielles :
 
+> Les fichiers techniques décrivant les différentes versions des schémas de données essentielles sont contenus sur un dépôt Github et versionnés avec un tag correspondant à leur numéro de version. [Voir la liste des versions](https://github.com/139bercy/format-commande-publique/tags) 
+
 Les schémas de données présentés jusqu’à la **version 1.5** régissent la structure des données publiées par les acheteurs publics sur leur profil d'acheteur, **jusqu’au 31 décembre 2023**. Ces formats sont la traduction technique des textes réglementaires publiés le 14 avril 2017 et mis à jour le 22 mars 2019.
 **Vous trouverez l'ensemble des fichiers techniques décrivant la structure du [schéma version 1.5 sur ce lien](https://github.com/139bercy/format-commande-publique/releases/tag/1.5.0).**
 
