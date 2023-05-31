@@ -268,7 +268,7 @@
           <xs:simpleType>
             <xs:restriction base="xs:string">
               <xs:enumeration value="Travaux"/>
-              <xs:enumeration value="Maîtrise d'œuvre"/>
+              <xs:enumeration value="Maîtrise d’œuvre"/>
               <xs:enumeration value="Fournitures courantes et services"/>
               <xs:enumeration value="Marchés industriels"/>
               <xs:enumeration value="Prestations intellectuelles"/>
