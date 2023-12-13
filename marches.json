@@ -220,7 +220,7 @@
           "title": "Montant HT forfaitaire ou estimé maximum en euros",
           "description": "",
           "type": "number",
-          "minimum": 0
+          "minimum": 1
         },
         "typePrix": {
           "title": "Type de prix",
@@ -440,7 +440,7 @@
               "title": "Durée du contrat de sous-traitance en nombre de mois",
               "description": "La durée totale du contrat de sous-traitance, en mois, telle que définie au moment de la notification du marché public. Si une fois les données initiales du contrat de sous-traitance publiées, une modification de sa durée intervient, elle doit être retranscrite via un objet enfant de modificationsActesSousTraitance et la propriété dureeMois initiale ne doit pas être modifiée.",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dateNotification": {
               "title": "Date de notification de l'acte spécial de sous-traitance",
@@ -458,7 +458,7 @@
               "title": "Montant en euros HT de l'acte spécial de sous-traitance",
               "description": "Le montant en euros HT de l'acte spécial de sous-traitance sur toute la durée du contrat de sous-traitance, toutes reconductions possibles incluses, ou au montant maximum dans le cas d’un accord-cadre. Le montant renseigné est celui connu au moment de la notification du marché public. Si une fois les données initiales de l'acte spécial publiées une modification de son montant intervient, elle doit être retranscrite via un objet enfant de modificationsActesSousTraitance et la propriété montant initiale ne doit pas être modifiée.",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             },
             "variationPrix": {
               "title": "Modalités de variation du prix du contrat de sous-traitance",
@@ -495,7 +495,7 @@
               "title": "Durée modifiée du contrat de sous-traitance",
               "description": "La nouvelle durée de l'acte spécial de sous-traitance, en mois. Arrondir au nombre supérieur",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dateNotificationModificationSousTraitance": {
               "title": "Date de notification de la modification de l'acte spécial de sous-traitance",
@@ -507,7 +507,7 @@
               "title": "Montant en euros HT modifié attribué au sous-traitant",
               "description": "Le nouveau montant en euros HT du montant attribué au sous-traitant",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             },
             "datePublicationDonnees": {
               "title": "Date de la publication des données essentielles de la modification de l'acte spécial de sous-traitance",
@@ -533,7 +533,7 @@
               "title": "Numéro d'identification de la modification apportée au marché public",
               "description": "Numéro permettant d'identifier la modification. Il doit être unique au sein d'un marché public et former une séquence croissante correspondant à l'ordre de notification des modifications.",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dateNotificationModification": {
               "title": "Date de la notification de la modification apportée au marché public",
@@ -551,13 +551,13 @@
               "title": "Durée modifiée du marché public en nombre de mois",
               "description": "La nouvelle durée du marché public, en mois. Arrondir au nombre supérieur",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "montant": {
               "title": "Montant modifié en euros HT",
               "description": "Le nouveau montant en euros HT du marché public",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             },
             "titulaires": {
               "title": "Titulaires modifiés",
@@ -782,7 +782,7 @@
               "title": "Numéro d'identification de la modification",
               "description": "Numéro permettant d'identifier la modification. Il doit être unique au sein d'un contrat de concession et former une séquence croissante correspondant à l'ordre de notification des modifications",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dateSignatureModification": {
               "title": "Date de signature de la modification",
@@ -800,13 +800,13 @@
               "title": "Durée modifiée en nombre de mois",
               "description": "Durée totale du contrat de concession après modification",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "valeurGlobale": {
               "title": "Valeur globale HT modifiée en euros",
               "description": "Valeur globale du contrat après modification",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             }
           },
           "required": [
