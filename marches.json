@@ -34,11 +34,6 @@
           "description": "L'identifiant unique de marché public est un numéro d'ordre interne propre à l’acheteur public (1 caractère minimum à 16 caractères maximum). Les caractères spéciaux suivants sont à éviter autant que possible : &, \", \\, <, espace, virgule, point-virgule. Exemples : 1234 ou C123_456-98777nz",
           "$ref": "#/definitions/marche/definitions/IdentifiantMarche"
         },
-        "_type": {
-          "title": "Type d'objet (marché, contrat de concession)",
-          "type": "string",
-          "pattern": "^Marché$"
-        },
         "acheteur": {
           "title": "Acheteur ou mandataire du marché",
           "description": "Si le marché est passé par un groupement d'acheteurs, c'est le mandataire du groupement qui est décrit dans les données.",
@@ -62,7 +57,7 @@
         },
         "codeCPV": {
           "title": "Code CPV",
-          "description": "Indiquer le code CPV principal du marché. CODE CPV: Nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500 (même si toléré, il préférable d'omettre le caractère de contrôle (-9))",
+          "description": "Indiquer le code CPV principal du marché. CODE CPV: Nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500",
           "$ref": "#/definitions/marche/definitions/CodeCPV"
         },
         "technique": {
@@ -114,7 +109,7 @@
           "type": "string",
           "enum": [
             "Travaux",
-            "Maîtrise d'œuvre",
+            "Maitrise d'œuvre",
             "Fournitures courantes et services",
             "Marchés industriels",
             "Prestations intellectuelles",
@@ -225,7 +220,7 @@
           "title": "Montant HT forfaitaire ou estimé maximum en euros",
           "description": "",
           "type": "number",
-          "minimum": 0
+          "minimum": 1
         },
         "typePrix": {
           "title": "Type de prix",
@@ -368,7 +363,7 @@
         },
         "CodeCPV": {
           "title": "Code CPV principal",
-          "description": "Le Code CPV principal du marché public. Code CPV: nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500 (même si toléré, il préférable d'omettre le caractère de contrôle (-9))",
+          "description": "Le Code CPV principal du marché public. Code CPV: nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500",
           "type": "string",
           "pattern": "^[0-9]{8}(-[0-9])?$"
         },
@@ -409,7 +404,7 @@
               "title": "Numéro d'identification de l'acte spécial de sous-traitance",
               "description": "Numéro permettant d'identifier l'acte spécial de sous-traitance. Il doit être unique au sein d'un marché public et former une séquence croissante correspondant à l'ordre des notifications.",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "sousTraitant": {
               "title": "Identification du sous-traitant",
@@ -445,7 +440,7 @@
               "title": "Durée du contrat de sous-traitance en nombre de mois",
               "description": "La durée totale du contrat de sous-traitance, en mois, telle que définie au moment de la notification du marché public. Si une fois les données initiales du contrat de sous-traitance publiées, une modification de sa durée intervient, elle doit être retranscrite via un objet enfant de modificationsActesSousTraitance et la propriété dureeMois initiale ne doit pas être modifiée.",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dateNotification": {
               "title": "Date de notification de l'acte spécial de sous-traitance",
@@ -463,7 +458,7 @@
               "title": "Montant en euros HT de l'acte spécial de sous-traitance",
               "description": "Le montant en euros HT de l'acte spécial de sous-traitance sur toute la durée du contrat de sous-traitance, toutes reconductions possibles incluses, ou au montant maximum dans le cas d’un accord-cadre. Le montant renseigné est celui connu au moment de la notification du marché public. Si une fois les données initiales de l'acte spécial publiées une modification de son montant intervient, elle doit être retranscrite via un objet enfant de modificationsActesSousTraitance et la propriété montant initiale ne doit pas être modifiée.",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             },
             "variationPrix": {
               "title": "Modalités de variation du prix du contrat de sous-traitance",
@@ -494,15 +489,15 @@
               "title": "Numéro d'identification de l'acte spécial de sous-traitance modifié",
               "description": "Numéro permettant d'identifier l'acte spécial de sous-traitance à modifier. Doit correspondre à un numéro d'identification dans actesSousTraitance",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dureeMois": {
               "title": "Durée modifiée du contrat de sous-traitance",
               "description": "La nouvelle durée de l'acte spécial de sous-traitance, en mois. Arrondir au nombre supérieur",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
-            "dateNotificationModificationActeSousTraitance": {
+            "dateNotificationModificationSousTraitance": {
               "title": "Date de notification de la modification de l'acte spécial de sous-traitance",
               "description": "Date de la réception de la notification de la modification de l'acte spécial de sous-traitance par l'acheteur,au format AAAA-MM-JJ.",
               "type": "string",
@@ -512,9 +507,9 @@
               "title": "Montant en euros HT modifié attribué au sous-traitant",
               "description": "Le nouveau montant en euros HT du montant attribué au sous-traitant",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             },
-            "datePublicationDonneesModificationActeSousTraitance": {
+            "datePublicationDonnees": {
               "title": "Date de la publication des données essentielles de la modification de l'acte spécial de sous-traitance",
               "description": "Date à laquelle les données essentielles de l'acte spécial de sous-traitance modifié sont publiées sur le portail national des données ouvertes (data.gouv.fr), au format AAAA-MM-JJ.",
               "type": "string",
@@ -523,8 +518,8 @@
           },
           "required": [
             "id",
-            "dateNotificationModificationActeSousTraitance",
-            "datePublicationDonneesModificationActeSousTraitance",
+            "dateNotificationModificationSousTraitance",
+            "datePublicationDonnees",
 			"dureeMois",
 			"montant"
           ]
@@ -538,7 +533,7 @@
               "title": "Numéro d'identification de la modification apportée au marché public",
               "description": "Numéro permettant d'identifier la modification. Il doit être unique au sein d'un marché public et former une séquence croissante correspondant à l'ordre de notification des modifications.",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dateNotificationModification": {
               "title": "Date de la notification de la modification apportée au marché public",
@@ -556,13 +551,13 @@
               "title": "Durée modifiée du marché public en nombre de mois",
               "description": "La nouvelle durée du marché public, en mois. Arrondir au nombre supérieur",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "montant": {
               "title": "Montant modifié en euros HT",
               "description": "Le nouveau montant en euros HT du marché public",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             },
             "titulaires": {
               "title": "Titulaires modifiés",
@@ -616,6 +611,7 @@
         "procedure": {
           "title": "Procédure de passation utilisée",
           "description": "La procédure de passation utilisée par l'autorité concédante",
+	  "type": "string",
           "enum": [
             "Procédure négociée ouverte",
             "Procédure non négociée ouverte",
@@ -681,7 +677,7 @@
               "Clause sociale",
               "Critère social",
               "Concession réservée",
-			  "Pas de considération sociale"
+	      "Pas de considération sociale"
             ]
           }
         },
@@ -696,7 +692,7 @@
             "enum": [
               "Clause environnementale",
               "Critère environnemental",
-			  "Pas de considération environnementale"
+	      "Pas de considération environnementale"
             ]
           }
         },
@@ -786,7 +782,7 @@
               "title": "Numéro d'identification de la modification",
               "description": "Numéro permettant d'identifier la modification. Il doit être unique au sein d'un contrat de concession et former une séquence croissante correspondant à l'ordre de notification des modifications",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dateSignatureModification": {
               "title": "Date de signature de la modification",
@@ -804,13 +800,13 @@
               "title": "Durée modifiée en nombre de mois",
               "description": "Durée totale du contrat de concession après modification",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "valeurGlobale": {
               "title": "Valeur globale HT modifiée en euros",
               "description": "Valeur globale du contrat après modification",
               "type": "number",
-              "minimum": 0
+              "minimum": 1
             }
           },
           "required": [
