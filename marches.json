@@ -34,11 +34,6 @@
           "description": "L'identifiant unique de marché public est un numéro d'ordre interne propre à l’acheteur public (1 caractère minimum à 16 caractères maximum). Les caractères spéciaux suivants sont à éviter autant que possible : &, \", \\, <, espace, virgule, point-virgule. Exemples : 1234 ou C123_456-98777nz",
           "$ref": "#/definitions/marche/definitions/IdentifiantMarche"
         },
-        "_type": {
-          "title": "Type d'objet (marché, contrat de concession)",
-          "type": "string",
-          "pattern": "^Marché$"
-        },
         "acheteur": {
           "title": "Acheteur ou mandataire du marché",
           "description": "Si le marché est passé par un groupement d'acheteurs, c'est le mandataire du groupement qui est décrit dans les données.",
@@ -62,7 +57,7 @@
         },
         "codeCPV": {
           "title": "Code CPV",
-          "description": "Indiquer le code CPV principal du marché. CODE CPV: Nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500 (même si toléré, il préférable d'omettre le caractère de contrôle (-9))",
+          "description": "Indiquer le code CPV principal du marché. CODE CPV: Nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500",
           "$ref": "#/definitions/marche/definitions/CodeCPV"
         },
         "technique": {
@@ -114,7 +109,7 @@
           "type": "string",
           "enum": [
             "Travaux",
-            "Maîtrise d'œuvre",
+            "Maitrise d'œuvre",
             "Fournitures courantes et services",
             "Marchés industriels",
             "Prestations intellectuelles",
@@ -368,7 +363,7 @@
         },
         "CodeCPV": {
           "title": "Code CPV principal",
-          "description": "Le Code CPV principal du marché public. Code CPV: nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500 (même si toléré, il préférable d'omettre le caractère de contrôle (-9))",
+          "description": "Le Code CPV principal du marché public. Code CPV: nomenclature européenne permettant d'identifier les catégories de biens et de service faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv). Exemple: 45112500",
           "type": "string",
           "pattern": "^[0-9]{8}(-[0-9])?$"
         },
@@ -409,7 +404,7 @@
               "title": "Numéro d'identification de l'acte spécial de sous-traitance",
               "description": "Numéro permettant d'identifier l'acte spécial de sous-traitance. Il doit être unique au sein d'un marché public et former une séquence croissante correspondant à l'ordre des notifications.",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "sousTraitant": {
               "title": "Identification du sous-traitant",
@@ -494,7 +489,7 @@
               "title": "Numéro d'identification de l'acte spécial de sous-traitance modifié",
               "description": "Numéro permettant d'identifier l'acte spécial de sous-traitance à modifier. Doit correspondre à un numéro d'identification dans actesSousTraitance",
               "type": "integer",
-              "minimum": 0
+              "minimum": 1
             },
             "dureeMois": {
               "title": "Durée modifiée du contrat de sous-traitance",
@@ -502,7 +497,7 @@
               "type": "integer",
               "minimum": 0
             },
-            "dateNotificationModificationActeSousTraitance": {
+            "dateNotificationModificationSousTraitance": {
               "title": "Date de notification de la modification de l'acte spécial de sous-traitance",
               "description": "Date de la réception de la notification de la modification de l'acte spécial de sous-traitance par l'acheteur,au format AAAA-MM-JJ.",
               "type": "string",
@@ -514,7 +509,7 @@
               "type": "number",
               "minimum": 0
             },
-            "datePublicationDonneesModificationActeSousTraitance": {
+            "datePublicationDonnees": {
               "title": "Date de la publication des données essentielles de la modification de l'acte spécial de sous-traitance",
               "description": "Date à laquelle les données essentielles de l'acte spécial de sous-traitance modifié sont publiées sur le portail national des données ouvertes (data.gouv.fr), au format AAAA-MM-JJ.",
               "type": "string",
@@ -523,8 +518,8 @@
           },
           "required": [
             "id",
-            "dateNotificationModificationActeSousTraitance",
-            "datePublicationDonneesModificationActeSousTraitance",
+            "dateNotificationModificationSousTraitance",
+            "datePublicationDonnees",
 			"dureeMois",
 			"montant"
           ]
@@ -616,6 +611,7 @@
         "procedure": {
           "title": "Procédure de passation utilisée",
           "description": "La procédure de passation utilisée par l'autorité concédante",
+	  "type": "string",
           "enum": [
             "Procédure négociée ouverte",
             "Procédure non négociée ouverte",
@@ -681,7 +677,7 @@
               "Clause sociale",
               "Critère social",
               "Concession réservée",
-			  "Pas de considération sociale"
+	      "Pas de considération sociale"
             ]
           }
         },
@@ -696,7 +692,7 @@
             "enum": [
               "Clause environnementale",
               "Critère environnemental",
-			  "Pas de considération environnementale"
+	      "Pas de considération environnementale"
             ]
           }
         },
