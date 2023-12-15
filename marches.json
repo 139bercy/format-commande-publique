@@ -519,9 +519,7 @@
           "required": [
             "id",
             "dateNotificationModificationSousTraitance",
-            "datePublicationDonnees",
-			"dureeMois",
-			"montant"
+            "datePublicationDonnees"
           ]
         },
         "Modification": {
@@ -567,10 +565,7 @@
           "required": [
             "id",
             "datePublicationDonneesModification",
-            "dateNotificationModification",
-			"dureeMois",
-			"montant",
-			"titulaires"
+            "dateNotificationModification"
           ]
         }
     }
@@ -812,9 +807,7 @@
           "required": [
             "datePublicationDonneesModification",
             "dateSignatureModification",
-			"id",
-			"dureeMois",
-			"valeurGlobale"
+			"id"
           ]
         },
         "DonneesExecution": {
