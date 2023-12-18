@@ -68,13 +68,13 @@
           "uniqueItems": true,
           "items": {
             "enum": [
-            "Accord-cadre",
-            "Concours",
-            "Système de qualification",
-            "Système d’acquisition dynamique",
-            "Catalogue électronique",
-            "Enchère électronique",
-			"Sans objet"
+              "Accord-cadre",
+              "Concours",
+              "Système de qualification",
+              "Système d’acquisition dynamique",
+              "Catalogue électronique",
+              "Enchère électronique",
+              "Sans objet"
             ]
           }
         },
@@ -158,13 +158,13 @@
         "procedure": {
           "title": "Procédure de passation du marché",
           "description": "La procédure de passation de marché utilisée par l'acheteur",
-		  "type": "string",
+          "type": "string",
           "enum": [
             "Procédure adaptée",
             "Appel d'offres ouvert",
             "Appel d'offres restreint",
             "Procédure avec négociation",
-			"Marché passé sans publicité ni mise en concurrence préalable",
+            "Marché passé sans publicité ni mise en concurrence préalable",
             "Dialogue compétitif"
           ]
         },
@@ -277,7 +277,7 @@
               "Critère social",
               "Clause sociale",
               "Marché réservé",
-			  "Pas de considération sociale"
+              "Pas de considération sociale"
             ]
           }
         },
@@ -291,7 +291,7 @@
             "enum": [
               "Clause environnementale",
               "Critère environnemental",
-			  "Pas de considération environnementale"
+              "Pas de considération environnementale"
             ]
           }
         },
@@ -304,7 +304,8 @@
           "title": "Modifications des données du marché public",
           "description": "Une fois les données essentielles du marché public publiées, aucune modification des données n'est possible, si ce n'est l'ajout d'objets dans Modifications.",
           "$ref": "#/definitions/marche/definitions/Modification"
-	  }},
+        }
+      },
       "required": [
         "id",
         "acheteur",
@@ -336,7 +337,7 @@
         "considerationsEnvironnementales",
         "modificationsActesSousTraitance",
         "modifications",
-		"tauxAvance"
+        "tauxAvance"
       ],
       "additionalProperties": false,
       "definitions": {
@@ -412,18 +413,18 @@
               "type": "object",
               "properties": {
                 "typeIdentifiant": {
-                "title": "Type d'identifiant du sous-traitant",
-                "description": "Le type d'identifiant utilisé pour identifier le sous-traitant du marché.",
-                "type": "string",
-                "enum": [
-                  "SIRET",
-                  "TVA",
-                  "TAHITI",
-                  "RIDET",
-                  "FRWF",
-                  "IREP",
-                  "HORS-UE"
-                ]
+                  "title": "Type d'identifiant du sous-traitant",
+                  "description": "Le type d'identifiant utilisé pour identifier le sous-traitant du marché.",
+                  "type": "string",
+                  "enum": [
+                    "SIRET",
+                    "TVA",
+                    "TAHITI",
+                    "RIDET",
+                    "FRWF",
+                    "IREP",
+                    "HORS-UE"
+                  ]
                 },
                 "id": {
                   "title": "Identifiant du sous-traitant",
@@ -520,8 +521,8 @@
             "id",
             "dateNotificationModificationSousTraitance",
             "datePublicationDonnees",
-			"dureeMois",
-			"montant"
+            "dureeMois",
+            "montant"
           ]
         },
         "Modification": {
@@ -563,20 +564,19 @@
               "title": "Titulaires modifiés",
               "description": "Liste des titulaires après modification",
               "$ref": "#/definitions/marche/definitions/Titulaire"
-              },
-          "required": [
-            "id",
-            "datePublicationDonneesModification",
-            "dateNotificationModification",
-			"dureeMois",
-			"montant",
-			"titulaires"
-          ]
+            },
+            "required": [
+              "id",
+              "datePublicationDonneesModification",
+              "dateNotificationModification",
+              "dureeMois",
+              "montant",
+              "titulaires"
+            ]
+          }
         }
-    }
-  }
- }
-,
+      }
+    },
     "contrat-concession": {
       "title": "Format réglementaire de publication des données essentielles des contrats de concession français",
       "description": "",
@@ -611,7 +611,7 @@
         "procedure": {
           "title": "Procédure de passation utilisée",
           "description": "La procédure de passation utilisée par l'autorité concédante",
-	  "type": "string",
+          "type": "string",
           "enum": [
             "Procédure négociée ouverte",
             "Procédure non négociée ouverte",
@@ -677,7 +677,7 @@
               "Clause sociale",
               "Critère social",
               "Concession réservée",
-	      "Pas de considération sociale"
+              "Pas de considération sociale"
             ]
           }
         },
@@ -692,7 +692,7 @@
             "enum": [
               "Clause environnementale",
               "Critère environnemental",
-	      "Pas de considération environnementale"
+              "Pas de considération environnementale"
             ]
           }
         },
@@ -812,9 +812,9 @@
           "required": [
             "datePublicationDonneesModification",
             "dateSignatureModification",
-			"id",
-			"dureeMois",
-			"valeurGlobale"
+            "id",
+            "dureeMois",
+            "valeurGlobale"
           ]
         },
         "DonneesExecution": {
@@ -865,5 +865,5 @@
         }
       }
     }
-	}
+  }
 }
