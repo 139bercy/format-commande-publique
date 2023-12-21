@@ -1,29 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/139bercy/format-commande-publique/master/marches.xsd">
-	<id>1987_jb</id>
+<marches>
+<contrat-concession>
+    <id>TESTN5</id>
 	<autoriteConcedante>
-		<id>21350238800019</id>
+	  <id>21640122400037</id>
 	</autoriteConcedante>
-	<nature>Concession de travaux</nature>
-	<objet>Construction et exploitation d'un viaduc</objet>
+	<nature>Concession de service</nature>
+	<objet>Exploitation de la piscine municipale</objet>
 	<procedure>Procédure négociée restreinte</procedure>
-	<dureeMois>360</dureeMois>
-	<dateSignature>2001-02-21</dateSignature>
-	<datePublicationDonnees>2001-02-21</datePublicationDonnees>
-	<dateDebutExecution>2001-02-21</dateDebutExecution>
-	<valeurGlobale>27860000</valeurGlobale>
-	<montantSubventionPublique>2987000</montantSubventionPublique>
-	<donneesExecution/>
+	<dureeMois>48</dureeMois>
+	<dateSignature>2024-06-06</dateSignature>
+	<datePublicationDonnees>2024-06-10</datePublicationDonnees>
+	<dateDebutExecution>2024-06-08</dateDebutExecution>
+	<valeurGlobale>300000</valeurGlobale>
+	<montantSubventionPublique>50000</montantSubventionPublique>
+	<donneesExecution>
+	  <datePublicationDonneesExecution>2024-06-10</datePublicationDonneesExecution>
+	  <depensesInvestissement>50000</depensesInvestissement>
+	  <tarifs>
+	   <intituleTarif>prix ticket</intituleTarif>
+	   <tarif>10</tarif>
+	  </tarifs>
+	</donneesExecution>
 	<concessionnaires>
-		<concessionnaire>
-			<typeIdentifiant>SIRET</typeIdentifiant>
-			<id>81223113200026</id>
-		</concessionnaire>
+	 <concessionnaire>
+	   <typeIdentifiant>TVA</typeIdentifiant>
+	   <id>FR31344253653</id>
+	 </concessionnaire>
 	</concessionnaires>
 	<considerationsSociales>
-		<considerationSociale>Critère social</considerationSociale>
-		<considerationSociale>Concession réservée</considerationSociale>
+	   <considerationSociale>Clause sociale</considerationSociale>
 	</considerationsSociales>
-	<considerationsEnvironnementales/>
-	<modifications/>
-</contrat-concession>
+	<considerationsEnvironnementales>
+	   <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+	</considerationsEnvironnementales>
+	<modifications></modifications>
+ </contrat-concession>
+</marches>
