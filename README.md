@@ -8,9 +8,9 @@ Les schémas de données présentés jusqu’à la **version 1.5** régissent la
 **Vous trouverez l'ensemble des fichiers techniques décrivant la structure du [schéma version 1.5 sur ce lien](https://github.com/139bercy/format-commande-publique/releases/tag/1.5.0).**
 
 Les schémas de données présentés à partir de la **version 2.0** régissent la structure des données à publier par les acheteurs publics le portail national des données ouvertes à compter du 1er janvier 2024. Ces formats sont la traduction technique des arrêtés relatifs aux données essentielles des marchés publics et des contrats de concession du 22 décembre 2022.
-**Vous trouverez l'ensemble des fichiers techniques décrivant la structure du [schéma version 2.0.0 sur ce lien](https://github.com/139bercy/format-commande-publique/releases/tag/2.0.0).**
+**Vous trouverez l'ensemble des fichiers techniques décrivant la structure du [schéma version 2.0.1 sur ce lien](https://github.com/139bercy/format-commande-publique/releases/tag/2.0.1).**
 
-Les acheteurs publics doivent publier leurs données de marchés publics et de contrats de concession dans ce format **à partir du 1er janvier 2024**, sur leur profil d'acheteur.
+Les acheteurs publics doivent publier leurs données de marchés publics et de contrats de concession dans ce format **à partir du 1er janvier 2024**, sur le portail national des données ouvertes.
 
 Ce schéma de données rassemble :
 •	le lien vers le dépôt Github, qui contient des exemples de données et les référentiels des schémas au format PDF ;
