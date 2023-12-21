@@ -1,33 +1,35 @@
 {
-  "$schema": "../../marches.json",
-  "marches": [
-    {
-      "id": "CC_18933b",
-      "autoriteConcedante": {
-        "id": "21350238800019"
-      },
-      "nature": "Concession de travaux",
-      "objet": "Construction et exploitation d'un viaduc",
-      "procedure": "Procédure négociée restreinte",
-      "dureeMois": 360,
-      "dateSignature": "2001-02-21",
-      "datePublicationDonnees": "2001-02-21",
-      "dateDebutExecution": "2001-02-21",
-      "valeurGlobale": 27860000,
-      "montantSubventionPublique": 2987000,
-      "donneesExecution": [],
-      "concessionnaires": [
-        {
-          "typeIdentifiant": "SIRET",
-          "id": "81223113200026"
+ "marches":[
+   {
+        "id": "CC_456",
+        "autoriteConcedante":
+		{
+          "id": "21640122400037"
+		  },
+        "nature": "Concession de service",
+        "objet": "Exploitation de la piscine municipale",
+        "procedure": "Procédure négociée restreinte",
+        "dureeMois": 48,
+        "dateSignature": "2024-06-06",
+        "datePublicationDonnees": "2024-06-10",
+        "dateDebutExecution": "2024-06-08",
+        "valeurGlobale": 300000,
+        "montantSubventionPublique": 50000,
+        "donneesExecution": {
+		  "datePublicationDonneesExecution": "2024-06-10",
+		  "depensesInvestissement": 50000,
+		  "intituleTarif": "Prix ticket",
+		  "tarif": 10
+        },
+        "concessionnaires": [
+		{
+          "typeIdentifiant": "TVA",
+		  "id": "FR31344253653"
         }
-      ],
-      "considerationsSociales": [
-        "Clause sociale",
-        "Critère social"
-      ],
-      "considerationsEnvironnementales": [],
-      "modifications": []
+		],
+        "considerationsSociales": ["Clause sociale"],
+        "considerationsEnvironnementales": ["Clause environnementale"],
+        "modifications": []
     }
-  ]
+ ]
 }
