@@ -1,57 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<contrat-concession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../marches.xsd">
-	<id>cc_12655</id>
+<marches>
+ <contrat-concession>
+    <id>TESTM1</id>
 	<autoriteConcedante>
-		<id>21350238800019</id>
+	  <id>24490001500011</id>
 	</autoriteConcedante>
-	<nature>Concession de travaux</nature>
-	<objet>Construction et exploitation d'un viaduc</objet>
-	<procedure>Procédure négociée restreinte</procedure>
-	<dureeMois>360</dureeMois>
-	<dateSignature>2001-02-21</dateSignature>
-	<datePublicationDonnees>2001-02-21</datePublicationDonnees>
-	<dateDebutExecution>2001-02-21</dateDebutExecution>
-	<valeurGlobale>27860000</valeurGlobale>
-	<montantSubventionPublique>2987000</montantSubventionPublique>
+	<nature>Concession de service</nature>
+	<objet>MODIFICATION</objet>
+	<procedure>Procédure négociée ouverte</procedure>
+	<dureeMois>60</dureeMois>
+	<dateSignature>2024-01-01</dateSignature>
+	<datePublicationDonnees>2024-03-01</datePublicationDonnees>
+	<dateDebutExecution>2024-02-01</dateDebutExecution>
+	<valeurGlobale>800000</valeurGlobale>
+	<montantSubventionPublique>0</montantSubventionPublique>
 	<donneesExecution>
-		<donneesAnnuelles>
-			<datePublicationDonneesExecution>2002-03-30</datePublicationDonneesExecution>
-			<depensesInvestissement>658000</depensesInvestissement>
-			<tarifs>
-				<tarif>
-					<intituleTarif>Traversée du viaduc, véhicule léger</intituleTarif>
-					<tarif>9.10</tarif>
-				</tarif>
-				<tarif>
-					<intituleTarif>Traversée du viaduc, véhicule lourd</intituleTarif>
-					<tarif>14.4</tarif>
-				</tarif>
-			</tarifs>
-		</donneesAnnuelles>
+	  <datePublicationDonneesExecution>2024-04-01</datePublicationDonneesExecution>
+	  <depensesInvestissement>50000</depensesInvestissement>
+	  <tarifs>
+	    <intituleTarif>Frais de gestion</intituleTarif>
+	    <tarif>20</tarif>
+	  </tarifs>
 	</donneesExecution>
 	<concessionnaires>
-		<concessionnaire>
-			<typeIdentifiant>SIRET</typeIdentifiant>
-			<id>81223113200026</id>
-		</concessionnaire>
+	  <concessionnaire>
+	   <typeIdentifiant>SIRET</typeIdentifiant>
+	   <id>72200039500110</id>
+	  </concessionnaire>
 	</concessionnaires>
-	<considerationsSociales/>
+	<considerationsSociales>
+	 <considerationSociale>Clause sociale</considerationSociale>
+	</considerationsSociales>
 	<considerationsEnvironnementales>
-		<considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+	<considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
 	</considerationsEnvironnementales>
 	<modifications>
-		<modification>
-			<id>1</id>
-			<datePublicationDonneesModification>2002-01-19</datePublicationDonneesModification>
-			<dateSignatureModification>2008-07-20</dateSignatureModification>
-			<dureeMois>410</dureeMois>
-		</modification>
-		<modification>
-			<id>3</id>
-			<datePublicationDonneesModification>2007-06-14</datePublicationDonneesModification>
-			<dateSignatureModification>2008-07-20</dateSignatureModification>
-			<dureeMois>540</dureeMois>
-			<valeurGlobale>33890000</valeurGlobale>
-		</modification>
+	  <id>1</id>
+	  <dateSignatureModification>2024-06-01</dateSignatureModification>
+	  <datePublicationDonneesModification>2024-06-10</datePublicationDonneesModification>
+	  <dureeMois>64</dureeMois>
 	</modifications>
-</contrat-concession>
+ </contrat-concession>
+</marches>
