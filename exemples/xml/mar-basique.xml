@@ -1,48 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<marche xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../marches.xsd">
-	<id>99876a</id>
-	<acheteur>
-		<id>21350238800019</id>
-	</acheteur>
-	<nature>Marché</nature>
-	<objet>Pêches et abricots, 100 kg</objet>
-	<codeCPV>77313000</codeCPV>
-	<procedure>Marché passé sans publicité ni mise en concurrence préalable</procedure>
-	<lieuExecution>
-		<code>35238</code>
-		<typeCode>Code commune</typeCode>
+<marches>
+ <marche>
+     <id>TESTN1</id>
+	 <acheteur>
+	    <id>21750001630040</id>
+	 </acheteur>
+	 <nature>Marché</nature>
+	 <objet>envoi pour Json test</objet>
+	 <codeCPV>45000000-7</codeCPV>
+	 <technique>Concours</technique>
+	 <modaliteExecution>Tranches</modaliteExecution>
+	 <idAccordCadre></idAccordCadre>
+	 <marcheInnovant>1</marcheInnovant>
+	 <ccag>Travaux</ccag>
+	 <offresRecues>4</offresRecues>
+	 <attributionAvance>0</attributionAvance>
+	 <tauxAvance>0</tauxAvance>
+	 <typeGroupementOperateurs>Pas de groupement</typeGroupementOperateurs>
+	 <sousTraitanceDeclaree>0</sousTraitanceDeclaree>
+	 <actesSousTraitance></actesSousTraitance>
+	 <procedure>Appel d'offres ouvert</procedure>
+	 <lieuExecution>
+	    <code>75000</code>
+		<typeCode>Code postal</typeCode>
 	</lieuExecution>
-	<dureeMois>24</dureeMois>
-	<dateNotification>2007-08-13</dateNotification>
-	<datePublicationDonnees>2007-08-19</datePublicationDonnees>
-	<montant>127000</montant>
+	<dureeMois>48</dureeMois>
+	<dateNotification>2024-05-15</dateNotification>
+	<datePublicationDonnees>2024-05-25</datePublicationDonnees>
+	<montant>575000</montant>
+	<typePrix>Définitif ferme</typePrix>
 	<formePrix>Forfaitaire</formePrix>
+	<origineUE>0.1</origineUE>
+	<origineFrance>0.1</origineFrance>
 	<titulaires>
-		<titulaire>
-			<typeIdentifiant>SIRET</typeIdentifiant>
-			<id>81223113200026</id>
-		</titulaire>
+	  <titulaire>
+	    <id>55204599900869</id>
+	    <typeIdentifiant>SIRET</typeIdentifiant>
+	  </titulaire>
 	</titulaires>
 	<considerationsSociales>
-		<considerationSociale>Marché réservé</considerationSociale>
+	    <considerationSociale>Clause sociale</considerationSociale>
 	</considerationsSociales>
-	<considerationsEnvironnementales/>
-	<technique/>
-	<modaliteExecution/>
-	<idAccordCadre/>
-	<typePrix>
-		<typePrix>Définitif révisable</typePrix>
-	</typePrix>
-	<marcheInnovant>1</marcheInnovant>
-	<ccag>Fournitures courantes et services</ccag>
-	<offresRecues>1</offresRecues>
-	<attributionAvance>true</attributionAvance>
-	<tauxAvance>0.25</tauxAvance>
-	<typeGroupementOperateurs>Solidaire</typeGroupementOperateurs>
-	<sousTraitanceDeclaree>0</sousTraitanceDeclaree>
-	<actesSousTraitance/>
-	<origineUE>0.8</origineUE>
-	<origineFrance>0.7</origineFrance>
-	<modificationsActesSousTraitance/>
-	<modifications/>
-</marche>
+	<considerationsEnvironnementales>
+	    <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+	</considerationsEnvironnementales>
+	<modificationsActesSousTraitance></modificationsActesSousTraitance>
+	<modifications></modifications>
+ </marche>
+</marches>
