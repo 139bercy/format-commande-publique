@@ -4,9 +4,8 @@ Ces fichiers contiennent des données fictives mais réalistes, vous permettant 
 
 ### Exemples
 
-- **cc-avec-modifications-données-d-exécution** : un contrat de concession pour lequel des modifications sont intervenues après la signature.
-- **cc-basique** : un contrat de concession simple, avec un seul concessionnaire, sans modification.
-- **mar-avec-modifications** : marché public pour lequel des modifications sont intervenues après la date de notification.
-- **mar-basique** : un marché public, de nature accord-cadre, avec plusieurs titulaires mais pas de modifications
-- **paquet** : plusieurs marchés ou contrats de concession dans un même fichier
-
+- **Marche** : marché public sans modification.
+- **Marche-modification** : marché public avec une modification.
+- **Contrat-concession** : contrat de concession sans modification.
+- **Contrat-concession-modification** : contrat de concession avec une modification
+- **Paquet** : ensemble de marchés publics et contrats de concession dans un même fichier

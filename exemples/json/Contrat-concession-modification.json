@@ -1,0 +1,42 @@
+{
+ "marches":{
+	"contrat-concession":{
+        "id": "Exemple1",
+        "autoriteConcedante":
+		{
+          "id": "21640122400037"
+		  },
+        "nature": "Concession de service",
+        "objet": "contrat de concession avec modification",
+        "procedure": "Procédure négociée restreinte",
+        "dureeMois": 48,
+        "dateSignature": "2024-06-06",
+        "datePublicationDonnees": "2024-06-10",
+        "dateDebutExecution": "2024-06-08",
+        "valeurGlobale": 300000,
+        "montantSubventionPublique": 50000,
+        "donneesExecution": {
+		  "datePublicationDonneesExecution": "2024-12-01",
+		  "depensesInvestissement": 50000,
+		  "intituleTarif": "Prix ticket",
+		  "tarif": 10
+        },
+        "concessionnaires": [
+		{
+          "typeIdentifiant": "TVA",
+		  "id": "FR31344253653"
+        }
+		],
+        "considerationsSociales": ["Clause sociale"],
+        "considerationsEnvironnementales": ["Clause environnementale"],
+        "modifications": [
+		{
+		"id": 1,
+		"dateSignatureModification": "2024-07-15",
+		"datePublicationDonneesModification": "2024-07-20",
+		"dureeMois": 60
+		}
+		]
+    }
+ }
+}

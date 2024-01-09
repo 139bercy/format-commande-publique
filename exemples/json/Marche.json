@@ -1,0 +1,46 @@
+{
+ "marches":{
+	"marche":{
+        "id": "Exemple1",
+        "acheteur": {
+        "id": "21750001630040"},
+        "nature": "Marché",
+        "objet": "exemple marche",
+        "codeCPV": "45000000-7",
+        "technique": ["Concours" , "Catalogue électronique"],
+        "modaliteExecution": ["Tranches"],
+        "idAccordCadre": null,
+        "marcheInnovant": true,
+        "ccag": "Travaux",
+        "offresRecues": 4,
+        "attributionAvance": false,
+        "tauxAvance": 0,
+        "typeGroupementOperateurs": "Pas de groupement",
+        "sousTraitanceDeclaree": false,
+        "actesSousTraitance": [],
+        "procedure": "Appel d'offres ouvert",
+        "lieuExecution": {
+            "code": "75000",
+            "typeCode": "Code postal"
+            },
+        "dureeMois": 48,
+        "dateNotification": "2024-05-15",
+        "datePublicationDonnees": "2024-05-25",
+        "montant": 575000,
+        "typePrix": ["Définitif ferme"],
+        "formePrix": "Forfaitaire",
+        "origineUE": 0.1,
+		"origineFrance": 0.1,
+        "titulaires": [
+		{
+          "id": "55204599900869",
+		  "typeIdentifiant": "SIRET"
+        }
+		],
+        "considerationsSociales": ["Clause sociale"],
+        "considerationsEnvironnementales": ["Clause environnementale"],
+        "modificationsActesSousTraitance": [],
+        "modifications": []
+	}
+ }
+}

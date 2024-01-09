@@ -1,186 +1,248 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<marches xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="../../marches.xsd">
-    <contrat-concession>
-        <id>cc7889</id>
-        <autoriteConcedante>
-            <id>21350238800019</id>
-        </autoriteConcedante>
-        <nature>Concession de travaux</nature>
-        <objet>Construction et exploitation d'un viaduc</objet>
-        <procedure>Procédure négociée restreinte</procedure>
-        <dureeMois>360</dureeMois>
-        <dateSignature>2001-02-21</dateSignature>
-        <datePublicationDonnees>2001-02-21</datePublicationDonnees>
-        <dateDebutExecution>2001-02-21</dateDebutExecution>
-        <valeurGlobale>27860000</valeurGlobale>
-        <montantSubventionPublique>2987000</montantSubventionPublique>
-        <donneesExecution/>
-        <concessionnaires>
-            <concessionnaire>
-                <typeIdentifiant>SIRET</typeIdentifiant>
-                <id>81223113200026</id>
-            </concessionnaire>
-        </concessionnaires>
-        <considerationsSociales>
-            <considerationSociale>Critère social</considerationSociale>
-            <considerationSociale>Concession réservée</considerationSociale>
-        </considerationsSociales>
-        <considerationsEnvironnementales/>
-        <modifications/>
-    </contrat-concession>
-
-    <contrat-concession>
-        <id>cc_12655</id>
-        <autoriteConcedante>
-            <id>21350238800019</id>
-        </autoriteConcedante>
-        <nature>Concession de travaux</nature>
-        <objet>Construction et exploitation d'un viaduc</objet>
-        <procedure>Procédure négociée restreinte</procedure>
-        <dureeMois>360</dureeMois>
-        <dateSignature>2001-02-21</dateSignature>
-        <datePublicationDonnees>2001-02-21</datePublicationDonnees>
-        <dateDebutExecution>2001-02-21</dateDebutExecution>
-        <valeurGlobale>27860000</valeurGlobale>
-        <montantSubventionPublique>2987000</montantSubventionPublique>
-        <donneesExecution/>
-        <concessionnaires>
-            <concessionnaire>
-                <typeIdentifiant>SIRET</typeIdentifiant>
-                <id>81223113200026</id>
-            </concessionnaire>
-        </concessionnaires>
-        <considerationsSociales/>
+<marches>
+    <marche>
+        <id>TEST2022</id>
+        <acheteur>
+            <id>21750001630040</id>
+        </acheteur>
+        <marcheInnovant>oui</marcheInnovant>
+        <origineUE>0.1</origineUE>
+        <origineFrance>0.1</origineFrance>
+        <ccag>Travaux</ccag>
+        <offresRecues>4</offresRecues>
+        <formePrix>Forfaitaire</formePrix>
+        <typesPrix>
+            <typePrix>Définitif ferme</typePrix>
+        </typesPrix>
         <considerationsEnvironnementales>
             <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
         </considerationsEnvironnementales>
-        <modifications/>
-    </contrat-concession>
-    <marche>
-        <id>987755_mp</id>
-        <acheteur>
-            <id>21350238800019</id>
-        </acheteur>
+        <attributionAvance>oui</attributionAvance>
+        <considerationsSociales>
+            <considerationSociale>Clause sociale</considerationSociale>
+            <considerationSociale>Critère social</considerationSociale>
+        </considerationsSociales>
+
         <nature>Marché</nature>
-        <objet>Entretien des jardins municipaux</objet>
-        <codeCPV>77313000</codeCPV>
-        <procedure>Marché passé sans publicité ni mise en concurrence préalable</procedure>
-        <lieuExecution>
-            <code>35238</code>
-            <typeCode>Code commune</typeCode>
-        </lieuExecution>
-        <dureeMois>24</dureeMois>
-        <dateNotification>2007-08-13</dateNotification>
-        <datePublicationDonnees>2007-08-19</datePublicationDonnees>
-        <montant>127000</montant>
-        <formePrix>Unitaire</formePrix>
+        <objet>envoi pour Json test</objet>
+        <codeCPV>45000000-7</codeCPV>
+        <techniques>
+            <technique>Concours</technique>
+            <technique>Accord-cadre</technique>
+        </techniques>
+        <modaliteExecution>Tranches</modaliteExecution>
+        <idAccordCadre>1234567890</idAccordCadre>
+        <tauxAvance>0</tauxAvance>
         <titulaires>
             <titulaire>
+                <id>55204599900869</id>
                 <typeIdentifiant>SIRET</typeIdentifiant>
-                <id>81223113200026</id>
             </titulaire>
         </titulaires>
-        <considerationsSociales>
-		    <considerationSociale>Marché réservé</considerationSociale>
-        </considerationsSociales>
-        <considerationsEnvironnementales/>
-        <technique>
-            <technique>Catalogue électronique</technique>
-        </technique>
-        <modaliteExecution>
-            <modaliteExecution>Marché subséquent</modaliteExecution>
-        </modaliteExecution>
-        <idAccordCadre>AC_997Y66</idAccordCadre>
-        <typePrix>
-            <typePrix>Provisoire</typePrix>
-        </typePrix>
-        <marcheInnovant>0</marcheInnovant>
-        <ccag/>
-        <offresRecues>4</offresRecues>
-        <attributionAvance>1</attributionAvance>
-        <tauxAvance>0.25</tauxAvance>
-        <typeGroupementOperateurs>Conjoint</typeGroupementOperateurs>
-        <sousTraitanceDeclaree>1</sousTraitanceDeclaree>
+
+        <typeGroupementOperateurs>Pas de groupement</typeGroupementOperateurs>
+        <sousTraitanceDeclaree>oui</sousTraitanceDeclaree>
+        <datePublicationDonnees>2024-05-25</datePublicationDonnees>
+
         <actesSousTraitance>
             <acteSousTraitance>
-                <id>0</id>
+                <id>1</id>
                 <sousTraitant>
-                    <id>81223178800044</id>
+                    <id>214356</id>
                     <typeIdentifiant>SIRET</typeIdentifiant>
                 </sousTraitant>
-                <dureeMois>17</dureeMois>
-                <dateNotification>2007-08-22</dateNotification>
-                <montant>6000</montant>
-                <variationPrix>Ferme</variationPrix>
-                <datePublicationDonnees>2007-08-19</datePublicationDonnees>
-            </acteSousTraitance>
-            <acteSousTraitance>
-                <id>2</id>
-                <sousTraitant>
-                    <id>56789543300011</id>
-                    <typeIdentifiant>SIRET</typeIdentifiant>
-                </sousTraitant>
-                <dureeMois>14</dureeMois>
-                <dateNotification>2008-11-02</dateNotification>
-                <montant>11000</montant>
-                <variationPrix>Actualisable</variationPrix>
-                <datePublicationDonnees>2008-11-17</datePublicationDonnees>
+                <dureeMois>12</dureeMois>
+                <dateNotification>2023-10-11</dateNotification>
+                <montant>123456.89</montant>
+                <variationPrix>Révisable</variationPrix>
+                <datePublicationDonnees>2023-10-12</datePublicationDonnees>
             </acteSousTraitance>
         </actesSousTraitance>
-        <origineUE/>
-        <origineFrance/>
-        <modificationsActesSousTraitance/>
-        <modifications/>
-    </marche>
-    <marche>
-        <id>213500</id>
-        <acheteur>
-            <id>21350238800019</id>
-        </acheteur>
-        <nature>Marché</nature>
-        <objet>Entretien des jardins municipaux</objet>
-        <codeCPV>77313000</codeCPV>
-        <procedure>Marché passé sans publicité ni mise en concurrence préalable</procedure>
+
+        <modifications>
+            <modification>
+                <id>1</id>
+                <dureeMois>12</dureeMois>
+                <montant>123457.87</montant>
+                <titulaires>
+                    <id>1657657655768</id>
+                    <typeIdentifiant>SIRET</typeIdentifiant>
+                </titulaires>
+                <dateNotificationModification>2022-10-18</dateNotificationModification>
+                <datePublicationDonneesModification>2022-10-20</datePublicationDonneesModification>
+            </modification>
+        </modifications>
+
+        <modificationsActesSousTraitance>
+            <modificationActesSousTraitance>
+                <id>1</id>
+                <dureeMois>12</dureeMois>
+                <dateNotificationModificationSousTraitance>2022-10-20</dateNotificationModificationSousTraitance>
+                <montant>23465.87</montant>
+                <datePublicationDonnees>2022-12-15</datePublicationDonnees>
+            </modificationActesSousTraitance>
+        </modificationsActesSousTraitance>
+
+        <procedure>Appel d'offres ouvert</procedure>
+
         <lieuExecution>
-            <code>35238</code>
-            <typeCode>Code commune</typeCode>
+            <code>75000</code>
+            <typeCode>Code postal</typeCode>
         </lieuExecution>
-        <dureeMois>24</dureeMois>
-        <dateNotification>2007-08-13</dateNotification>
-        <datePublicationDonnees>2007-08-19</datePublicationDonnees>
-        <montant>127000</montant>
-        <formePrix>Mixte</formePrix>
+        <dureeMois>48</dureeMois>
+        <dateNotification>2024-05-15</dateNotification>
+        <montant>575000</montant>
+    </marche>
+
+    <contrat-concession>
+        <id>0612202306122023</id>
+        <autoriteConcedante>
+            <id>12345678901234</id>
+        </autoriteConcedante>
+        <nature>Concession de travaux</nature>
+        <objet>Objet de la consultation</objet>
+        <procedure>Procédure négociée ouverte</procedure>
+        <dureeMois>12</dureeMois>
+        <dateSignature>2023-04-02</dateSignature>
+        <datePublicationDonnees>2023-04-12</datePublicationDonnees>
+        <dateDebutExecution>2023-04-01</dateDebutExecution>
+        <valeurGlobale>10.3</valeurGlobale>
+        <montantSubventionPublique>0.5</montantSubventionPublique>
+        <donneesExecution>
+            <donneesAnnuelles>
+                <datePublicationDonneesExecution>2023-04-18</datePublicationDonneesExecution>
+                <depensesInvestissement>15.3</depensesInvestissement>
+                <tarifs>
+                    <tarif>
+                        <intituleTarif>Intitulé du tarif</intituleTarif>
+                        <tarif>14.29</tarif>
+                    </tarif>
+                </tarifs>
+            </donneesAnnuelles>
+        </donneesExecution>
+        <concessionnaires>
+            <concessionnaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>38103128500491</id>
+            </concessionnaire>
+            <concessionnaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>38103128500574</id>
+            </concessionnaire>
+        </concessionnaires>
+        <considerationsSociales>
+            <considerationSociale>Clause sociale</considerationSociale>
+            <considerationSociale>Critère social</considerationSociale>
+        </considerationsSociales>
+        <considerationsEnvironnementales>
+            <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+            <considerationEnvironnementale>Critère environnemental</considerationEnvironnementale>
+        </considerationsEnvironnementales>
+        <modifications>
+            <modification>
+                <id>1</id>
+                <dateSignatureModification>2023-04-19</dateSignatureModification>
+                <datePublicationDonneesModification>2023-04-20</datePublicationDonneesModification>
+                <dureeMois>14</dureeMois>
+                <valeurGlobale>25.0</valeurGlobale>
+            </modification>
+        </modifications>
+    </contrat-concession>
+
+    <marche>
+        <id>TEST2022</id>
+        <acheteur>
+            <id>21750001630040</id>
+        </acheteur>
+        <marcheInnovant>oui</marcheInnovant>
+        <origineUE>0.1</origineUE>
+        <origineFrance>0.1</origineFrance>
+        <ccag>Travaux</ccag>
+        <offresRecues>4</offresRecues>
+        <formePrix>Forfaitaire</formePrix>
+        <typesPrix>
+            <typePrix>Définitif ferme</typePrix>
+        </typesPrix>
+        <considerationsEnvironnementales>
+            <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+        </considerationsEnvironnementales>
+        <attributionAvance>oui</attributionAvance>
+        <considerationsSociales>
+            <considerationSociale>Clause sociale</considerationSociale>
+            <considerationSociale>Critère social</considerationSociale>
+        </considerationsSociales>
+
+        <nature>Marché</nature>
+        <objet>envoi pour Json test</objet>
+        <codeCPV>45000000-7</codeCPV>
+        <techniques>
+            <technique>Concours</technique>
+            <technique>Accord-cadre</technique>
+        </techniques>
+        <modaliteExecution>Tranches</modaliteExecution>
+        <idAccordCadre>1234567890</idAccordCadre>
+        <tauxAvance>0</tauxAvance>
         <titulaires>
             <titulaire>
+                <id>55204599900869</id>
                 <typeIdentifiant>SIRET</typeIdentifiant>
-                <id>81223113200026</id>
-            </titulaire>
-            <titulaire>
-                <typeIdentifiant>TVA</typeIdentifiant>
-                <id>DE814864138</id>
             </titulaire>
         </titulaires>
-        <considerationsSociales>
-		    <considerationSociale>Marché réservé</considerationSociale>
-        </considerationsSociales>
-        <considerationsEnvironnementales/>
-        <technique/>
-        <modaliteExecution/>
-        <idAccordCadre/>
-        <typePrix>
-            <typePrix>Provisoire</typePrix>
-        </typePrix>
-        <marcheInnovant>true</marcheInnovant>
-        <ccag>Travaux</ccag>
-        <offresRecues>1</offresRecues>
-        <attributionAvance>0</attributionAvance>
-        <typeGroupementOperateurs/>
-        <sousTraitanceDeclaree>1</sousTraitanceDeclaree>
-        <actesSousTraitance/>
-        <origineUE/>
-        <origineFrance/>
-	    <modificationsActesSousTraitance/>
-        <modifications/>
+
+        <typeGroupementOperateurs>Pas de groupement</typeGroupementOperateurs>
+        <sousTraitanceDeclaree>oui</sousTraitanceDeclaree>
+        <datePublicationDonnees>2024-05-25</datePublicationDonnees>
+
+        <actesSousTraitance>
+            <acteSousTraitance>
+                <id>1</id>
+                <sousTraitant>
+                    <id>214356</id>
+                    <typeIdentifiant>SIRET</typeIdentifiant>
+                </sousTraitant>
+                <dureeMois>12</dureeMois>
+                <dateNotification>2023-10-11</dateNotification>
+                <montant>123456.89</montant>
+                <variationPrix>Révisable</variationPrix>
+                <datePublicationDonnees>2023-10-12</datePublicationDonnees>
+            </acteSousTraitance>
+        </actesSousTraitance>
+
+        <modifications>
+            <modification>
+                <id>1</id>
+                <dureeMois>12</dureeMois>
+                <montant>123457.87</montant>
+                <titulaires>
+                    <id>75765765898981</id>
+                    <typeIdentifiant>SIRET</typeIdentifiant>
+                </titulaires>
+                <dateNotificationModification>2022-10-18</dateNotificationModification>
+                <datePublicationDonneesModification>2022-10-20</datePublicationDonneesModification>
+            </modification>
+        </modifications>
+
+        <modificationsActesSousTraitance>
+            <modificationActesSousTraitance>
+                <id>1</id>
+                <dureeMois>12</dureeMois>
+                <dateNotificationModificationSousTraitance>2022-10-20</dateNotificationModificationSousTraitance>
+                <montant>23465.87</montant>
+                <datePublicationDonnees>2022-12-15</datePublicationDonnees>
+            </modificationActesSousTraitance>
+        </modificationsActesSousTraitance>
+
+        <procedure>Appel d'offres ouvert</procedure>
+        <lieuExecution>
+            <code>75000</code>
+            <typeCode>Code postal</typeCode>
+        </lieuExecution>
+        <dureeMois>48</dureeMois>
+        <dateNotification>2024-05-15</dateNotification>
+        <montant>575000</montant>
     </marche>
 </marches>
+	
+	
+	
+	
+	

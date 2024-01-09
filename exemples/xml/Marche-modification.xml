@@ -1,0 +1,100 @@
+<marches>
+    <marche>
+        <id>TEST2022</id>
+        <acheteur>
+            <id>21750001630040</id>
+        </acheteur>
+        <marcheInnovant>oui</marcheInnovant>
+        <origineUE>0.1</origineUE>
+        <origineFrance>0.1</origineFrance>
+        <ccag>Travaux</ccag>
+        <offresRecues>4</offresRecues>
+        <formePrix>Forfaitaire</formePrix>
+        <typesPrix>
+            <typePrix>Définitif ferme</typePrix>
+        </typesPrix>
+        <considerationsEnvironnementales>
+            <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+        </considerationsEnvironnementales>
+        <attributionAvance>oui</attributionAvance>
+        <considerationsSociales>
+            <considerationSociale>Clause sociale</considerationSociale>
+            <considerationSociale>Critère social</considerationSociale>
+        </considerationsSociales>
+
+        <nature>Marché</nature>
+        <objet>envoi pour Json test</objet>
+        <codeCPV>45000000-7</codeCPV>
+        <techniques>
+            <technique>Concours</technique>
+            <technique>Accord-cadre</technique>
+        </techniques>
+        <modaliteExecution>Tranches</modaliteExecution>
+        <idAccordCadre>1234567890</idAccordCadre>
+        <tauxAvance>0</tauxAvance>
+        <titulaires>
+            <titulaire>
+                <id>55204599900869</id>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+            </titulaire>
+        </titulaires>
+
+        <typeGroupementOperateurs>Pas de groupement</typeGroupementOperateurs>
+        <sousTraitanceDeclaree>oui</sousTraitanceDeclaree>
+        <datePublicationDonnees>2024-05-25</datePublicationDonnees>
+
+        <actesSousTraitance>
+            <acteSousTraitance>
+                <id>1</id>
+                <sousTraitant>
+                    <id>214356</id>
+                    <typeIdentifiant>SIRET</typeIdentifiant>
+                </sousTraitant>
+                <dureeMois>12</dureeMois>
+                <dateNotification>2023-10-11</dateNotification>
+                <montant>123456.89</montant>
+                <variationPrix>Révisable</variationPrix>
+                <datePublicationDonnees>2023-10-12</datePublicationDonnees>
+            </acteSousTraitance>
+        </actesSousTraitance>
+
+        <modifications>
+            <modification>
+                <id>1</id>
+                <dureeMois>12</dureeMois>
+                <montant>123457.87</montant>
+                <titulaires>
+                    <id>868768687576575</id>
+                    <typeIdentifiant>SIRET</typeIdentifiant>
+                </titulaires>
+                <dateNotificationModification>2022-10-18</dateNotificationModification>
+                <datePublicationDonneesModification>2022-10-20</datePublicationDonneesModification>
+            </modification>
+        </modifications>
+
+        <modificationsActesSousTraitance>
+            <modificationActesSousTraitance>
+                <id>1</id>
+                <dureeMois>12</dureeMois>
+                <dateNotificationModificationSousTraitance>2022-10-20</dateNotificationModificationSousTraitance>
+                <montant>23465.87</montant>
+                <datePublicationDonnees>2022-12-15</datePublicationDonnees>
+            </modificationActesSousTraitance>
+        </modificationsActesSousTraitance>
+
+        <procedure>Appel d'offres ouvert</procedure>
+
+        <lieuExecution>
+            <code>75000</code>
+            <typeCode>Code postal</typeCode>
+        </lieuExecution>
+        <dureeMois>48</dureeMois>
+        <dateNotification>2024-05-15</dateNotification>
+        <montant>575000</montant>
+    </marche>
+</marches>
+	
+	
+	
+	
+	
