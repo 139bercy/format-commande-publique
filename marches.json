@@ -562,13 +562,13 @@
               "title": "Titulaires modifiés",
               "description": "Liste des titulaires après modification",
               "$ref": "#/definitions/marche/definitions/Titulaire"
-            },
-            "required": [
-              "id",
-              "datePublicationDonneesModification",
-              "dateNotificationModification"
-            ]
-          }
+            }
+          },
+          "required": [
+            "id",
+            "datePublicationDonneesModification",
+            "dateNotificationModification"
+          ]
         }
       }
     },
