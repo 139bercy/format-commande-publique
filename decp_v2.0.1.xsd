@@ -374,7 +374,7 @@
                                 <xs:restriction base="xs:string">
                                     <xs:enumeration value="Clause sociale"/>
                                     <xs:enumeration value="Critère social"/>
-                                    <xs:enumeration value="Maerché réservé"/>
+                                    <xs:enumeration value="Marché réservé"/>
                                     <xs:enumeration value="Pas de considération sociale"/>
                                 </xs:restriction>
                             </xs:simpleType>
