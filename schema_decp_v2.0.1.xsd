@@ -1,0 +1,936 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+           vc:minVersion="1.0">
+    <xs:element name="marches">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element ref="marche" minOccurs="0"/>
+                <xs:element ref="contrat-concession" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="marche">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="id" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>L'identifiant de marché est un numéro d'ordre interne propre à l'acheteur
+                            public (1 à 16 caractères).
+                            Les caractères spéciaux suivants sont à éviter autant que possible : &amp;, ", \, &lt;,
+                            espace, virgule, point virgule.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="16"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="acheteur">
+                    <xs:complexType mixed="true">
+                        <xs:sequence>
+                            <xs:element name="id">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="([0-9]{14})"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="nature" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Marché"/>
+                            <xs:enumeration value="Marché de partenariat"/>
+                            <xs:enumeration value="Marché de défense ou de sécurité"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="objet" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:maxLength value="1000"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="codeCPV" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Autres codes CPV permettant d'identifier les catégories de biens et de service
+                            faisant l'objet du marché (http://simap.ted.europa.eu/web/simap/cpv).
+                            Exemple: 45112500 (même si toléré, il préférable d'omettre le caractère de contrôle (-9))
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:pattern value="([0-9]{8}(-[0-9])?)"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="procedure" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Procédure adaptée"/>
+                            <xs:enumeration value="Appel d'offres ouvert"/>
+                            <xs:enumeration value="Appel d'offres restreint"/>
+                            <xs:enumeration value="Procédure avec négociation"/>
+                            <xs:enumeration value="Marché passé sans publicité ni mise en concurrence préalable"/>
+                            <xs:enumeration value="Dialogue compétitif"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="lieuExecution">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element name="code" type="xs:string"/>
+                            <xs:element name="typeCode">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Code postal"/>
+                                        <xs:enumeration value="Code commune"/>
+                                        <xs:enumeration value="Code arrondissement"/>
+                                        <xs:enumeration value="Code canton"/>
+                                        <xs:enumeration value="Code département"/>
+                                        <xs:enumeration value="Code région"/>
+                                        <xs:enumeration value="Code pays"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:all>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="dureeMois" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="dateNotification" type="xs:date" minOccurs="1"/>
+                <xs:element name="datePublicationDonnees" type="xs:date" minOccurs="1"/>
+                <xs:element name="montant" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:minInclusive value="0"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="formePrix" minOccurs="1">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Unitaire"/>
+                            <xs:enumeration value="Forfaitaire"/>
+                            <xs:enumeration value="Mixte"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="titulaires">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="titulaire" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="typeIdentifiant">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="SIRET"/>
+                                                    <xs:enumeration value="TVA"/>
+                                                    <xs:enumeration value="TAHITI"/>
+                                                    <xs:enumeration value="RIDET"/>
+                                                    <xs:enumeration value="FRWF"/>
+                                                    <xs:enumeration value="IREP"/>
+                                                    <xs:enumeration value="HORS-UE"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="id" type="xs:string" minOccurs="1"/>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="considerationsSociales" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="considerationSociale" minOccurs="1" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Clause sociale"/>
+                                        <xs:enumeration value="Critère social"/>
+                                        <xs:enumeration value="Marché réservé"/>
+										<xs:enumeration value="Pas de considération sociale"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="considerationsEnvironnementales" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="considerationEnvironnementale" minOccurs="1" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Clause environnementale"/>
+                                        <xs:enumeration value="Critère environnemental"/>
+										<xs:enumeration value="Pas de considération environnementale"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="techniques" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>La ou les techniques d'achat utilisées par l'acheteur</xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="technique" minOccurs="1" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Accord-cadre"/>
+                                        <xs:enumeration value="Concours"/>
+                                        <xs:enumeration value="Système de qualification"/>
+                                        <xs:enumeration value="Système d’acquisition dynamique"/>
+                                        <xs:enumeration value="Catalogue électronique"/>
+                                        <xs:enumeration value="Enchère électronique"/>
+                                        <xs:enumeration value="Sans objet"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="modalitesExecution" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>La ou les modalités d'exécution du marché public.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="modaliteExecution" minOccurs="1" maxOccurs="unbounded">
+                                <xs:annotation>
+                                    <xs:documentation>La ou les modalités d'exécution du marché public. 
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Tranches"/>
+                                        <xs:enumeration value="Bons de commande"/>
+                                        <xs:enumeration value="Marchés subséquents"/>
+                                        <xs:enumeration value="Sans objet"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="idAccordCadre" >
+                    <xs:annotation>
+                        <xs:documentation>Pour un marché subséquent, le numéro d’identification unique de marché public
+                            relevant de la technique d’achat accord-cadre.
+                            Exemples : 1234 ou C123_456-98777nz. Si non applicable au marché, renseigner une chaîne de
+                            caractères vide.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="1"/>
+                            <xs:maxLength value="16"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="typesPrix" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Ferme : le prix est fixé pour toute la durée marché.
+                            Actualisable : le prix peut évoluer périodiquement selon des conditions prévues dans le
+                            contrat initial (ex : variation d'indice).
+                            Révisable : l'acheteur et le titulaire peuvent s'entendre sur une modification du prix après
+                            la signature du marché.).
+                            Provisoire : le prix n'est pas définitif.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="typePrix" minOccurs="1" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Définitif ferme"/>
+                                        <xs:enumeration value="Définitif actualisable"/>
+                                        <xs:enumeration value="Définitif révisable"/>
+                                        <xs:enumeration value="Provisoire"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="marcheInnovant" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Marché public comportant des travaux, services ou fournitures innovants.
+                            "1" ou "true" = oui
+                            "0" ou "false" = non
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:union>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="oui"/>
+                                    <xs:enumeration value="non"/>
+                                    <xs:enumeration value="true"/>
+                                    <xs:enumeration value="false"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="1"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:union>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="ccag" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Cahiers des clauses administratives générales de référence du marché public
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Travaux"/>
+                            <xs:enumeration value="Maitrise d'œuvre"/>
+                            <xs:enumeration value="Fournitures courantes et services"/>
+                            <xs:enumeration value="Marchés industriels"/>
+                            <xs:enumeration value="Prestations intellectuelles"/>
+                            <xs:enumeration value="Techniques de l’information et de la communication"/>
+                            <xs:enumeration value="Pas de CCAG"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="offresRecues" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Nombre d'offres reçues par l'acheteur de la part des soumissionnaires.
+                            Comprend aussi les offres irrégulières, inacceptables, inappropriées et anormalement basses.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:union>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                              <xs:minInclusive value="1"/>
+                            </xs:restriction>
+                            </xs:simpleType>
+                        </xs:union>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="attributionAvance" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Une avance a été attribuée au titulaire principal du marché public.
+                            "1" ou "true" = oui
+                            "0" ou "false" = non
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:union>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="oui"/>
+                                    <xs:enumeration value="non"/>
+                                    <xs:enumeration value="true"/>
+                                    <xs:enumeration value="false"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="1"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:union>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="tauxAvance" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>Taux de l'avance attribuée au titulaire principal du marché public par rapport
+                            au montant du marché (O.1 = 10 % du montant du marché).
+                            En fonction de la valeur de attributionAvance, une valeur égale à 0 signifie soit qu'aucune
+                            avance n'a été attribée (si attributionAvance=false), soit que le taux de l'avance n'est pas
+                            connu (si attributionAvance=true).
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                            <xs:minInclusive value="0"/>
+                            <xs:maxInclusive value="1"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="typeGroupementOperateurs" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Le type de groupement d’entreprises ou d’opérateurs économiques
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="Conjoint"/>
+                            <xs:enumeration value="Solidaire"/>
+                            <xs:enumeration value="Pas de groupement"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="origineUE" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Pour les marchés de fournitures de denrées alimentaires, de véhicules, de
+                            produits de santé et d’habillement, selon la liste annexée à l'arrêté, la part des produits
+                            issus de l’Union Européenne avec laquelle le marché sera exécuté.
+                            0.2 = 20 % de la part des produits provient de l'UE. Cette valeur ne peut pas être
+                            inférieure à la valeur d'origineFrance.
+                            Si le marché n'est pas concerné, saisir une chaîne de caractères vide.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:union>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minInclusive value="0"/>
+                                    <xs:maxInclusive value="1"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:union>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="origineFrance" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Pour les marchés de fournitures de denrées alimentaires, de véhicules, de
+                            produits de santé et d’habillement, selon la liste annexée à l'arrêté, la part des produits
+                            français avec laquelle le marché sera exécuté.
+                            0.2 = 20 % de la part des produits provient de France. Cette valeur ne peut pas être
+                            supérieure à la valeur d'origineUE.
+                            Si le marché n'est pas concerné, saisir une chaîne de caractères vide.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:union>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:decimal">
+                                    <xs:minInclusive value="0"/>
+                                    <xs:maxInclusive value="1"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:maxLength value="0"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:union>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="sousTraitanceDeclaree" minOccurs="1">
+                    <xs:annotation>
+                        <xs:documentation>Les titulaires du marché ont déclaré s'appuyer sur un ou plusieurs
+                            sous-traitants pour ce marché public.
+                            La déclaration peut avoir été formalisée avant la notification du marché (ajout dans
+                            actesSousTraitance) ou a posteriori (ajout dans actesSousTraitance + mention dans
+                            modifications).
+                            "1" ou "true" = oui
+                            "0" ou "false" = non
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:simpleType>
+                        <xs:union>
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="oui"/>
+                                    <xs:enumeration value="non"/>
+                                    <xs:enumeration value="true"/>
+                                    <xs:enumeration value="false"/>
+                                    <xs:enumeration value="0"/>
+                                    <xs:enumeration value="1"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:union>
+                    </xs:simpleType>
+                </xs:element>
+                <xs:element name="actesSousTraitance">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="acteSousTraitance" minOccurs="0" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="id">
+                                            <xs:annotation>
+                                                <xs:documentation>Numéro permettant d'identifier l'acte de
+                                                    sous-traitance.
+                                                    Il doit être unique au sein d'un marché public et former une
+                                                    séquence croissante correspondant à l'ordre de notification des
+                                                    sous-traitants.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="sousTraitant">
+                                            <xs:complexType>
+                                                <xs:all>
+                                                    <xs:element name="id" type="xs:string"/>
+                                                    <xs:element name="typeIdentifiant">
+                                                        <xs:simpleType>
+                                                            <xs:restriction base="xs:string">
+                                                                <xs:enumeration value="SIRET"/>
+                                                                <xs:enumeration value="TVA"/>
+                                                                <xs:enumeration value="TAHITI"/>
+                                                                <xs:enumeration value="RIDET"/>
+                                                                <xs:enumeration value="FRWF"/>
+                                                                <xs:enumeration value="IREP"/>
+                                                                <xs:enumeration value="HORS-UE"/>
+                                                            </xs:restriction>
+                                                        </xs:simpleType>
+                                                    </xs:element>
+                                                </xs:all>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="dureeMois">
+                                            <xs:annotation>
+                                                <xs:documentation>La durée de l'acte spécial de sous-traitance, en mois,
+                                                    telle que définie au moment de sa notification.
+                                                    Si une fois les données initiales publiées une modification de la
+                                                    durée de l'acte spécial de sous-traitance intervient, elle doit être
+                                                    retranscrite via un objet enfant de modificationsActesSousTraitance
+                                                    et la propriété dureeMois initiale ne doit pas être modifiée.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:union>
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:integer">
+                                                            <xs:minInclusive value="1"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:union>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="dateNotification">
+                                            <xs:annotation>
+                                                <xs:documentation>Date à laquelle l'acte spécial de sous-traitance a été
+                                                    notifié au sous-traitant, au format AAAA-MM-JJ.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:date"/>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="montant">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:decimal">
+                                                    <xs:minInclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="variationPrix">
+                                            <xs:simpleType>
+                                                <xs:union>
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="Ferme"/>
+                                                            <xs:enumeration value="Actualisable"/>
+                                                            <xs:enumeration value="Révisable"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:union>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="datePublicationDonnees">
+                                            <xs:annotation>
+                                                <xs:documentation>Date à laquelle les données essentielles de l'acte de
+                                                    sous-traitance ont été publiées sur data.gouv.fr, au format
+                                                    AAAA-MM-JJ.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:date"/>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="modificationsActesSousTraitance" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="modificationActesSousTraitance"  minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="id">
+                                            <xs:annotation>
+                                                <xs:documentation>Numéro permettant d'identifier l'acte spécial de
+                                                    sous-traitance à modifier.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="dureeMois" minOccurs="0">
+                                            <xs:annotation>
+                                                <xs:documentation>La nouvelle durée de l'acte spécial de sous-traitance,
+                                                    en mois.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="dateNotificationModificationSousTraitance">
+                                            <xs:annotation>
+                                                <xs:documentation>Date à laquelle la modification de l'acte spécial de
+                                                    sous-traitance a été notifiée au sous-traitant, au format
+                                                    AAAA-MM-JJ.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:date"/>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="montant" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:decimal">
+                                                    <xs:minInclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="datePublicationDonnees">
+                                            <xs:annotation>
+                                                <xs:documentation>Date à laquelle les données essentielles sont
+                                                    republiées suite à la modification, au format AAAA-MM-JJ.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:date"/>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="modifications" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="modification" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:all>
+                                        <xs:element name="id">
+                                            <xs:annotation>
+                                                <xs:documentation>Numéro permettant d'identifier la modification.
+                                                    Il doit être unique au sein d'un marché public et former une
+                                                    séquence croissante correspondant à l'ordre de notification des
+                                                    modifications.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="titulaires" minOccurs="1">
+                                          <xs:complexType>
+                                           <xs:sequence>
+                                             <xs:element name="titulaire" minOccurs="1" maxOccurs="unbounded">
+                                             <xs:complexType>
+                                             <xs:all>
+                                             <xs:element name="typeIdentifiant">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:enumeration value="SIRET"/>
+                                                    <xs:enumeration value="TVA"/>
+                                                    <xs:enumeration value="TAHITI"/>
+                                                    <xs:enumeration value="RIDET"/>
+                                                    <xs:enumeration value="FRWF"/>
+                                                    <xs:enumeration value="IREP"/>
+                                                    <xs:enumeration value="HORS-UE"/>
+                                                </xs:restriction>
+                                                </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="id" type="xs:string" minOccurs="1"/>
+                                                </xs:all>
+                                                </xs:complexType>
+                                                </xs:element>
+                                                </xs:sequence>
+                                                </xs:complexType>
+                                                </xs:element>
+                                        <xs:element name="dateNotificationModification" type="xs:date"/>
+                                        <xs:element name="datePublicationDonneesModification" type="xs:date"/>
+                                        <xs:element name="dureeMois" minOccurs="0">
+                                                <xs:simpleType>
+                                                  <xs:restriction base="xs:integer">
+                                                    <xs:minInclusive value="1"/>
+                                                  </xs:restriction>
+                                                </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="montant" minOccurs="0">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:decimal">
+                                                    <xs:minInclusive value="0"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                    </xs:all>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+	<xs:element name="contrat-concession">
+    <xs:complexType>
+      <xs:all>
+        <xs:element name="id" minOccurs="1">
+          <xs:annotation>
+            <xs:documentation>L'identifiant de contrat de concession est un numéro d'ordre interne propre à l'acheteur public (1 à 16 caractères).
+              Les caractères spéciaux suivants sont à éviter autant que possible : &amp;, ", \, &lt;, espace, virgule, point virgule.</xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:minLength value="1"/>
+              <xs:maxLength value="16"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="autoriteConcedante">
+          <xs:complexType>
+            <xs:all>
+              <xs:element name="id">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:pattern value="([0-9]{14,14})"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:all>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="nature" minOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Concession de travaux"/>
+              <xs:enumeration value="Concession de service"/>
+              <xs:enumeration value="Concession de service public"/>
+              <xs:enumeration value="Délégation de service public"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="objet" minOccurs="1">
+		   <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="1000"/>
+            </xs:restriction>
+          </xs:simpleType>
+		 </xs:element>
+        <xs:element name="procedure" minOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Procédure négociée ouverte"/>
+              <xs:enumeration value="Procédure non négociée ouverte"/>
+              <xs:enumeration value="Procédure négociée restreinte"/>
+              <xs:enumeration value="Procédure non négociée restreinte"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="dureeMois" minOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minInclusive value="1"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="dateSignature" type="xs:date" minOccurs="1"/>
+        <xs:element name="datePublicationDonnees" type="xs:date" minOccurs="1"/>
+        <xs:element name="dateDebutExecution" type="xs:date" minOccurs="1"/>
+        <xs:element name="valeurGlobale" minOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+              <xs:minInclusive value="0"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="montantSubventionPublique" minOccurs="1">
+          <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+              <xs:minInclusive value="0"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+          <xs:element name="donneesExecution" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="donneesAnnuelles" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="datePublicationDonneesExecution" type="xs:date"/>
+                    <xs:element name="depensesInvestissement">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                          <xs:minInclusive value="0"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="tarifs">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="tarif" maxOccurs="unbounded">
+                            <xs:complexType>
+                              <xs:all>
+                                <xs:element name="intituleTarif">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                      <xs:maxLength value="256"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                                <xs:element name="tarif">
+                                  <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                      <xs:minInclusive value="0"/>
+                                    </xs:restriction>
+                                  </xs:simpleType>
+                                </xs:element>
+                              </xs:all>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="concessionnaires">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="concessionnaire" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="typeIdentifiant">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:enumeration value="SIRET"/>
+                          <xs:enumeration value="TVA"/>
+                          <xs:enumeration value="TAHITI"/>
+                          <xs:enumeration value="RIDET"/>
+                          <xs:enumeration value="FRWF"/>
+                          <xs:enumeration value="IREP"/>
+                          <xs:enumeration value="HORS-UE"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="id" type="xs:string"/>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="considerationsSociales" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="considerationSociale" minOccurs="1" maxOccurs="unbounded">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Clause sociale"/>
+                    <xs:enumeration value="Critère social"/>
+                    <xs:enumeration value="Concession réservée"/>
+					<xs:enumeration value="Pas de considération sociale"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="considerationsEnvironnementales" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="considerationEnvironnementale" minOccurs="1" maxOccurs="unbounded">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="Clause environnementale"/>
+                    <xs:enumeration value="Critère environnemental"/>
+					<xs:enumeration value="Pas de considération environnementale"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="modifications" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="modification" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="id" minOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="dateSignatureModification" type="xs:date"/>
+                    <xs:element name="datePublicationDonneesModification" type="xs:date"/>
+                    <xs:element name="dureeMois" minOccurs="0">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                          <xs:minInclusive value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="valeurGlobale" minOccurs="1">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:decimal">
+                          <xs:minInclusive value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

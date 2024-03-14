@@ -1,5 +1,5 @@
 <marches>
-    <contrat-concession>
+	<contrat-concession>
         <id>0612202306122023</id>
         <autoriteConcedante>
             <id>12345678901234</id>
@@ -8,14 +8,14 @@
         <objet>Objet de la consultation</objet>
         <procedure>Procédure négociée ouverte</procedure>
         <dureeMois>12</dureeMois>
-        <dateSignature>2023-04-02</dateSignature>
-        <datePublicationDonnees>2023-04-12</datePublicationDonnees>
-        <dateDebutExecution>2023-04-01</dateDebutExecution>
+        <dateSignature>2024-04-02</dateSignature>
+        <datePublicationDonnees>2024-04-12</datePublicationDonnees>
+        <dateDebutExecution>2024-04-01</dateDebutExecution>
         <valeurGlobale>10.3</valeurGlobale>
         <montantSubventionPublique>0.5</montantSubventionPublique>
         <donneesExecution>
             <donneesAnnuelles>
-                <datePublicationDonneesExecution>2023-04-18</datePublicationDonneesExecution>
+                <datePublicationDonneesExecution>2024-04-18</datePublicationDonneesExecution>
                 <depensesInvestissement>15.3</depensesInvestissement>
                 <tarifs>
                     <tarif>
@@ -44,6 +44,52 @@
             <considerationEnvironnementale>Critère environnemental</considerationEnvironnementale>
         </considerationsEnvironnementales>
     </contrat-concession>
+	<contrat-concession>
+        <id>0612202306122023</id>
+        <autoriteConcedante>
+            <id>12345678901234</id>
+        </autoriteConcedante>
+        <nature>Concession de travaux</nature>
+        <objet>Objet de la consultation</objet>
+        <procedure>Procédure négociée ouverte</procedure>
+        <dureeMois>12</dureeMois>
+        <dateSignature>2024-04-02</dateSignature>
+        <datePublicationDonnees>2024-04-12</datePublicationDonnees>
+        <dateDebutExecution>2024-04-01</dateDebutExecution>
+        <valeurGlobale>10.3</valeurGlobale>
+        <montantSubventionPublique>0.5</montantSubventionPublique>
+        <donneesExecution>
+            <donneesAnnuelles>
+                <datePublicationDonneesExecution>2024-04-18</datePublicationDonneesExecution>
+                <depensesInvestissement>15.3</depensesInvestissement>
+                <tarifs>
+                    <tarif>
+                        <intituleTarif>Intitulé du tarif</intituleTarif>
+                        <tarif>14.29</tarif>
+                    </tarif>
+                </tarifs>
+            </donneesAnnuelles>
+        </donneesExecution>
+        <concessionnaires>
+            <concessionnaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>38103128500491</id>
+            </concessionnaire>
+            <concessionnaire>
+                <typeIdentifiant>SIRET</typeIdentifiant>
+                <id>38103128500574</id>
+            </concessionnaire>
+        </concessionnaires>
+        <considerationsSociales>
+            <considerationSociale>Clause sociale</considerationSociale>
+            <considerationSociale>Critère social</considerationSociale>
+        </considerationsSociales>
+        <considerationsEnvironnementales>
+            <considerationEnvironnementale>Clause environnementale</considerationEnvironnementale>
+            <considerationEnvironnementale>Critère environnemental</considerationEnvironnementale>
+        </considerationsEnvironnementales>
+    </contrat-concession>
+	
 </marches>
 	
 	

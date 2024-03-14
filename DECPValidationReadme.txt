@@ -11,10 +11,11 @@ Utilisation
 L'outil se présente sous la forme d'une application Java présentée sous la forme d'un JAR exécutable.
 Etapes à suivre pour l'utiliser :
 1. Télécharger l'application (le fichier .jar).
-2. Télécharger dans le même répertoire que le .jar, le xsd (schéma de validation).
-3. Copier dans ce même répertoire votre fichier xml que vous souhaitez valider.
+2. Télécharger dans le même répertoire que le .jar, le xsd (schéma de validation) ou le schéma json.
+3. Copier dans ce même répertoire votre fichier xml ou json que vous souhaitez valider.
 4. Ouvrez un invité de commande (Win + R -> tapez cmd -> tapez entrée), allez dans ce répertoire utilisé aux points 1,2,3 et ensuite :
 java -jar DECPValidation.jar decp_v2.0.1.xsd <votre_xml>
+la commande est similaire pour valider des données json, le premier argument étant le schéma json et le deuxième les données json.
 
 Exemple utilisant le sml se trouvant au même niveau de l'arborescence que la readme.txt
 

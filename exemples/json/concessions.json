@@ -1,0 +1,90 @@
+{
+  "marches": {
+    "contrat-concession": [
+      {
+        "id": "0612202306122024",
+        "autoriteConcedante": {
+          "id": "12345678901250"
+        },
+        "nature": "Concession de travaux",
+        "objet": "Objet de la consultation 1",
+        "procedure": "Procédure négociée ouverte",
+        "dureeMois": 12,
+        "dateSignature": "2024-04-02",
+        "datePublicationDonnees": "2024-04-12",
+        "dateDebutExecution": "2024-04-01",
+        "valeurGlobale": 10.3,
+        "montantSubventionPublique": 0.5,
+        
+		"concessionnaires": [
+			{
+			  "concessionnaire": {
+				"typeIdentifiant": "SIRET",
+				"id": "38103128500491"
+			  }
+			},
+			{
+			  "concessionnaire": {
+				"typeIdentifiant": "SIRET",
+				"id": "38103128500574"
+			  }
+			}
+		],
+        "considerationsSociales": {
+          "considerationSociale": [
+            "Clause sociale",
+            "Critère social"
+          ]
+        },
+        "considerationsEnvironnementales": {
+          "considerationEnvironnementale": [
+            "Clause environnementale",
+            "Critère environnemental"
+          ]
+        }
+      },
+      {
+        "id": "0612202306122023",
+        "autoriteConcedante": {
+          "id": "12345678901234"
+        },
+        "nature": "Concession de travaux",
+        "objet": "Objet de la consultation 2",
+        "procedure": "Procédure négociée ouverte",
+        "dureeMois": 12,
+        "dateSignature": "2024-04-02",
+        "datePublicationDonnees": "2024-04-12",
+        "dateDebutExecution": "2024-04-01",
+        "valeurGlobale": 10.3,
+        "montantSubventionPublique": 0.5,
+
+        "concessionnaires": [
+			{
+			  "concessionnaire": {
+				"typeIdentifiant": "SIRET",
+				"id": "38103128500491"
+			  }
+			},
+			{
+			  "concessionnaire": {
+				"typeIdentifiant": "SIRET",
+				"id": "38103128500574"
+			  }
+			}
+		],
+        "considerationsSociales": {
+          "considerationSociale": [
+            "Clause sociale",
+            "Critère social"
+          ]
+        },
+        "considerationsEnvironnementales": {
+          "considerationEnvironnementale": [
+            "Clause environnementale",
+            "Critère environnemental"
+          ]
+        }
+      }
+    ]
+  }
+}

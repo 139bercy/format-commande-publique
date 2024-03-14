@@ -1,0 +1,227 @@
+{
+  "marches": {
+    "marche": [
+      {
+        "id": "TEST2022",
+        "acheteur": {
+          "id": "21750001630066"
+        },
+        "marcheInnovant": true,
+        "origineUE": 0.1,
+        "origineFrance": 0.1,
+        "ccag": "Travaux",
+        "offresRecues": 4,
+        "formePrix": "Forfaitaire",
+        "typesPrix": {
+          "typePrix": [
+			"Définitif ferme"
+		  ]
+        },
+        "considerationsEnvironnementales": {
+          "considerationEnvironnementale": [
+            "Clause environnementale"
+          ]
+        },
+        "attributionAvance": true,
+        "considerationsSociales": {
+          "considerationSociale": [
+            "Clause sociale",
+            "Critère social"
+          ]
+        },
+        "nature": "Marché",
+        "objet": "envoi pour Json test 1",
+        "codeCPV": "45000000-7",
+        "techniques": {
+          "technique": [
+            "Concours",
+            "Accord-cadre"
+          ]
+        },
+        "modalitesExecution": 
+		{
+			"modaliteExecution": [
+			  "Tranches"]}
+		,
+		"idAccordCadre": "1234567890",
+        "tauxAvance": 0,
+        "titulaires": [
+          {
+            "titulaire": {
+              "id": "55204599900869",
+              "typeIdentifiant": "SIRET"
+            }
+          }
+        ],
+        "typeGroupementOperateurs": "Pas de groupement",
+        "sousTraitanceDeclaree": true,
+        "datePublicationDonnees": "2024-05-25",
+        "actesSousTraitance": [
+          {
+            "acteSousTraitance": {
+              "id": 1,
+              "sousTraitant": {
+                "id": "214356",
+                "typeIdentifiant": "SIRET"
+              },
+              "dureeMois": 12,
+              "dateNotification": "2023-10-11",
+              "montant": 123456.89,
+              "variationPrix": "Révisable",
+              "datePublicationDonnees": "2023-10-12"
+            }
+          }
+        ],
+        "modifications": [
+          {
+            "modification": {
+              "id": 1,
+              "dureeMois": 12,
+              "montant": 123457.87,
+              "titulaires": [
+                {
+                  "titulaire": {
+                    "id": "868768687576575",
+                    "typeIdentifiant": "SIRET"
+                  }
+                }
+			  ],
+              "dateNotificationModification": "2022-10-18",
+              "datePublicationDonneesModification": "2022-10-20"
+            }
+          }
+		],
+        "modificationsActesSousTraitance": [
+          {
+            "modificationActeSousTraitance": {
+              "id": 1,
+              "dureeMois": 12,
+              "dateNotificationModificationSousTraitance": "2022-10-20",
+              "montant": 23465.87,
+              "datePublicationDonnees": "2022-12-15"
+            }
+          }
+		],
+        "procedure": "Appel d'offres ouvert",
+        "lieuExecution": {
+          "code": "75000",
+          "typeCode": "Code postal"
+        },
+        "dureeMois": 48,
+        "dateNotification": "2024-05-15",
+        "montant": 575000
+      },
+      {
+        "id": "TEST2022Bis",
+        "acheteur": {
+          "id": "21750001630040"
+        },
+        "marcheInnovant": true,
+        "origineUE": 0.1,
+        "origineFrance": 0.1,
+        "ccag": "Travaux",
+        "offresRecues": 4,
+        "formePrix": "Forfaitaire",
+        "typesPrix": {
+          "typePrix": [
+			"Définitif ferme"
+		  ]
+        },
+        "considerationsEnvironnementales": {
+          "considerationEnvironnementale": [
+            "Clause environnementale"
+          ]
+        },
+        "attributionAvance": true,
+        "considerationsSociales": {
+          "considerationSociale": [
+            "Clause sociale",
+            "Critère social"
+          ]
+        },
+        "nature": "Marché",
+        "objet": "envoi pour Json test 2",
+        "codeCPV": "45000000-7",
+        "techniques": {
+          "technique": [
+            "Concours",
+            "Accord-cadre"
+          ]
+        },
+        "modalitesExecution": 
+		{
+			"modaliteExecution": [
+				"Tranches"]
+		}
+		,
+        "idAccordCadre": "1234567890",
+        "tauxAvance": 0,
+        "titulaires": [
+          {
+            "titulaire": {
+              "id": "55204599900869",
+              "typeIdentifiant": "SIRET"
+            }
+          }
+        ],
+        "typeGroupementOperateurs": "Pas de groupement",
+        "sousTraitanceDeclaree": true,
+        "datePublicationDonnees": "2024-05-25",
+        "actesSousTraitance": [
+          {
+            "acteSousTraitance": {
+              "id": 1,
+              "sousTraitant": {
+                "id": "214356",
+                "typeIdentifiant": "SIRET"
+              },
+              "dureeMois": 12,
+              "dateNotification": "2023-10-11",
+              "montant": 123456.89,
+              "variationPrix": "Révisable",
+              "datePublicationDonnees": "2023-10-12"
+            }
+          }
+        ],
+        "modifications": [
+          {
+            "modification": {
+              "id": 1,
+              "dureeMois": 12,
+              "montant": 123457.87,
+              "titulaires": [
+                {
+                  "titulaire": {
+                    "id": "868768687576575",
+                    "typeIdentifiant": "SIRET"
+                  }
+                }
+              ],
+              "dateNotificationModification": "2022-10-18",
+              "datePublicationDonneesModification": "2022-10-20"
+            }
+          }
+		],
+        "modificationsActesSousTraitance": [
+          {
+            "modificationActeSousTraitance": {
+              "id": 1,
+              "dureeMois": 12,
+              "dateNotificationModificationSousTraitance": "2022-10-20",
+              "montant": 23465.87,
+              "datePublicationDonnees": "2022-12-15"
+            }
+          }
+		],
+        "procedure": "Appel d'offres ouvert",
+        "lieuExecution": {
+          "code": "75000",
+          "typeCode": "Code postal"
+        },
+        "dureeMois": 48,
+        "dateNotification": "2024-05-15",
+        "montant": 575000
+      }
+    ]
+  }
+}
