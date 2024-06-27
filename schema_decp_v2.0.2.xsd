@@ -195,7 +195,7 @@
                                         <xs:enumeration value="Accord-cadre"/>
                                         <xs:enumeration value="Concours"/>
                                         <xs:enumeration value="Système de qualification"/>
-                                        <xs:enumeration value="Système d’acquisition dynamique"/>
+                                        <xs:enumeration value="Système d'acquisition dynamique"/>
                                         <xs:enumeration value="Catalogue électronique"/>
                                         <xs:enumeration value="Enchère électronique"/>
                                         <xs:enumeration value="Sans objet"/>
@@ -229,10 +229,10 @@
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="idAccordCadre" >
+                <xs:element name="idAccordCadre" minOccurs="0">
                     <xs:annotation>
-                        <xs:documentation>Pour un marché subséquent, le numéro d’identification unique de marché public
-                            relevant de la technique d’achat accord-cadre.
+                        <xs:documentation>Pour un marché subséquent, le numéro d'identification unique de marché public
+                            relevant de la technique d'achat accord-cadre.
                             Exemples : 1234 ou C123_456-98777nz. Si non applicable au marché, renseigner une chaîne de
                             caractères vide.
                         </xs:documentation>
@@ -303,7 +303,7 @@
                             <xs:enumeration value="Fournitures courantes et services"/>
                             <xs:enumeration value="Marchés industriels"/>
                             <xs:enumeration value="Prestations intellectuelles"/>
-                            <xs:enumeration value="Techniques de l’information et de la communication"/>
+                            <xs:enumeration value="Techniques de l'information et de la communication"/>
                             <xs:enumeration value="Pas de CCAG"/>
                         </xs:restriction>
                     </xs:simpleType>
@@ -350,9 +350,8 @@
                     <xs:annotation>
                         <xs:documentation>Taux de l'avance attribuée au titulaire principal du marché public par rapport
                             au montant du marché (O.1 = 10 % du montant du marché).
-                            En fonction de la valeur de attributionAvance, une valeur égale à 0 signifie soit qu'aucune
-                            avance n'a été attribée (si attributionAvance=false), soit que le taux de l'avance n'est pas
-                            connu (si attributionAvance=true).
+                           En fonction de la valeur de attributionAvance, une valeur égale à 0 signifie
+                           qu'il y a une avance  mais que le taux n'est pas connu (attributionAvance=true).
                         </xs:documentation>
                     </xs:annotation>
                     <xs:simpleType>
@@ -364,7 +363,7 @@
                 </xs:element>
                 <xs:element name="typeGroupementOperateurs" minOccurs="1">
                     <xs:annotation>
-                        <xs:documentation>Le type de groupement d’entreprises ou d’opérateurs économiques
+                        <xs:documentation>Le type de groupement d'entreprises ou d'opérateurs économiques
                         </xs:documentation>
                     </xs:annotation>
                     <xs:simpleType>
@@ -378,18 +377,17 @@
                 <xs:element name="origineUE" minOccurs="1">
                     <xs:annotation>
                         <xs:documentation>Pour les marchés de fournitures de denrées alimentaires, de véhicules, de
-                            produits de santé et d’habillement, selon la liste annexée à l'arrêté, la part des produits
-                            issus de l’Union Européenne avec laquelle le marché sera exécuté.
+                            produits de santé et d'habillement, selon la liste annexée à l'arrêté, la part des produits
+                            issus de l'Union Européenne avec laquelle le marché sera exécuté.
                             0.2 = 20 % de la part des produits provient de l'UE. Cette valeur ne peut pas être
                             inférieure à la valeur d'origineFrance.
-                            Si le marché n'est pas concerné, saisir une chaîne de caractères vide.
                         </xs:documentation>
                     </xs:annotation>
                     <xs:simpleType>
                         <xs:union>
                             <xs:simpleType>
                                 <xs:restriction base="xs:decimal">
-                                    <xs:minInclusive value="0"/>
+                                    <xs:minInclusive value="0"/> 
                                     <xs:maxInclusive value="1"/>
                                 </xs:restriction>
                             </xs:simpleType>
@@ -404,11 +402,10 @@
                 <xs:element name="origineFrance" minOccurs="1">
                     <xs:annotation>
                         <xs:documentation>Pour les marchés de fournitures de denrées alimentaires, de véhicules, de
-                            produits de santé et d’habillement, selon la liste annexée à l'arrêté, la part des produits
+                            produits de santé et d'habillement, selon la liste annexée à l'arrêté, la part des produits
                             français avec laquelle le marché sera exécuté.
                             0.2 = 20 % de la part des produits provient de France. Cette valeur ne peut pas être
                             supérieure à la valeur d'origineUE.
-                            Si le marché n'est pas concerné, saisir une chaîne de caractères vide.
                         </xs:documentation>
                     </xs:annotation>
                     <xs:simpleType>
@@ -453,10 +450,10 @@
                         </xs:union>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="actesSousTraitance">
+                <xs:element name="actesSousTraitance" minOccurs="0">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="acteSousTraitance" minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="acteSousTraitance" minOccurs="1" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:all>
                                         <xs:element name="id">
@@ -645,7 +642,7 @@
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
-                                        <xs:element name="titulaires" minOccurs="1">
+                                        <xs:element name="titulaires" minOccurs="0">
                                           <xs:complexType>
                                            <xs:sequence>
                                              <xs:element name="titulaire" minOccurs="1" maxOccurs="unbounded">
@@ -778,7 +775,7 @@
           <xs:element name="donneesExecution" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="donneesAnnuelles" minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="donneesAnnuelles" minOccurs="1" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:all>
                     <xs:element name="datePublicationDonneesExecution" type="xs:date"/>

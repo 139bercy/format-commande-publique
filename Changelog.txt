@@ -1,0 +1,23 @@
+Changelog 2.0.1 -> 2.0.2
+-------------------------------------------------------------------
+XSD :
+schema_decp_v2.0.1.xsd -> schema_decp_v2.0.2.xsd
+
+- Harmonisation du guillemet verticaux droit: ' 
+- Ajout du minOccurs de la balise “idAccordCadre”  (Ligne 232): minOccurs="0"
+- Modification de la documentation de la balise “tauxAvance (Ligne 353) ”:  En fonction de la valeur de attributionAvance, une valeur égale à 0 signifie qu'il y a une avance  mais que le taux n'est pas connu (attributionAvance=true).
+- Suppression d’une phrase dans la documentation de la balise “origineUE” et “origineFrance” (Lignes 384, 408) : Si le marché n'est pas concerné, saisir une chaîne de caractères vide.
+- Ajout du minOccurs de la balise “actesSousTraitance”  (Ligne 456): minOccurs="0"
+- Modification du minOccurs de la balise “acteSousTraitance”  (Ligne 496): minOccurs="1"
+- Modification du minOccurs de la balise “titulaires”  (Ligne 648): minOccurs="0"
+- Modification du minOccurs de la balise “donneesAnnuelles”  (Ligne 781): minOccurs="1"
+------------------------------------------------------------------------
+JSON :
+schema_decp_v2.0.1.json -> schema_decp_v2.0.2.json
+
+- Harmonisation du guillemet verticaux droit: '
+- Modification de la documentation de la balise “tauxAvance (Ligne 143) ”:  En fonction de la valeur de attributionAvance, une valeur égale à 0 signifie qu'il y a une avance  mais que le taux n'est pas connu (attributionAvance=true).
+- Suppression d’une phrase dans la documentation de la balise “origineUE” et “origineFrance” (Lignes 265, 272) : Si le marché n'est pas concerné, saisir null.
+- Suppression de 2 champs dans la liste “required” (Ligne 354): “origineUE” et “origineFrance”
+- Modification du minOccurs de la balise “donneesExecution”  (Ligne 787): minOccurs="1"
+------------------------------------------------------------------------
