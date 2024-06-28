@@ -374,7 +374,7 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="origineUE" minOccurs="1">
+                <xs:element name="origineUE" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation>Pour les marchés de fournitures de denrées alimentaires, de véhicules, de
                             produits de santé et d'habillement, selon la liste annexée à l'arrêté, la part des produits
@@ -399,7 +399,7 @@
                         </xs:union>
                     </xs:simpleType>
                 </xs:element>
-                <xs:element name="origineFrance" minOccurs="1">
+                <xs:element name="origineFrance" minOccurs="0">
                     <xs:annotation>
                         <xs:documentation>Pour les marchés de fournitures de denrées alimentaires, de véhicules, de
                             produits de santé et d'habillement, selon la liste annexée à l'arrêté, la part des produits
@@ -761,7 +761,7 @@
         <xs:element name="valeurGlobale" minOccurs="1">
           <xs:simpleType>
             <xs:restriction base="xs:decimal">
-              <xs:minInclusive value="0"/>
+              <xs:minInclusive value="1"/>
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
@@ -897,7 +897,7 @@
                         </xs:restriction>
                       </xs:simpleType>
                     </xs:element>
-                    <xs:element name="valeurGlobale" minOccurs="1">
+                    <xs:element name="valeurGlobale" minOccurs="0">
                       <xs:simpleType>
                         <xs:restriction base="xs:decimal">
                           <xs:minInclusive value="1"/>

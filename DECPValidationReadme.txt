@@ -14,12 +14,12 @@ Etapes à suivre pour l'utiliser :
 2. Télécharger dans le même répertoire que le .jar, le xsd (schéma de validation) ou le schéma json.
 3. Copier dans ce même répertoire votre fichier xml ou json que vous souhaitez valider.
 4. Ouvrez un invité de commande (Win + R -> tapez cmd -> tapez entrée), allez dans ce répertoire utilisé aux points 1,2,3 et ensuite :
-java -jar DECPValidation.jar decp_v2.0.1.xsd <votre_xml>
+java -jar DECPValidation.jar decp_v2.0.2.xsd <votre_xml>
 la commande est similaire pour valider des données json, le premier argument étant le schéma json et le deuxième les données json.
 
 Exemple utilisant le sml se trouvant au même niveau de l'arborescence que la readme.txt
 
-java -jar DECPValidation.jar decp_v2.0.1.xsd decp_v2.0.1.xml
+java -jar DECPValidation.jar decp_v2.0.2.xsd decp_v2.0.2.xml
 
 
 Si votre fichier comporte des non-conformités par rapport aux arrêtés en vigueur, vous allez obtenir des informations vous guidant dans l'identification des causes des non-conformité.

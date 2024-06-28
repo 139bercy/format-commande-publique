@@ -3,5 +3,5 @@ description : "Données des attributions de marchés publics et de contrats de c
 homepage: "https://github.com/139bercy/format-commande-publique"
 schemas:
   -
-    path: "marches.json"
+    path: "schema_decp_v2.0.2.json"
     title: "Contrats de commande publique JSON"
