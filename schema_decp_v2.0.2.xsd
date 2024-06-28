@@ -113,7 +113,7 @@
                 <xs:element name="montant" minOccurs="1">
                     <xs:simpleType>
                         <xs:restriction base="xs:decimal">
-                            <xs:minInclusive value="0"/>
+                            <xs:minInclusive value="1"/>
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
@@ -524,7 +524,7 @@
                                         <xs:element name="montant">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:decimal">
-                                                    <xs:minInclusive value="0"/>
+                                                    <xs:minInclusive value="1"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
@@ -602,7 +602,7 @@
                                         <xs:element name="montant" minOccurs="0">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:decimal">
-                                                    <xs:minInclusive value="0"/>
+                                                    <xs:minInclusive value="1"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
@@ -680,7 +680,7 @@
                                         <xs:element name="montant" minOccurs="0">
                                             <xs:simpleType>
                                                 <xs:restriction base="xs:decimal">
-                                                    <xs:minInclusive value="0"/>
+                                                    <xs:minInclusive value="1"/>
                                                 </xs:restriction>
                                             </xs:simpleType>
                                         </xs:element>
